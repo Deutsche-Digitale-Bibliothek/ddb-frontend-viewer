@@ -1,3 +1,12 @@
 # Configuration
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:ddb_frontend_viewer/Configuration/TypoScript/Config/config.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:ddb_frontend_viewer/Configuration/TypoScript/Config/language.ts">
+
+# Plugin
+
+## Content
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ddb_frontend_viewer/Configuration/TypoScript/Content/tt_content.ts">
+
+## Page
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ddb_frontend_viewer/Configuration/TypoScript/Page/header.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ddb_frontend_viewer/Configuration/TypoScript/Page/page.ts">
