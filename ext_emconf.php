@@ -13,7 +13,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'author_email' => 'alexander.bigga@slub-dresden.de',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '7.6.20-7.6.99',
+			'typo3' => '7.6.0-7.6.99',
 			'dlf' => '2.1.0',
 		),
 		'conflicts' => array(
