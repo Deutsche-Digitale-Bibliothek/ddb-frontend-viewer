@@ -1,0 +1,3 @@
+# Configuration
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ddb_frontend_viewer/Configuration/TypoScript/Config/config.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ddb_frontend_viewer/Configuration/TypoScript/Config/language.ts">
