@@ -8,7 +8,7 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:ddb_frontend_viewer/Configuration/TypoScript/Plugins/kitodo.ts">
 
 ## Content
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ddb_frontend_viewer/Configuration/TypoScript/Content/tt_content.ts">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ddb_frontend_viewer/Configuration/TypoScript/Content/tt_content.ts">
 
 ## Page
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:ddb_frontend_viewer/Configuration/TypoScript/Page/header.ts">

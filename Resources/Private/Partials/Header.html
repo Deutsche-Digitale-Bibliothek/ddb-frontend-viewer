@@ -36,6 +36,15 @@
             <span class="switch"><span><f:link.page pageUid="{kitodoPageView}" additionalParams="{0: {tx_dlf:{page:'{ddb:calc(val1:\'{gp-page}\', val2:\'1\', operator:\'+\')}', double:'1', id:'{gp-id}', pagegrid:'0'}}}" class="tx-dlf-navigation-doubleOff" title="<f:translate key='double.RectoVerso' extensionName='dfgviewer' />"><f:translate key="double.RectoVerso"  extensionName="dfgviewer" /></f:link.page></span></span>
           </f:if>
       </div>
+
+      <f:cObject typoscriptObjectPath="lib.navigation_viewfunction" />
+
+      <div class="page-control">
+        <f:cObject typoscriptObjectPath="lib.navigation_pagecontrol" />
+      </div>
     </div>
+
+
+
   </div>
 </f:section>
