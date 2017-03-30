@@ -1,0 +1,13 @@
+{namespace ddb=Slub\DdbFrontendViewer\ViewHelpers}
+<f:section name="Header">
+  <div class="header">
+    <div class="provider">
+      <f:link.external uri="<ddb:xpath xpath='//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\"DVRIGHTS\"]/mets:xmlData/dv:rights/dv:ownerSiteURL' />" title="<ddb:xpath xpath='//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\"DVRIGHTS\"]/mets:xmlData/dv:rights/dv:owner' />">
+      <img src="<ddb:xpath xpath='//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\'DVRIGHTS\']/mets:xmlData/dv:rights/dv:ownerLogo' />"
+        title="<ddb:xpath xpath='//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\'DVRIGHTS\']/mets:xmlData/dv:rights/dv:owner' />"
+        alt="Abbildung eines Logo"
+        />
+      </f:link.external>
+    </div>
+  </div>
+</f:section>
