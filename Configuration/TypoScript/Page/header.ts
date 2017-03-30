@@ -6,7 +6,7 @@ page = PAGE
 page {
 
 	includeCSS {
-		style = EXT:ddb_frontend_viewer/Resources/Public/Css/ddb_frontend_viewer.css
+		style = EXT:ddb_frontend_viewer/Resources/Public/Css/allStyles.css
 	}
 
 	includeJSlibs {
@@ -15,8 +15,3 @@ page {
   }
 
 }
-
-# include t3jquery
-includeLibs.t3jquery = EXT:t3jquery/class.tx_t3jquery.php
-page.9 = USER_INT
-page.9.userFunc = tx_t3jquery->addJqJS
