@@ -5,3 +5,6 @@
 		<!--TYPO3SEARCH_end-->
 	</div>
 </div>
+<f:if condition="{piwik_idsite}">
+	<f:render section="Piwik" partial="Piwik" arguments="{_all}" />
+</f:if>
