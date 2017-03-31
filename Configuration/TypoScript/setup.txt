@@ -6,6 +6,7 @@
 
 # Plugin
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:ddb_frontend_viewer/Configuration/TypoScript/Plugins/kitodo.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ddb_frontend_viewer/Configuration/TypoScript/Plugins/ddbfrontendviewer.ts">
 
 ## Content
 #<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ddb_frontend_viewer/Configuration/TypoScript/Content/tt_content.ts">
