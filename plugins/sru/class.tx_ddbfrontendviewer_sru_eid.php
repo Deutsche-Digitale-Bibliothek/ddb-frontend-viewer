@@ -43,7 +43,9 @@ class tx_ddbfrontendviewer_sru_eid extends \TYPO3\CMS\Frontend\Plugin\AbstractPl
 		$url = \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('sru') . '?operation=searchRetrieve&version=1.2&startRecord=1&maximumRecords=10&amp;recordSchema=dfg-viewer/page&amp;query=' . urlencode(\TYPO3\CMS\Core\Utility\GeneralUtility::_GP('q'));
 
 		// make request to SRU service
-		$sruXML = simplexml_load_file($url);
+		$xmlData = \TYPO3\CMS\Core\Utility\GeneralUtility::getUrl($url);
+
+		$sruXML = simplexml_load_string($xmlData);
 
 		if ($sruXML !== FALSE) {
 
