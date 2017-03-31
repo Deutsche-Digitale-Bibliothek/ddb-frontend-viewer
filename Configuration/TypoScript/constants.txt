@@ -1,24 +1,24 @@
 config {
 
-	# cat=plugin.tx_dfgviewer/links/010; type=int+; label=Storage PID
+	# cat=plugin.tx_ddbfrontendviewer/links/010; type=int+; label=Storage PID
 	storagePid =
 
-	# cat=plugin.tx_dfgviewer/links/020; type=int+; label=Root PID
+	# cat=plugin.tx_ddbfrontendviewer/links/020; type=int+; label=Root PID
 	rootPid =
 
-	# cat=plugin.tx_dfgviewer/links/030; type=int+; label= Headnavigation PID
+	# cat=plugin.tx_ddbfrontendviewer/links/030; type=int+; label= Headnavigation PID
 	headNavPid =
 
-	# cat=plugin.tx_dfgviewer/links/030; type=int+; label=Kitodo Page View
+	# cat=plugin.tx_ddbfrontendviewer/links/030; type=int+; label=Kitodo Page View
 	kitodoPageView =
 
-	# cat=plugin.tx_dfgviewer/piwik/010; type=string; label=Piwik Hostname
+	# cat=plugin.tx_ddbfrontendviewer/piwik/010; type=string; label=Piwik Hostname
 	piwik_hostname =
 
-	# cat=plugin.tx_dfgviewer/piwik/020; type=string; label=Piwik Idsite
+	# cat=plugin.tx_ddbfrontendviewer/piwik/020; type=string; label=Piwik Idsite
 	piwik_idsite =
 
-	# cat=plugin.tx_dfgviewer/piwik/030; type=string; label=Piwik Domains
+	# cat=plugin.tx_ddbfrontendviewer/piwik/030; type=string; label=Piwik Domains
 	piwik_domains =
 
 }
