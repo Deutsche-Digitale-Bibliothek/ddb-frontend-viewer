@@ -6,8 +6,12 @@
       <f:cObject typoscriptObjectPath="plugin.tx_dlf_pagegrid" />
     </f:then>
     <f:else>
+      <div class="tx-dlf-pageview">
         <f:cObject typoscriptObjectPath="plugin.tx_dlf_pageview" />
-        <div id="tx-dlf-fulltextselection"></div>
+        <div id="tx-dlf-map">
+          	<div id="tx-dlf-fulltextselection"></div>
+        </div>
+      </div>
     </f:else>
   </f:if>
 </div>

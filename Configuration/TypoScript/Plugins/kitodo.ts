@@ -100,7 +100,7 @@ plugin.tx_dlf_pageview {
 	pages = {$config.storagePid}
 	excludeOther = 0
 	features =
-	elementId = tx-dfgviewer-map
+	elementId = tx-dlf-map
 	templateFile = EXT:ddb_frontend_viewer/Resources/Private/Templates/Plugins/Kitodo/pageview.tmpl
 
 }
