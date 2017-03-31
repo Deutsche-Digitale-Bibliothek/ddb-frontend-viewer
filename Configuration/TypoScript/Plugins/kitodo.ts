@@ -69,3 +69,15 @@ plugin.tx_dlf_metadata {
 	separator = #
 	templateFile = EXT:ddb_frontend_viewer/Resources/Private/Templates/Plugins/Kitodo/metadata.tmpl
 }
+
+lib.tools.toolsFulltext = USER
+lib.tools.toolsFulltext {
+	includeLibs = typo3conf/ext/dlf/plugins/toolbox/class.tx_dlf_toolbox.php
+	userFunc = tx_dlf_toolbox->main
+	pages = {$config.storagePid}
+	tools = tx_dlf_toolsFulltext
+	templateFile = EXT:ddb_frontend_viewer/Resources/Private/Templates/Plugins/Kitodo/toolbox.tmpl
+}
+plugin.tx_dlf_toolsFulltext {
+	toolTemplateFile = EXT:ddb_frontend_viewer/Resources/Private/Templates/Plugins/Kitodo/fulltext.tmpl
+}
