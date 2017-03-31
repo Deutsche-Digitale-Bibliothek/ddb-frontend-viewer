@@ -81,3 +81,17 @@ lib.tools.toolsFulltext {
 plugin.tx_dlf_toolsFulltext {
 	toolTemplateFile = EXT:ddb_frontend_viewer/Resources/Private/Templates/Plugins/Kitodo/fulltext.tmpl
 }
+
+lib.tools.toolsImagemanipulation = USER
+lib.tools.toolsImagemanipulation {
+	includeLibs = typo3conf/ext/dlf/plugins/toolbox/class.tx_dlf_toolbox.php
+	userFunc = tx_dlf_toolbox->main
+	pages = {$config.storagePid}
+	tools = tx_dlf_toolsImagemanipulation
+	templateFile = EXT:ddb_frontend_viewer/Resources/Private/Templates/Plugins/Kitodo/toolbox.tmpl
+}
+
+plugin.tx_dlf_toolsImagemanipulation {
+	toolTemplateFile = EXT:ddb_frontend_viewer/Resources/Private/Templates/Plugins/Kitodo/imagemanipulation.tmpl
+
+}
