@@ -58,3 +58,14 @@ plugin.tx_dlf_toc {
 		7 < .6
 	}
 }
+
+plugin.tx_dlf_metadata {
+	pages = {$config.storagePid}
+	excludeOther = 0
+	linkTitle = 0
+	getTitle = 0
+	showFull = 1
+	rootline = 1
+	separator = #
+	templateFile = EXT:ddb_frontend_viewer/Resources/Private/Templates/Plugins/Kitodo/metadata.tmpl
+}
