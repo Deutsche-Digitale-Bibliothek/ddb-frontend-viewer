@@ -104,3 +104,11 @@ plugin.tx_dlf_pageview {
 	templateFile = EXT:ddb_frontend_viewer/Resources/Private/Templates/Plugins/Kitodo/pageview.tmpl
 
 }
+
+plugin.tx_dlf_pagegrid {
+	pages = {$config.storagePid}
+	limit = 24
+	placeholder =
+	targetPid = #
+	templateFile = EXT:ddb_frontend_viewer/Resources/Private/Templates/Plugins/Kitodo/pagegrid.tmpl
+}
