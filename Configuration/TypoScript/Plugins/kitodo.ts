@@ -15,3 +15,46 @@ lib.navigation_pagecontrol {
 	pageStep = 10
 	templateFile = EXT:ddb_frontend_viewer/Resources/Private/Templates/Plugins/Kitodo/navigation-pagecontrol.tmpl
 }
+
+plugin.tx_dlf_toc {
+	pages = {$config.storagePid}
+	excludeOther = 0
+	targetPid.data = TSFE:page|uid
+	templateFile = EXT:ddb_frontend_viewer/Resources/Private/Templates/Plugins/Kitodo/toc.tmpl
+	menuConf {
+		expAll = 0
+		1 = TMENU
+		1.noBlur = 1
+		1.wrap = <ul class="toc">|</ul>
+		1.NO = 1
+		1.NO.stdWrap.crop = 55 | &nbsp;... | 1
+		1.NO.stdWrap.ifEmpty.field = type
+		1.NO.stdWrap.ifEmpty.append = TEXT
+		1.NO.stdWrap.ifEmpty.append.fieldRequired = volume
+		1.NO.stdWrap.ifEmpty.append.field = volume
+		1.NO.stdWrap.ifEmpty.append.warp = &nbsp;|
+		1.NO.stdWrap.dataWrap = | <span class="pagination">{field:pagination}</span>
+		1.NO.doNotLinkIt.field = doNotLinkIt
+		1.NO.ATagTitle.field = type
+		1.NO.allWrap = <span class="a">|</span>
+		1.NO.allWrap.fieldRequired = doNotLinkIt
+		1.NO.wrapItemAndSub = <li>|</li>
+		1.IFSUB < .1.NO
+		1.IFSUB.wrapItemAndSub = <li class="submenu">|</li>
+		1.CUR < .1.NO
+		1.CUR.wrapItemAndSub = <li class="current">|</li>
+		1.CURIFSUB < .1.NO
+		1.CURIFSUB.wrapItemAndSub = <li class="current submenu">|</li>
+		1.ACT < .1.NO
+		1.ACT.wrapItemAndSub = <li class="active">|</li>
+		1.ACTIFSUB < .1.NO
+		1.ACTIFSUB.wrapItemAndSub = <li class="active submenu">|</li>
+		2 < .1
+		2.wrap = <ul>|</ul>
+		3 < .2
+		4 < .3
+		5 < .4
+		6 < .5
+		7 < .6
+	}
+}
