@@ -1,3 +1,5 @@
+config.disableWrapInBaseClass=1
+
 lib.navigation_viewfunction = USER
 lib.navigation_viewfunction {
 	includeLibs = typo3conf/ext/dlf/plugins/navigation/class.tx_dlf_navigation.php
