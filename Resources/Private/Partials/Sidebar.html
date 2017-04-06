@@ -7,7 +7,7 @@
             <li><a href="#tab-meta" class="tab-meta">Metadaten</a></li>
             <li><a href="#tab-fulltext" class="tab-fulltext">Volltext</a></li>
             <li><a href="#tab-search" class="tab-search">Suche</a></li>
-            <li><a href="#tab-donwloads" class="tab-downloads">Downloads</a></li>
+            <li><a href="#tab-downloads" class="tab-downloads">Downloads</a></li>
             <li><a href="#tab-imageadjust" class="tab-imageadjust">Bildbearbeitung</a></li>
         </ul>
     </div>
@@ -17,19 +17,19 @@
         <f:cObject typoscriptObjectPath="plugin.tx_dlf_toc" />
       </div>
 
-      <div class="metadata-wrapper tab-content-pane">
+      <div id="tab-meta" class="metadata-wrapper tab-content-pane">
         <f:cObject typoscriptObjectPath="plugin.tx_dlf_metadata" />
       </div>
 
-      <div class="fulltext-wrapper tab-content-pane">
+      <div id="tab-fulltext" class="fulltext-wrapper tab-content-pane">
         <f:cObject typoscriptObjectPath="lib.tools.toolsFulltext" />
       </div>
 
-      <div class="search-wrapper tab-content-pane">
+      <div id="tab-search" class="search-wrapper tab-content-pane">
         <f:cObject typoscriptObjectPath="plugin.tx_ddbfrontendviewer_sru" />
       </div>
 
-      <div class="download-wrapper tab-content-pane">
+      <div id="tab-downloads" class="download-wrapper tab-content-pane">
         <f:if condition="<ddb:downloadLinks type='work' /> !=''">
           <li>
             <f:link.external uri="<ddb:downloadLinks type='work' />" class="download-document" title="<f:translate key='download.work' extensionName='ddb_frontend_viewer' />"><f:translate key="download.work"  extensionName="dfgviewer" /></f:link.external>
@@ -56,7 +56,7 @@
         </f:if>
       </div>
 
-      <div class="imageadjust-wrapper tab-content-pane">
+      <div id="tab-imageadjust" class="imageadjust-wrapper tab-content-pane">
         <f:cObject typoscriptObjectPath="lib.tools.toolsImagemanipulation" />
       </div>
     </div>
