@@ -10,8 +10,9 @@ page {
 	}
 
 	includeJSlibs {
-    # we include jquery by t3jquery on page.9 below
-    plugins = EXT:ddb_frontend_viewer/Resources/Public/Js/plugins.js
-  }
+		# we include jquery by t3jquery on page.9 below
+		plugins = EXT:ddb_frontend_viewer/Resources/Public/Js/plugins.js
+		uiscripts = EXT:ddb_frontend_viewer/Resources/Public/Js/allScripts.js
+	}
 
 }
