@@ -20,7 +20,7 @@ $("#tx_ddbfrontendviewer-sru-form").submit(function( event ) {
 
 	// Send the data using post
 	$.post(
-		"/",
+		window.location.pathname,
 		{
 			eID: "tx_ddbfrontendviewer_sru_eid",
 			q: $( "input[name='tx_dlf[query]']" ).val(),
