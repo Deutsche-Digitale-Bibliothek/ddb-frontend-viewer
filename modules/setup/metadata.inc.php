@@ -12,32 +12,6 @@
 // Define metadata elements.
 // @see http://dfg-viewer.de/en/profile-of-the-metadata/
 $metadata = array (
-	'settlement' => array (
-		'hidden' => 0,
-		'format' => array (
-			array (
-				'encoded' => 2,
-				'xpath' => './teihdr:fileDesc/teihdr:sourceDesc/teihdr:msDesc/teihdr:msIdentifier/teihdr:settlement',
-				'xpath_sorting' => '',
-			),
-		),
-		'default_value' => '',
-		'wrap' => "key.wrap = <span style=\"display:none;\">|: </span>\nvalue.required = 1\nall.noTrimWrap = |<h2>|,</h2> |",
-		'is_listed' => 1,
-	),
-	'repository' => array (
-		'hidden' => 0,
-		'format' => array (
-			array (
-				'encoded' => 2,
-				'xpath' => './teihdr:fileDesc/teihdr:sourceDesc/teihdr:msDesc/teihdr:msIdentifier/teihdr:repository',
-				'xpath_sorting' => '',
-			),
-		),
-		'default_value' => '',
-		'wrap' => "key.wrap = <span style=\"display:none;\">|: </span>\nvalue.required = 1\nall.noTrimWrap = |<h2>|,</h2> |",
-		'is_listed' => 1,
-	),
 	'type' => array (
 		'hidden' => 1,
 		'format' => array (),
@@ -49,39 +23,13 @@ $metadata = array (
 		'hidden' => 0,
 		'format' => array (
 			array (
-				'encoded' => 2,
-				'xpath' => './teihdr:fileDesc/teihdr:sourceDesc/teihdr:msDesc/teihdr:head/teihdr:title/teihdr:persName[@role="author"]',
-				'xpath_sorting' => '',
-			),
-		),
-		'default_value' => '',
-		'wrap' => "key.wrap = <span style=\"display:none;\">|: </span>\nvalue.ifEmpty.field = parentAuthor\nvalue.required = 1\nvalue.noTrimWrap = ||; |\nall.substring = 0,-2\nall.noTrimWrap = |<span class=\"author\">|:</span> |",
-		'is_listed' => 1,
-	),
-	'parentAuthor' => array (
-		'hidden' => 1,
-		'format' => array (
-			array (
 				'encoded' => 1,
 				'xpath' => './mods:relatedItem[@type="host"]/mods:name[./mods:role/mods:roleTerm[@authority="marcrelator"][@type="code"]="aut"]/mods:displayForm',
 				'xpath_sorting' => '',
 			),
 		),
 		'default_value' => '',
-		'wrap' => '',
-		'is_listed' => 0,
-	),
-	'shelfmark' => array (
-		'hidden' => 0,
-		'format' => array (
-			array (
-				'encoded' => 2,
-				'xpath' => './teihdr:fileDesc/teihdr:sourceDesc/teihdr:msDesc/teihdr:msIdentifier/teihdr:idno',
-				'xpath_sorting' => '',
-			),
-		),
-		'default_value' => '',
-		'wrap' => "key.wrap = <span style=\"display:none;\">|: </span>\nvalue.required = 1\nall.noTrimWrap = |<h2>|,</h2> |",
+		'wrap' => "key.wrap = <span style=\"display:none;\">|: </span>\nvalue.ifEmpty.field = parentAuthor\nvalue.required = 1\nvalue.noTrimWrap = ||; |\nall.substring = 0,-2\nall.noTrimWrap = |<span class=\"author\">|:</span> |",
 		'is_listed' => 1,
 	),
 	'title' => array (
@@ -90,11 +38,6 @@ $metadata = array (
 			array (
 				'encoded' => 1,
 				'xpath' => 'concat(./mods:titleInfo[not(@type="alternative")]/mods:nonSort," ",./mods:titleInfo[not(@type="alternative")]/mods:title," ",./mods:titleInfo[not(@type="alternative")]/mods:partNumber," ",./mods:titleInfo[not(@type="alternative")]/mods:partName)',
-				'xpath_sorting' => '',
-			),
-			array (
-				'encoded' => 2,
-				'xpath' => './teihdr:fileDesc/teihdr:sourceDesc/teihdr:msDesc/teihdr:head/teihdr:title',
 				'xpath_sorting' => '',
 			),
 		),
@@ -141,58 +84,6 @@ $metadata = array (
 		'wrap' => "key.noTrimWrap = || |\nvalue.if.value.field = type\nvalue.if.equals = issue\nvalue.required = 1\nall.noTrimWrap = |<span class=\"volume\">|</span> |",
 		'is_listed' => 1,
 	),
-	'material' => array (
-		'hidden' => 0,
-		'format' => array (
-			array (
-				'encoded' => 2,
-				'xpath' => './teihdr:fileDesc/teihdr:sourceDesc/teihdr:msDesc/teihdr:physDesc/teihdr:objectDesc/teihdr:supportDesc/teihdr:support',
-				'xpath_sorting' => '',
-			),
-		),
-		'default_value' => '',
-		'wrap' => "key.wrap = <span style=\"display:none;\">|: </span>\nvalue.required = 1\nall.noTrimWrap = |<span class=\"date\">|,</span> |",
-		'is_listed' => 1,
-	),
-	'leavesCount' => array (
-		'hidden' => 0,
-		'format' => array (
-			array (
-				'encoded' => 2,
-				'xpath' => './teihdr:fileDesc/teihdr:sourceDesc/teihdr:msDesc/teihdr:physDesc/teihdr:objectDesc/teihdr:supportDesc/teihdr:extent/teihdr:measure[@type="leavesCount"]',
-				'xpath_sorting' => '',
-			),
-		),
-		'default_value' => '',
-		'wrap' => "key.wrap = <span style=\"display:none;\">|: </span>\nvalue.required = 1\nall.noTrimWrap = |<span class=\"date\">|,</span> |",
-		'is_listed' => 1,
-	),
-	'format' => array (
-		'hidden' => 0,
-		'format' => array (
-			array (
-				'encoded' => 2,
-				'xpath' => 'concat(./teihdr:fileDesc/teihdr:sourceDesc/teihdr:msDesc/teihdr:physDesc/teihdr:objectDesc/teihdr:supportDesc/teihdr:extent/teihdr:dimensions[@type="leaves"]/teihdr:width,"x",./teihdr:fileDesc/teihdr:sourceDesc/teihdr:msDesc/teihdr:physDesc/teihdr:objectDesc/teihdr:supportDesc/teihdr:extent/teihdr:dimensions[@type="leaves"]/teihdr:height,./teihdr:fileDesc/teihdr:sourceDesc/teihdr:msDesc/teihdr:physDesc/teihdr:objectDesc/teihdr:supportDesc/teihdr:extent/teihdr:dimensions[@type="leaves"]/@unit)',
-				'xpath_sorting' => '',
-			),
-		),
-		'default_value' => '',
-		'wrap' => "key.wrap = <span style=\"display:none;\">|: </span>\nvalue.if.value.field = format\nvalue.if.equals = x\nvalue.if.negate = 1\nvalue.required = 1\nall.noTrimWrap = |<span class=\"date\">|,</span> |",
-		'is_listed' => 1,
-	),
-	'place' => array (
-		'hidden' => 0,
-		'format' => array (
-			array (
-				'encoded' => 2,
-				'xpath' => './teihdr:fileDesc/teihdr:sourceDesc/teihdr:msDesc/teihdr:history/teihdr:origin/teihdr:origPlace',
-				'xpath_sorting' => '',
-			),
-		),
-		'default_value' => '',
-		'wrap' => "key.wrap = <span style=\"display:none;\">|: </span>\nvalue.ifEmpty.field = parentPlace\nvalue.required = 1\nvalue.noTrimWrap = ||, |\nall.substring = 0,-2\nall.noTrimWrap = |<span class=\"date\">|</span> |",
-		'is_listed' => 1,
-	),
 	'parentPlace' => array (
 		'hidden' => 1,
 		'format' => array (
@@ -213,11 +104,6 @@ $metadata = array (
 				'encoded' => 1,
 				'xpath' => 'concat(./mods:originInfo[@eventType="production" or @eventType="publication" or not(./mods:edition="[Electronic ed.]")]/mods:dateIssued[@point="start"]," - ",./mods:originInfo[@eventType="production" or @eventType="publication" or not(./mods:edition="[Electronic ed.]")]/mods:dateIssued[@point="end"])',
 				'xpath_sorting' => '',
-			),
-			array (
-				'encoded' => 2,
-				'xpath' => './teihdr:fileDesc/teihdr:sourceDesc/teihdr:msDesc/teihdr:history/teihdr:origin/teihdr:origDate',
-				'xpath_sorting' => './teihdr:fileDesc/teihdr:sourceDesc/teihdr:msDesc/teihdr:history/teihdr:origin/teihdr:origDate/@when',
 			),
 		),
 		'default_value' => '',
