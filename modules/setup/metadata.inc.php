@@ -29,7 +29,7 @@ $metadata = array (
 			),
 		),
 		'default_value' => '',
-		'wrap' => "key.wrap = <span style=\"display:none;\">|: </span>\nvalue.ifEmpty.field = parentAuthor\nvalue.required = 1\nvalue.noTrimWrap = ||; |\nall.substring = 0,-2\nall.noTrimWrap = |<span class=\"author\">|:</span> |",
+		'wrap' => "key.wrap = <dt>|</dt>\nvalue.required = 1\nvalue.wrap = <dd>|</dd>",
 		'is_listed' => 1,
 	),
 	'title' => array (
@@ -107,7 +107,7 @@ $metadata = array (
 			),
 		),
 		'default_value' => '',
-		'wrap' => "key.wrap = <span style=\"display:none;\">|: </span>\nvalue.replacement.1.search = /^-$/\nvalue.replacement.1.replace.field = year // parentYear\nvalue.replacement.1.useRegExp = 1\nvalue.replacement.2.search = /([0-9]{4})-([0-1]?[0-9])-([0-3]?[0-9])/\nvalue.replacement.2.replace = $3.$2.$1\nvalue.replacement.2.useRegExp = 1\nvalue.required = 1\nvalue.noTrimWrap = ||, |\nall.substring = 0,-2\nall.noTrimWrap = |<span class=\"date\">|</span> |",
+		'wrap' => "key.wrap = <dt>|</dt>\nvalue.replacement.1.search = /^-$/\nvalue.replacement.1.replace.field = year // parentYear\nvalue.replacement.1.useRegExp = 1\nvalue.replacement.2.search = /([0-9]{4})-([0-1]?[0-9])-([0-3]?[0-9])/\nvalue.replacement.2.replace = $3.$2.$1\nvalue.replacement.2.useRegExp = 1\nvalue.required = 1\nvalue.noTrimWrap = ||, |\nall.substring = 0,-2\nall.noTrimWrap = |<dd>|</dd> |",
 		'is_listed' => 1,
 	),
 	'year' => array (
@@ -140,7 +140,7 @@ $metadata = array (
 			),
 		),
 		'default_value' => '',
-		'wrap' => "key.wrap = |&nbsp;\nvalue.setContentToCurrent = 1\nvalue.required = 1\nvalue.typolink.parameter.current = 1\nvalue.typolink.parameter.rawUrlEncode = 1\nvalue.typolink.parameter.prepend = TEXT\nvalue.typolink.parameter.prepend.value = http://gateway-bayern.bib-bvb.de/aleph-cgi/bvb_suche?sid=VD16&find_code_1=WVD&find_request_1=\nall.noTrimWrap = |<span class=\"catid\">[|]</span> |",
+		'wrap' => "key.wrap = <dt>|</dt>\nvalue.setContentToCurrent = 1\nvalue.required = 1\nvalue.typolink.parameter.current = 1\nvalue.typolink.parameter.rawUrlEncode = 1\nvalue.typolink.parameter.prepend = TEXT\nvalue.typolink.parameter.prepend.value = http://gateway-bayern.bib-bvb.de/aleph-cgi/bvb_suche?sid=VD16&find_code_1=WVD&find_request_1=\nall.noTrimWrap = |<dd>[|]</dd>|",
 		'is_listed' => 1,
 	),
 	'vd17' => array (
@@ -153,7 +153,7 @@ $metadata = array (
 			),
 		),
 		'default_value' => '',
-		'wrap' => "key.wrap = |&nbsp;\nvalue.setContentToCurrent = 1\nvalue.required = 1\nvalue.typolink.parameter.current = 1\nvalue.typolink.parameter.rawUrlEncode = 1\nvalue.typolink.parameter.prepend = TEXT\nvalue.typolink.parameter.prepend.value = http://gso.gbv.de/xslt/DB=1.28/SET=1/TTL=1/CMD?ACT=SRCHA&IKT=8002&TRM=\nall.noTrimWrap = |<span class=\"catid\">[|]</span> |",
+		'wrap' => "key.wrap = <dt>|</dt>\nvalue.setContentToCurrent = 1\nvalue.required = 1\nvalue.typolink.parameter.current = 1\nvalue.typolink.parameter.rawUrlEncode = 1\nvalue.typolink.parameter.prepend = TEXT\nvalue.typolink.parameter.prepend.value = http://gso.gbv.de/xslt/DB=1.28/SET=1/TTL=1/CMD?ACT=SRCHA&IKT=8002&TRM=\nall.noTrimWrap = |<dd>[|]</dd>|",
 		'is_listed' => 1,
 	)
 );
