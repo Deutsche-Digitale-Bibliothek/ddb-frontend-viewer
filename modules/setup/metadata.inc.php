@@ -13,10 +13,10 @@
 // @see http://dfg-viewer.de/en/profile-of-the-metadata/
 $metadata = array (
 	'type' => array (
-		'hidden' => 1,
+		'hidden' => 0,
 		'format' => array (),
 		'default_value' => '',
-		'wrap' => '',
+		'wrap' => "key.wrap = <dt class=\"tx-dlf-type\">|</dt>\nvalue.required = 1\nvalue.wrap = <dd class=\"tx-dlf-type\">|</dd>",
 		'is_listed' => 1,
 	),
 	'author' => array (
@@ -42,7 +42,7 @@ $metadata = array (
 			),
 		),
 		'default_value' => '',
-		'wrap' => "key.wrap = <span style=\"display:none;\">|: </span>\nvalue.ifEmpty.field = parentTitle\nvalue.ifEmpty.wrap = [|]\nvalue.required = 1\nall.noTrimWrap = |<h2>|</h2> |",
+		'wrap' => "key.wrap = <dt class=\"tx-dlf-title\">|</dt>\nvalue.ifEmpty.field = parentTitle\nvalue.ifEmpty.wrap = [|]\nvalue.required = 1\nvalue.wrap = <dd class=\"tx-dlf-title\">|</dd>",
 		'is_listed' => 1,
 	),
 	'parentTitle' => array (
