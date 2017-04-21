@@ -15,3 +15,6 @@ if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 
 // Register eID handlers.
 $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['tx_ddbfrontendviewer_sru_eid'] = 'EXT:'.$_EXTKEY.'/plugins/sru/class.tx_ddbfrontendviewer_sru_eid.php';
+
+// Register realurl autoconfiguration
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/realurl/class.tx_realurl_autoconfgen.php']['postProcessConfiguration']['ddb_frontend_viewer'] = Slub\DdbFrontendViewer\Helpers\RealUrlConfiguration::class . '->addKitodoConfig';
