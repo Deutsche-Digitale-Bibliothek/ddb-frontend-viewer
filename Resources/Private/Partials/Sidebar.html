@@ -3,7 +3,7 @@
   <div class="sidebar">
     <div class="tab-nav">
         <ul>
-            <li><a href="#tab-toc" class="tab-toc" title="<f:translate key='tab.toc' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.toc' extensionName='ddb_frontend_viewer' /></a></li>
+            <li><a href="#tab-toc" class="tab-toc active" title="<f:translate key='tab.toc' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.toc' extensionName='ddb_frontend_viewer' /></a></li>
             <li><a href="#tab-meta" class="tab-meta" title="<f:translate key='tab.meta' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.meta' extensionName='ddb_frontend_viewer' /></a></li>
             <li><a href="#tab-fulltext" class="tab-fulltext" title="<f:translate key='tab.fulltext' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.fulltext' extensionName='ddb_frontend_viewer' /></a></li>
             <li><a href="#tab-search" class="tab-search" title="<f:translate key='tab.search' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.search' extensionName='ddb_frontend_viewer' /></a></li>
@@ -14,22 +14,27 @@
 
     <div class="tab-content">
       <div id="tab-toc" class="toc-wrapper tab-content-pane active">
+        <h3><f:translate key='tab.toc' extensionName='ddb_frontend_viewer' /></h3>
         <f:cObject typoscriptObjectPath="plugin.tx_dlf_toc" />
       </div>
 
       <div id="tab-meta" class="metadata-wrapper tab-content-pane">
+        <h3><f:translate key='tab.meta' extensionName='ddb_frontend_viewer' /></h3>
         <f:cObject typoscriptObjectPath="plugin.tx_dlf_metadata" />
       </div>
 
       <div id="tab-fulltext" class="fulltext-wrapper tab-content-pane">
+        <h3><f:translate key='tab.fulltext' extensionName='ddb_frontend_viewer' /></h3>
         <f:cObject typoscriptObjectPath="lib.tools.toolsFulltext" />
       </div>
 
       <div id="tab-search" class="search-wrapper tab-content-pane">
+        <h3><f:translate key='tab.search' extensionName='ddb_frontend_viewer' /></h3>
         <f:cObject typoscriptObjectPath="plugin.tx_ddbfrontendviewer_sru" />
       </div>
 
       <div id="tab-downloads" class="download-wrapper tab-content-pane">
+        <h3><f:translate key='tab.downloads' extensionName='ddb_frontend_viewer' /></h3>
         <f:if condition="<ddb:downloadLinks type='work' /> !=''">
           <li>
             <f:link.external uri="<ddb:downloadLinks type='work' />" class="download-document" title="<f:translate key='download.work' extensionName='ddb_frontend_viewer' />"><f:translate key="download.work"  extensionName="dfgviewer" /></f:link.external>
@@ -57,6 +62,7 @@
       </div>
 
       <div id="tab-imageadjust" class="imageadjust-wrapper tab-content-pane">
+        <h3><f:translate key='tab.imageadjust' extensionName='ddb_frontend_viewer' /></h3>
         <f:cObject typoscriptObjectPath="lib.tools.toolsImagemanipulation" />
       </div>
     </div>
