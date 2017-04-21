@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-04-21T07:53:22Z">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-04-21T07:55:18Z">
 		<header>
 			<generator>LFEditor</generator>
 		</header>
@@ -32,6 +32,10 @@
 		<trans-unit id="download.work" approved="yes">
 			<source>Download whole work</source>
 			<target>Ganzes Werk herunterladen</target>
+		</trans-unit>
+		<trans-unit id="metadata.provider" approved="yes">
+			<source>Provider</source>
+			<target>Datengeber</target>
 		</trans-unit>
 		<trans-unit id="tab.downloads" approved="yes">
 			<source>Downloads</source>

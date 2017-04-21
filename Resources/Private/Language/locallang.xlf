@@ -44,6 +44,9 @@
 		<trans-unit id="tab.downloads">
 			<source>Downloads</source>
 		</trans-unit>
+		<trans-unit id="metadata.provider">
+			<source>Provider</source>
+		</trans-unit>
 		</body>
 	</file>
 </xliff>
