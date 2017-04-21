@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-03-27T13:16:48Z">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-04-21T07:53:22Z">
 		<header>
 			<generator>LFEditor</generator>
 		</header>
@@ -32,6 +32,30 @@
 		<trans-unit id="download.work" approved="yes">
 			<source>Download whole work</source>
 			<target>Ganzes Werk herunterladen</target>
+		</trans-unit>
+		<trans-unit id="tab.downloads" approved="yes">
+			<source>Downloads</source>
+			<target>Downloads</target>
+		</trans-unit>
+		<trans-unit id="tab.fulltext" approved="yes">
+			<source>Fulltext</source>
+			<target>Volltext</target>
+		</trans-unit>
+		<trans-unit id="tab.imageadjust" approved="yes">
+			<source>Image Adjustments</source>
+			<target>Bildbearbeitung</target>
+		</trans-unit>
+		<trans-unit id="tab.meta" approved="yes">
+			<source>Metadata</source>
+			<target>Metadaten</target>
+		</trans-unit>
+		<trans-unit id="tab.search" approved="yes">
+			<source>Search in Document</source>
+			<target>Suche im Dokument</target>
+		</trans-unit>
+		<trans-unit id="tab.toc" approved="yes">
+			<source>Table of Contents</source>
+			<target>Inhaltsverzeichnis</target>
 		</trans-unit>
 		</body>
 	</file>
