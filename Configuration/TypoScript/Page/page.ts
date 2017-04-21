@@ -55,7 +55,7 @@ page {
 	meta {
 				keywords.field = keywords
 				description.field = description
-        author   = DDB
+        author   = Deutsche Digitale Bibliothek
         robots	 = all
     }
 }

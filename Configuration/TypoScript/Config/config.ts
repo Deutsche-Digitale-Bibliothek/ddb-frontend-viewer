@@ -22,4 +22,8 @@ config {
 
 	# If set, the admin panel appears in the bottom of pages.
 	admPanel = 0
+
+  pageTitleFirst = 1
+  pageTitleSeparator = -
+  pageTitleSeparator.noTrimWrap = | | |
 }

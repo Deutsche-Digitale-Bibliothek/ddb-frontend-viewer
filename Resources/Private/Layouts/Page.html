@@ -1,5 +1,7 @@
 {namespace t3jquery=T3Ext\T3jquery\ViewHelpers}
+{namespace ddb=Slub\DdbFrontendViewer\ViewHelpers}
 <t3jquery:AddJQuery />
+<ddb:titleTag title="<ddb:xpath xpath='//mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type=\"alternative\")]/mods:nonSort | //mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type=\"alternative\")]/mods:title | //mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type=\"alternative\")]/mods:partNumber | //mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type=\"alternative\")]/mods:partName' />" />
 <div class="main-wrapper">
 	<f:render section="Header" partial="Header" arguments="{_all}" />
 	<f:render section="Sidebar" partial="Sidebar" arguments="{_all}" />
