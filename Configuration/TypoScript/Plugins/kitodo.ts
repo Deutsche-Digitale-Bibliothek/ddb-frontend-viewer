@@ -1,5 +1,13 @@
 config.disableWrapInBaseClass=1
 
+# map GET parameter tx_ddbfrontendviewer[id] --> tx_dlf[id]
+[globalString = GP:tx_ddbfrontendviewer|id != /^$/]
+plugin.tx_dlf._DEFAULT_PI_VARS.id {
+	stdWrap.data = GP:tx_ddbfrontendviewer|id
+	stdWrap.wrap = https://api.deutsche-digitale-bibliothek.de/items/|/source
+}
+[global]
+
 lib.navigation_viewfunction = USER
 lib.navigation_viewfunction {
 	includeLibs = typo3conf/ext/dlf/plugins/navigation/class.tx_dlf_navigation.php

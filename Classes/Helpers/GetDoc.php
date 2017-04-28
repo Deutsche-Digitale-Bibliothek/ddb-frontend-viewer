@@ -138,7 +138,12 @@ class GetDoc
      */
     protected function loadDocument()
     {
-        $piVars = GeneralUtility::_GP('tx_dlf');
+        $piVarsDDB = GeneralUtility::_GPmerged('tx_ddbfrontendviewer');
+        $piVars = GeneralUtility::_GPmerged('tx_dlf');
+
+        if (!empty($piVarsDDB['id'])) {
+          $piVars['id'] = 'https://api.deutsche-digitale-bibliothek.de/items/' . $piVarsDDB['id'] . '/source';
+        }
 
         // Check for required variable.
         if (!empty($piVars['id'])) {
