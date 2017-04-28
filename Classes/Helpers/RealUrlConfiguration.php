@@ -35,6 +35,12 @@ class RealUrlConfiguration
             'page' => [ 'GETvar' => 'tx_dlf[page]' ],
             'double' => [ 'GETvar' => 'tx_dlf[double]' ],
             'pagegrid' => [ 'GETvar' => 'tx_dlf[pagegrid]' ]
+          ],
+          'ddb' => [
+            'id' => [ 'GETvar' => 'tx_ddbfrontendviewer[id]' ],
+            'page' => [ 'GETvar' => 'tx_dlf[page]' ],
+            'double' => [ 'GETvar' => 'tx_dlf[double]' ],
+            'pagegrid' => [ 'GETvar' => 'tx_dlf[pagegrid]' ]
           ]
         ]
       ]
