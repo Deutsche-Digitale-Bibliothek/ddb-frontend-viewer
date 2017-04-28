@@ -14,5 +14,12 @@ page {
 		plugins = EXT:ddb_frontend_viewer/Resources/Public/Js/plugins.js
 		uiscripts = EXT:ddb_frontend_viewer/Resources/Public/Js/allScripts.js
 	}
+	meta {
+		keywords.field = keywords
+		description.field = description
+		author.field = author
+		robots = all
+		viewport = width=device-width, initial-scale=1
+	}
 
 }
