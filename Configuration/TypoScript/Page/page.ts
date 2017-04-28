@@ -56,7 +56,7 @@ page {
 				keywords.field = keywords
 				description.field = description
         author   = Deutsche Digitale Bibliothek
-        robots	 = all
+        robots = noindex,nofollow
     }
 }
 
