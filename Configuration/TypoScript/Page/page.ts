@@ -44,7 +44,7 @@ page {
       gp-double.data = GP:tx_dlf|double
 
       gp-id = TEXT
-      gp-id.data = GP:tx_dlf|id
+      gp-id.data = GP:tx_dlf|id // GP:tx_ddbfrontendviewer|id
 
       gp-pagegrid = TEXT
       gp-pagegrid.data = GP:tx_dlf|pagegrid
