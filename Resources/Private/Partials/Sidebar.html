@@ -35,30 +35,32 @@
 
       <div id="tab-downloads" class="download-wrapper tab-content-pane">
         <h3><f:translate key='tab.downloads' extensionName='ddb_frontend_viewer' /></h3>
-        <f:if condition="<ddb:downloadLinks type='work' /> !=''">
-          <li>
-            <f:link.external uri="<ddb:downloadLinks type='work' />" class="download-document" title="<f:translate key='download.work' extensionName='ddb_frontend_viewer' />"><f:translate key="download.work"  extensionName="dfgviewer" /></f:link.external>
-          </li>
-        </f:if>
-        <f:if condition="{gp-double} == 1">
-          <f:then>
+        <ul>
+          <f:if condition="<ddb:downloadLinks type='work' /> !=''">
             <li>
-              <f:link.external uri="<ddb:downloadLinks type='page-left' pagenumber='{gp-page}' />" class="download-page" title="<f:translate key='download.leftPage' extensionName='ddb_frontend_viewer' />"><f:translate key="download.leftPage"  extensionName="dfgviewer" /></f:link.external>
+              <f:link.external uri="<ddb:downloadLinks type='work' />" class="download-document" title="<f:translate key='download.work' extensionName='ddb_frontend_viewer' />"><f:translate key="download.work"  extensionName="ddb_frontend_viewer" /></f:link.external>
             </li>
-            <f:if condition="<ddb:downloadLinks type='page-right' pagenumber='{gp-page}' /> !=''">
+          </f:if>
+          <f:if condition="{gp-double} == 1">
+            <f:then>
               <li>
-                <f:link.external uri="<ddb:downloadLinks type='page-right' pagenumber='{gp-page}' />" class="download-page" title="<f:translate key='download.rightPage' extensionName='ddb_frontend_viewer' />"><f:translate key="download.rightPage"  extensionName="dfgviewer" /></f:link.external>
+                <f:link.external uri="<ddb:downloadLinks type='page-left' pagenumber='{gp-page}' />" class="download-page" title="<f:translate key='download.leftPage' extensionName='ddb_frontend_viewer' />"><f:translate key="download.leftPage"  extensionName="ddb_frontend_viewer" /></f:link.external>
               </li>
-            </f:if>
-          </f:then>
-          <f:else>
-            <f:if condition="<ddb:downloadLinks type='page-left' pagenumber='{gp-page}' /> !=''">
-              <li>
-                <f:link.external uri="<ddb:downloadLinks type='page-left' pagenumber='{gp-page}' />" class="download-page" title="<f:translate key='download.singlePage' extensionName='ddb_frontend_viewer' />"><f:translate key="download.singlePage"  extensionName="dfgviewer" /></f:link.external>
-              </li>
-            </f:if>
-          </f:else>
-        </f:if>
+              <f:if condition="<ddb:downloadLinks type='page-right' pagenumber='{gp-page}' /> !=''">
+                <li>
+                  <f:link.external uri="<ddb:downloadLinks type='page-right' pagenumber='{gp-page}' />" class="download-page" title="<f:translate key='download.rightPage' extensionName='ddb_frontend_viewer' />"><f:translate key="download.rightPage"  extensionName="ddb_frontend_viewer" /></f:link.external>
+                </li>
+              </f:if>
+            </f:then>
+            <f:else>
+              <f:if condition="<ddb:downloadLinks type='page-left' pagenumber='{gp-page}' /> !=''">
+                <li>
+                  <f:link.external uri="<ddb:downloadLinks type='page-left' pagenumber='{gp-page}' />" class="download-page" title="<f:translate key='download.singlePage' extensionName='ddb_frontend_viewer' />"><f:translate key="download.singlePage"  extensionName="ddb_frontend_viewer" /></f:link.external>
+                </li>
+              </f:if>
+            </f:else>
+          </f:if>
+        </ul>
       </div>
 
       <div id="tab-imageadjust" class="imageadjust-wrapper tab-content-pane">
