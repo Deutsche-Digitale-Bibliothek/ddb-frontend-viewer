@@ -6,7 +6,14 @@
             <li><a href="#tab-toc" class="tab-toc active" title="<f:translate key='tab.toc' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.toc' extensionName='ddb_frontend_viewer' /></a></li>
             <li><a href="#tab-meta" class="tab-meta" title="<f:translate key='tab.meta' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.meta' extensionName='ddb_frontend_viewer' /></a></li>
             <li><a href="#tab-fulltext" class="tab-fulltext" title="<f:translate key='tab.fulltext' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.fulltext' extensionName='ddb_frontend_viewer' /></a></li>
-            <li><a href="#tab-search" class="tab-search" title="<f:translate key='tab.search' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.search' extensionName='ddb_frontend_viewer' /></a></li>
+            <f:if condition="<ddb:xpath xpath='//mets:amdSec/mets:digiprovMD/mets:mdWrap[@OTHERMDTYPE=\"DVLINKS\"]/mets:xmlData/dv:links/dv:sru' />">
+              <f:then>
+                <li><a href="#tab-search" class="tab-search" title="<f:translate key='tab.search' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.search' extensionName='ddb_frontend_viewer' /></a></li>
+              </f:then>
+              <f:else>
+                <li><a href="#tab-search" class="tab-search disabled" title="<f:translate key='tab.search' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.search' extensionName='ddb_frontend_viewer' /></a></li>
+              </f:else>
+            </f:if>
             <li><a href="#tab-downloads" class="tab-downloads" title="<f:translate key='tab.downloads' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.downloads' extensionName='ddb_frontend_viewer' /></a></li>
             <li><a href="#tab-imageadjust" class="tab-imageadjust" title="<f:translate key='tab.imageadjust' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.imageadjust' extensionName='ddb_frontend_viewer' /></a></li>
         </ul>
