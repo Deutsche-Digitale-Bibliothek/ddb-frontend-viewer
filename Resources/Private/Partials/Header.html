@@ -3,7 +3,7 @@
   <div class="header">
     <div class="provider">
       <f:if condition="<ddb:xpath xpath='//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\'DVRIGHTS\']/mets:xmlData/dv:rights/dv:ownerLogo' />">
-        <f:link.external uri="<ddb:xpath xpath='//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\"DVRIGHTS\"]/mets:xmlData/dv:rights/dv:ownerSiteURL' />" title="<ddb:xpath xpath='//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\"DVRIGHTS\"]/mets:xmlData/dv:rights/dv:owner' />">
+        <f:link.external uri="<ddb:xpath xpath='//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\"DVRIGHTS\"]/mets:xmlData/dv:rights/dv:ownerSiteURL' />" title="<ddb:xpath xpath='//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\"DVRIGHTS\"]/mets:xmlData/dv:rights/dv:owner' />" target="_blank">
         <img src="<ddb:xpath xpath='//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\'DVRIGHTS\']/mets:xmlData/dv:rights/dv:ownerLogo' />"
           title="<ddb:xpath xpath='//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\'DVRIGHTS\']/mets:xmlData/dv:rights/dv:owner' />"
           alt="Abbildung eines Logo"
@@ -18,7 +18,7 @@
         </h1>
         <div class="provider-link">
           <span class="label"><f:translate key='metadata.provider' extensionName='ddb_frontend_viewer' />:</span>
-          <f:link.external uri="<ddb:xpath xpath='//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\"DVRIGHTS\"]/mets:xmlData/dv:rights/dv:ownerSiteURL' />" title="Seite des Datengebers besuchen">
+          <f:link.external uri="<ddb:xpath xpath='//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\"DVRIGHTS\"]/mets:xmlData/dv:rights/dv:ownerSiteURL' />" title="Seite des Datengebers besuchen" target="_blank">
             <ddb:xpath xpath='//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\'DVRIGHTS\']/mets:xmlData/dv:rights/dv:owner' />
           </f:link.external>
         </div>
