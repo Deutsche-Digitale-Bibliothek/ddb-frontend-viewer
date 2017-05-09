@@ -3,7 +3,7 @@
 # -------------------------------
 page {
   typeNum = 0
-  bodyTag = <body class="ddb-viewer">
+  bodyTag = <body class="ddb-viewer hidden">
 
   adminPanelStyles = 0
   shortcutIcon = EXT:ddb_frontend_viewer/Resources/Public/Images/favicon.png
