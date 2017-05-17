@@ -42,7 +42,14 @@ class XpathViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelpe
 
         $result = $doc->getXpath($xpath);
 
-        // return first found result
-        return htmlspecialchars(trim((string) $result[0]));
+        if (is_array($result)) {
+          foreach ($result as $row) {
+            $output .= trim($row) . ' ';
+          }
+        } else {
+          $output = trim($result);
+        }
+
+        return htmlspecialchars($output);
     }
 }
