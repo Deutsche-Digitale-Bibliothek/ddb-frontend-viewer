@@ -50,9 +50,11 @@
           </f:if>
           <f:if condition="{gp-double} == 1">
             <f:then>
-              <li>
-                <f:link.external uri="<ddb:downloadLinks type='page-left' pagenumber='{gp-page}' />" class="download-page" title="<f:translate key='download.leftPage' extensionName='ddb_frontend_viewer' />"><f:translate key="download.leftPage"  extensionName="ddb_frontend_viewer" /></f:link.external>
-              </li>
+              <f:if condition="<ddb:downloadLinks type='page-left' pagenumber='{gp-page}' /> !=''">
+                <li>
+                  <f:link.external uri="<ddb:downloadLinks type='page-left' pagenumber='{gp-page}' />" class="download-page" title="<f:translate key='download.leftPage' extensionName='ddb_frontend_viewer' />"><f:translate key="download.leftPage"  extensionName="ddb_frontend_viewer" /></f:link.external>
+                </li>
+              </f:if>
               <f:if condition="<ddb:downloadLinks type='page-right' pagenumber='{gp-page}' /> !=''">
                 <li>
                   <f:link.external uri="<ddb:downloadLinks type='page-right' pagenumber='{gp-page}' />" class="download-page" title="<f:translate key='download.rightPage' extensionName='ddb_frontend_viewer' />"><f:translate key="download.rightPage"  extensionName="ddb_frontend_viewer" /></f:link.external>
