@@ -131,6 +131,7 @@
 			<label index="vd17">VD17</label>
 			<label index="publisher">Publisher</label>
 			<label index="series">Series</label>
+			<label index="urn">URN</label>
 		</languageKey>
 		<languageKey index="de" type="array">
 			<label index="flash.wrongPageType">Seite ist kein SysOrdner!</label>
@@ -258,6 +259,7 @@
 			<label index="vd17">VD17</label>
 			<label index="publisher">Verleger</label>
 			<label index="series">Reihe</label>
+			<label index="urn">URN</label>
 		</languageKey>
 	</data>
 </T3locallang>
