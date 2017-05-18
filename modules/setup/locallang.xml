@@ -136,6 +136,8 @@
 			<label index="owner">Owner</label>
 			<label index="licenser">License Owner</label>
 			<label index="copyright">Copyright Owner</label>
+			<label index="creator">Creator</label>
+			<label index="format">Physical Form</label>
 		</languageKey>
 		<languageKey index="de" type="array">
 			<label index="flash.wrongPageType">Seite ist kein SysOrdner!</label>
@@ -268,6 +270,8 @@
 			<label index="owner">Besitzer</label>
 			<label index="licenser">Lizenzinhaber</label>
 			<label index="copyright">Copyrightinhaber</label>
+			<label index="creator">Urheber</label>
+			<label index="format">Format</label>
 		</languageKey>
 	</data>
 </T3locallang>
