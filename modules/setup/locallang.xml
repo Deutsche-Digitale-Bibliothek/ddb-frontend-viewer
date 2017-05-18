@@ -132,6 +132,7 @@
 			<label index="publisher">Publisher</label>
 			<label index="series">Series</label>
 			<label index="urn">URN</label>
+			<label index="purl">Persistent URL</label>
 		</languageKey>
 		<languageKey index="de" type="array">
 			<label index="flash.wrongPageType">Seite ist kein SysOrdner!</label>
@@ -260,6 +261,7 @@
 			<label index="publisher">Verleger</label>
 			<label index="series">Reihe</label>
 			<label index="urn">URN</label>
+			<label index="purl">Persistente URL</label>
 		</languageKey>
 	</data>
 </T3locallang>

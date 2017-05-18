@@ -202,4 +202,17 @@ $metadata = array (
 		'wrap' => "key.wrap = <dt>|</dt>\nvalue.required = 1\nvalue.setContentToCurrent = 1\nvalue.typolink.parameter.current = 1\nvalue.typolink.parameter.prepend = TEXT\nvalue.typolink.parameter.prepend.value = http://nbn-resolving.de/\nvalue.wrap = <dd>|</dd>",
 		'is_listed' => 1,
 	),
+	'purl' => array (
+		'hidden' => 0,
+		'format' => array (
+			array (
+				'encoded' => 1,
+				'xpath' => './mods:identifier[@type="purl"]',
+				'xpath_sorting' => '',
+			),
+		),
+		'default_value' => '',
+		'wrap' => "key.wrap = <dt>|</dt>\nvalue.required = 1\nvalue.setContentToCurrent = 1\nvalue.typolink.parameter.current = 1\nvalue.wrap = <dd>|</dd>",
+		'is_listed' => 1,
+	),
 );
