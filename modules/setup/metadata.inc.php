@@ -12,6 +12,45 @@
 // Define metadata elements.
 // @see http://dfg-viewer.de/en/profile-of-the-metadata/
 $metadata = array (
+	'owner' => array (
+		'hidden' => 0,
+		'format' => array (
+			array (
+				'encoded' => 1,
+				'xpath' => './mods:name[./mods:role/mods:roleTerm="own"]/mods:displayForm',
+				'xpath_sorting' => '',
+			),
+		),
+		'default_value' => '',
+		'wrap' => "key.wrap = <dt>|</dt>\nvalue.required = 1\nvalue.wrap = <dd>|</dd>",
+		'is_listed' => 1,
+	),
+	'licencer' => array (
+		'hidden' => 0,
+		'format' => array (
+			array (
+				'encoded' => 1,
+				'xpath' => './mods:name[./mods:role/mods:roleTerm="lso"]/mods:displayForm',
+				'xpath_sorting' => '',
+			),
+		),
+		'default_value' => '',
+		'wrap' => "key.wrap = <dt>|</dt>\nvalue.required = 1\nvalue.wrap = <dd>|</dd>",
+		'is_listed' => 1,
+	),
+	'copyright' => array (
+		'hidden' => 0,
+		'format' => array (
+			array (
+				'encoded' => 1,
+				'xpath' => './mods:name[./mods:role/mods:roleTerm="cph"]/mods:displayForm',
+				'xpath_sorting' => '',
+			),
+		),
+		'default_value' => '',
+		'wrap' => "key.wrap = <dt>|</dt>\nvalue.required = 1\nvalue.wrap = <dd>|</dd>",
+		'is_listed' => 1,
+	),
 	'volume' => array (
 		'hidden' => 0,
 		'format' => array (

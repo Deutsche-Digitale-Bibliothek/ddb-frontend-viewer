@@ -133,6 +133,9 @@
 			<label index="series">Series</label>
 			<label index="urn">URN</label>
 			<label index="purl">Persistent URL</label>
+			<label index="owner">Owner</label>
+			<label index="licenser">License Owner</label>
+			<label index="copyright">Copyright Owner</label>
 		</languageKey>
 		<languageKey index="de" type="array">
 			<label index="flash.wrongPageType">Seite ist kein SysOrdner!</label>
@@ -262,6 +265,9 @@
 			<label index="series">Reihe</label>
 			<label index="urn">URN</label>
 			<label index="purl">Persistente URL</label>
+			<label index="owner">Besitzer</label>
+			<label index="licenser">Lizenzinhaber</label>
+			<label index="copyright">Copyrightinhaber</label>
 		</languageKey>
 	</data>
 </T3locallang>
