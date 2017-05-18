@@ -18,20 +18,20 @@
 			<target>Einzelseitenansicht</target>
 		</trans-unit>
 		<trans-unit id="download.leftPage" approved="yes">
-			<source>Download left page</source>
-			<target>Linke Seite herunterladen</target>
+			<source>Download left page (PDF)</source>
+			<target>Linke Seite herunterladen (PDF)</target>
 		</trans-unit>
 		<trans-unit id="download.rightPage" approved="yes">
-			<source>Download right page</source>
-			<target>Rechte Seite herunterladen</target>
+			<source>Download right page (PDF)</source>
+			<target>Rechte Seite herunterladen (PDF)</target>
 		</trans-unit>
 		<trans-unit id="download.singlePage" approved="yes">
-			<source>Download single page</source>
-			<target>Einzelseite herunterladen</target>
+			<source>Download single page (PDF)</source>
+			<target>Einzelseite herunterladen (PDF)</target>
 		</trans-unit>
 		<trans-unit id="download.work" approved="yes">
-			<source>Download whole work</source>
-			<target>Ganzes Werk herunterladen</target>
+			<source>Download whole work (PDF)</source>
+			<target>Ganzes Werk herunterladen (PDF)</target>
 		</trans-unit>
 		<trans-unit id="metadata.provider" approved="yes">
 			<source>Provider</source>

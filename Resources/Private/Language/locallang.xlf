@@ -15,16 +15,16 @@
 			<source>Show single page</source>
 		</trans-unit>
 		<trans-unit id="download.leftPage">
-			<source>Download left page</source>
+			<source>Download left page (PDF)</source>
 		</trans-unit>
 		<trans-unit id="download.rightPage">
-			<source>Download right page</source>
+			<source>Download right page (PDF)</source>
 		</trans-unit>
 		<trans-unit id="download.singlePage">
-			<source>Download single page</source>
+			<source>Download single page (PDF)</source>
 		</trans-unit>
 		<trans-unit id="download.work">
-			<source>Download whole work</source>
+			<source>Download whole work (PDF)</source>
 		</trans-unit>
 		<trans-unit id="tab.toc">
 			<source>Table of Contents</source>
