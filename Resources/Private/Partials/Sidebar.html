@@ -44,9 +44,25 @@
         <h3><f:translate key='tab.downloads' extensionName='ddb_frontend_viewer' /></h3>
         <ul>
           <f:if condition="<ddb:downloadLinks type='work' /> !=''">
-            <li>
-              <f:link.external uri="<ddb:downloadLinks type='work' />" class="download-document" title="<f:translate key='download.work' extensionName='ddb_frontend_viewer' />"><f:translate key="download.work"  extensionName="ddb_frontend_viewer" /></f:link.external>
-            </li>
+            <f:then>
+              <li>
+                <f:link.external
+                uri="<ddb:downloadLinks type='work' />"
+                class="download-document"
+                title="<f:translate key='download.work' extensionName='ddb_frontend_viewer' />"><f:translate key="download.work"  extensionName="ddb_frontend_viewer" /></f:link.external>
+              </li>
+            </f:then>
+            <f:else>
+              <f:if condition="<ddb:xpath xpath='/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:extension/slub:slub/slub:id[@type=\'digital\']' />">
+                <li>
+                  <f:link.external
+                    uri="http://digital.slub-dresden.de/fileadmin/data/<ddb:xpath xpath='/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:extension/slub:slub/slub:id[@type=\'digital\']' />/<ddb:xpath xpath='/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:extension/slub:slub/slub:id[@type=\'digital\']' />_tif/jpegs/<ddb:xpath xpath='/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:extension/slub:slub/slub:id[@type=\'digital\']' />.pdf"
+                    class="download-document"
+                    title="<f:translate key='download.work' extensionName='ddb_frontend_viewer' />"><f:translate key="download.work"  extensionName="ddb_frontend_viewer" />
+                  </f:link.external>
+                </f:if>
+              </li>
+            </f:else>
           </f:if>
           <f:if condition="{gp-double} == 1">
             <f:then>

@@ -50,6 +50,6 @@ class XpathViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelpe
           $output = trim($result);
         }
 
-        return htmlspecialchars($output);
+        return htmlspecialchars(trim($output));
     }
 }
