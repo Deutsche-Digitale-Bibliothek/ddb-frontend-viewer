@@ -12,52 +12,6 @@
 // Define metadata elements.
 // @see http://dfg-viewer.de/en/profile-of-the-metadata/
 $metadata = array (
-	'type' => array (
-		'hidden' => 0,
-		'format' => array (),
-		'default_value' => '',
-		'wrap' => "key.wrap = <dt class=\"tx-dlf-type\">|</dt>\nvalue.required = 1\nvalue.wrap = <dd class=\"tx-dlf-type\">|</dd>",
-		'is_listed' => 1,
-	),
-	'author' => array (
-		'hidden' => 0,
-		'format' => array (
-			array (
-				'encoded' => 1,
-				'xpath' => './mods:relatedItem[@type="host"]/mods:name[./mods:role/mods:roleTerm[@authority="marcrelator"][@type="code"]="aut"]/mods:displayForm',
-				'xpath_sorting' => '',
-			),
-		),
-		'default_value' => '',
-		'wrap' => "key.wrap = <dt>|</dt>\nvalue.required = 1\nvalue.wrap = <dd>|</dd>",
-		'is_listed' => 1,
-	),
-	'title' => array (
-		'hidden' => 0,
-		'format' => array (
-			array (
-				'encoded' => 1,
-				'xpath' => 'concat(./mods:titleInfo[not(@type="alternative")]/mods:nonSort," ",./mods:titleInfo[not(@type="alternative")]/mods:title," ",./mods:titleInfo[not(@type="alternative")]/mods:partNumber," ",./mods:titleInfo[not(@type="alternative")]/mods:partName)',
-				'xpath_sorting' => '',
-			),
-		),
-		'default_value' => '',
-		'wrap' => "key.wrap = <dt class=\"tx-dlf-title\">|</dt>\nvalue.ifEmpty.field = parentTitle\nvalue.ifEmpty.wrap = [|]\nvalue.required = 1\nvalue.wrap = <dd class=\"tx-dlf-title\">|</dd>",
-		'is_listed' => 1,
-	),
-	'parentTitle' => array (
-		'hidden' => 1,
-		'format' => array (
-			array (
-				'encoded' => 1,
-				'xpath' => 'concat(./mods:relatedItem[@type="host"]/mods:titleInfo[not(@type="alternative")]/mods:nonSort," ",./mods:relatedItem[@type="host"]/mods:titleInfo[not(@type="alternative")]/mods:title)',
-				'xpath_sorting' => '',
-			),
-		),
-		'default_value' => '',
-		'wrap' => '',
-		'is_listed' => 0,
-	),
 	'volume' => array (
 		'hidden' => 0,
 		'format' => array (
@@ -98,7 +52,7 @@ $metadata = array (
 		'is_listed' => 0,
 	),
 	'publicationRun' => array (
-		'hidden' => 0,
+		'hidden' => 1,
 		'format' => array (
 			array (
 				'encoded' => 1,
@@ -111,7 +65,7 @@ $metadata = array (
 		'is_listed' => 1,
 	),
 	'year' => array (
-		'hidden' => 1,
+		'hidden' => 0,
 		'format' => array (),
 		'default_value' => '',
 		'wrap' => '',
@@ -213,6 +167,52 @@ $metadata = array (
 		),
 		'default_value' => '',
 		'wrap' => "key.wrap = <dt>|</dt>\nvalue.required = 1\nvalue.setContentToCurrent = 1\nvalue.typolink.parameter.current = 1\nvalue.wrap = <dd>|</dd>",
+		'is_listed' => 1,
+	),
+	'author' => array (
+		'hidden' => 0,
+		'format' => array (
+			array (
+				'encoded' => 1,
+				'xpath' => './mods:relatedItem[@type="host"]/mods:name[./mods:role/mods:roleTerm[@authority="marcrelator"][@type="code"]="aut"]/mods:displayForm',
+				'xpath_sorting' => '',
+			),
+		),
+		'default_value' => '',
+		'wrap' => "key.wrap = <dt>|</dt>\nvalue.required = 1\nvalue.wrap = <dd>|</dd>",
+		'is_listed' => 1,
+	),
+	'title' => array (
+		'hidden' => 0,
+		'format' => array (
+			array (
+				'encoded' => 1,
+				'xpath' => 'concat(./mods:titleInfo[not(@type="alternative")]/mods:nonSort," ",./mods:titleInfo[not(@type="alternative")]/mods:title," ",./mods:titleInfo[not(@type="alternative")]/mods:partNumber," ",./mods:titleInfo[not(@type="alternative")]/mods:partName)',
+				'xpath_sorting' => '',
+			),
+		),
+		'default_value' => '',
+		'wrap' => "key.wrap = <dt class=\"tx-dlf-title\">|</dt>\nvalue.ifEmpty.field = parentTitle\nvalue.ifEmpty.wrap = [|]\nvalue.required = 1\nvalue.wrap = <dd class=\"tx-dlf-title\">|</dd>",
+		'is_listed' => 1,
+	),
+	'parentTitle' => array (
+		'hidden' => 1,
+		'format' => array (
+			array (
+				'encoded' => 1,
+				'xpath' => 'concat(./mods:relatedItem[@type="host"]/mods:titleInfo[not(@type="alternative")]/mods:nonSort," ",./mods:relatedItem[@type="host"]/mods:titleInfo[not(@type="alternative")]/mods:title)',
+				'xpath_sorting' => '',
+			),
+		),
+		'default_value' => '',
+		'wrap' => '',
+		'is_listed' => 0,
+	),
+	'type' => array (
+		'hidden' => 0,
+		'format' => array (),
+		'default_value' => '',
+		'wrap' => "key.wrap = <dt class=\"tx-dlf-type\">|</dt>\nvalue.required = 1\nvalue.wrap = <dd class=\"tx-dlf-type\">|</dd>",
 		'is_listed' => 1,
 	),
 );
