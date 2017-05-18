@@ -13,15 +13,15 @@
     </div>
 
     <div class="metadata">
-        <f:if condition="<ddb:xpath xpath='(//mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type=\'alternative\')]/mods:nonSort | //mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type=\'alternative\')]/mods:title | //mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type=\'alternative\')]/mods:partNumber | //mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type=\'alternative\')]/mods:partName)[1]' />">
+        <f:if condition="<ddb:xpath xpath='(//mets:mets/mets:structMap/mets:div/@LABEL)[1]' />">
           <f:then>
-            <h1 title="<ddb:xpath xpath='(//mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type=\'alternative\')]/mods:nonSort | //mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type=\'alternative\')]/mods:title | //mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type=\'alternative\')]/mods:partNumber | //mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type=\'alternative\')]/mods:partName)[1]' />">
-              <ddb:xpath xpath='(//mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type="alternative")]/mods:nonSort | //mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type="alternative")]/mods:title | //mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type="alternative")]/mods:partNumber | //mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type="alternative")]/mods:partName)[1]' />
+            <h1 title="<ddb:xpath xpath='(//mets:mets/mets:structMap/mets:div/@LABEL)[1]' />">
+              <ddb:xpath xpath='(//mets:mets/mets:structMap/mets:div/@LABEL)[1]' />
             </h1>
           </f:then>
           <f:else>
-            <h1 title="<ddb:xpath xpath='//mets:mets/mets:structMap/mets:div/@LABEL' />">
-              <ddb:xpath xpath='//mets:mets/mets:structMap/mets:div/@LABEL' />
+            <h1 title="<ddb:xpath xpath='(//mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type=\'alternative\')]/mods:nonSort | //mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type=\'alternative\')]/mods:title | //mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type=\'alternative\')]/mods:partNumber | //mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type=\'alternative\')]/mods:partName)[1]' />">
+              <ddb:xpath xpath='(//mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type="alternative")]/mods:nonSort | //mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type="alternative")]/mods:title | //mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type="alternative")]/mods:partNumber | //mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo[not(@type="alternative")]/mods:partName)[1]' />
             </h1>
           </f:else>
         </f:if>
