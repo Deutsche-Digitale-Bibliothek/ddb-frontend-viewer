@@ -1,0 +1,214 @@
+/*
+ *
+ * Controls
+ * ================================================
+ * Control elements like next and previous buttons,
+ * download buttons and so on...
+ *
+ * Author: Thomas Jung <thomas@tjwd.de>
+ * License: All rights reserved
+ *
+ */
+
+
+.controls {
+    position: absolute;
+    right: 15px;
+    bottom: 8px;
+    .clearfix();
+    > div {
+        position: relative;
+        display: block;
+        float: left;
+        .clearfix();
+        span > span, button, a {
+            position: relative;
+            margin: 0 10px;
+            width: 30px;
+            height: 30px;
+            display: block;
+            float: left;
+            color: transparent;
+            .text-hide();
+            background: @primary-red;
+            .vertgrad(@primary-red-light, @primary-red, 0, 100%);
+            .transition();
+            cursor: pointer;
+            &:before {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: url(../Images/ctrlIcons.svg) no-repeat 0 0;
+                background-size: auto 60px;
+                content: " ";
+            }
+        }
+        span > span {
+            opacity: 0.35;
+            cursor: not-allowed;
+        }
+    }
+    .zoom, .rotate, .doublepage {
+        display: none;
+    }
+    .page-control {
+        > div {
+            display: block;
+            height: 30px;
+            float: left;
+        }
+        .first, .rwnd, .last, .fwd {
+            display: none;
+        }
+        .prev {
+            a:before, span:before {
+                background-position: -90px -30px;
+            }
+        }
+        .next {
+            a:before, span:before {
+                background-position: -120px -30px;
+            }
+        }
+        .pageselect {
+            position: relative;
+            label {
+                position: absolute;
+                top: 9px;
+                right: 5px;
+                width: 12px;
+                height: 12px;
+                .text-hide();
+                background: url('data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiI+PHN0eWxlPi5zdDB7ZmlsbDojZmZmfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTYgMTAuOWwtNi4xLTYgMi4yLTIuMiAzLjkgNCAzLjktMy45IDIuMiAyLjF6Ii8+PC9zdmc+') no-repeat center center;
+                background-size: 10px 10px;
+                z-index: 10;
+                pointer-events: none;
+            }
+            select {
+                position: relative;
+                height: 30px;
+                min-width: 60px;
+                padding: 4px 16px 4px 6px;
+                font-size: 14px;
+                line-height: 16px;
+                background: @primary-red;
+                .vertgrad(@primary-red-light, @primary-red, 0, 100%);
+                color: #fff;
+                border: 0 none;
+                outline: none;
+                border-radius: 0;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                cursor: pointer;
+            }
+        }
+    }
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        top: 30px;
+        right: 30px;
+        bottom: auto;
+        > div {
+            height: 40px;
+            margin: 0 4px;
+            span > span, button, a {
+                width: 40px;
+                height: 40px;
+                margin: 0 2px;
+                &:before {
+                    background-size: auto 80px;
+                    .transform(scale(0.8));
+                }
+                .no-touchevents & {
+                    &:hover {
+                        .vertgrad(@primary-red, @primary-red-light, 0, 100%);
+                    }
+                }
+            }
+        }
+        .zoom, .rotate, .doublepage {
+            display: block;
+            float: left;
+        }
+        .zoom {
+            button.out:before {
+                background-position: -280px 0;
+            }
+            button.in:before {
+                background-position: -240px 0;
+            }
+            button.fullscreen {
+                &:before {
+                    background-position: -280px -40px;
+                }
+                &.active:before {
+                    background-position: -600px -40px;
+                }
+            }
+        }
+        .rotate {
+            button.rotate-left:before {
+                background-position: -360px 0;
+            }
+            button.rotate-right:before {
+                background-position: -320px 0;
+            }
+            button.upend:before {
+                background-position: -400px 0;
+            }
+        }
+        .doublepage {
+            .double {
+                a.tx-dlf-navigation-doubleOn:before, span.tx-dlf-navigation-doubleOn:before {
+                    background-position: 0 -40px;
+                }
+                a.tx-dlf-navigation-doubleOff:before, span.tx-dlf-navigation-doubleOff:before {
+                    background-position: -40px -40px;
+                }
+            }
+            .switch {
+                &:before {
+                    display: none;
+                    content: none;
+                }
+                > span {
+                    position: relative;
+                    opacity: 1;
+                    display: inline;
+                    background: transparent;
+                    a:before {
+                        background-position: -80px -40px;
+                    }
+                }
+            }
+        }
+        .page-control {
+            .prev {
+                a:before, span:before {
+                    background-position: -120px -40px;
+                }
+            }
+            .next {
+                a:before, span:before {
+                    background-position: -160px -40px;
+                }
+            }
+            .pageselect {
+                label {
+                    right: 10px;
+                    top: 14px;
+                }
+                select {
+                    height: 40px;
+                    margin: 0 2px;
+                    max-width: 110px;
+                    padding: 4px 20px 4px 10px;
+                }
+            }
+        }
+
+    }
+}
+
+// EOF

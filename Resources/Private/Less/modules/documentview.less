@@ -1,0 +1,96 @@
+/*
+ *
+ * Document view
+ * ================================================
+ * Styles for the central area of the viewer
+ *
+ * Author: Thomas Jung <thomas@tjwd.de>
+ * License: All rights reserved
+ *
+ */
+
+.document-view {
+    position: absolute;
+    top: 180px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    .fullscreen & {
+        width: 100% !important;
+    }
+    #tx-dlf-map {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        .loading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: table;
+            .loading-wrapper {
+                position: relative;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                svg {
+                    width: 70px;
+                    height: 70px;
+                    path {
+                        fill: @primary-red;
+                    }
+                }
+                .loading-label {
+                    display: block;
+                    margin-top: 20px;
+                    color: lighten(@warm-grey,20%);
+                    font-weight: bold;
+                }
+                .warning {
+                    position: relative;
+                    padding: 70px 30px 30px 30px;
+                    line-height: 1.4;
+                    strong {
+                        color: @primary-red;
+                    }
+                    &:before {
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        margin-left: -20px;
+                        width: 54px;
+                        height: 54px;
+                        border-radius: 27px;
+                        background: @primary-red url(../Images/ctrlIcons.svg) no-repeat -313px -34px;
+                        content: " ";
+                    }
+                }
+                .fullscreen & {
+                    svg {
+                        width: 100px;
+                        height: 100px;
+                        path {
+                            fill: lighten(@warm-grey,20%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        top: 100px;
+        left: auto;
+        margin: 5px;
+        width: 66.2%;
+        #tx-dlf-map .loading .loading-wrapper .warning {
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+}
+
+// EOF
