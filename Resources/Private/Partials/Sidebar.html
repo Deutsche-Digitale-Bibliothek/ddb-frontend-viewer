@@ -3,19 +3,19 @@
   <div class="sidebar">
     <div class="tab-nav">
         <ul>
-            <li><button data-target="#tab-toc" class="tab-toc active" title="<f:translate key='tab.toc' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.toc' extensionName='ddb_frontend_viewer' /></button></li>
-            <li><button data-target="#tab-meta" class="tab-meta" title="<f:translate key='tab.meta' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.meta' extensionName='ddb_frontend_viewer' /></button></li>
-            <li><button data-target="#tab-fulltext" class="tab-fulltext" title="<f:translate key='tab.fulltext' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.fulltext' extensionName='ddb_frontend_viewer' /></button></li>
+            <li><button data-target="#tab-toc" class="tab-toc active" title="<f:translate key='tab.toc.title' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.toc' extensionName='ddb_frontend_viewer' /></button></li>
+            <li><button data-target="#tab-meta" class="tab-meta" title="<f:translate key='tab.meta.title' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.meta' extensionName='ddb_frontend_viewer' /></button></li>
+            <li><button data-target="#tab-fulltext" class="tab-fulltext" title="<f:translate key='tab.fulltext.title' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.fulltext' extensionName='ddb_frontend_viewer' /></button></li>
             <f:if condition="<ddb:xpath xpath='//mets:amdSec/mets:digiprovMD/mets:mdWrap[@OTHERMDTYPE=\"DVLINKS\"]/mets:xmlData/dv:links/dv:sru' />">
               <f:then>
-                <li><button data-target="#tab-search" class="tab-search" title="<f:translate key='tab.search' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.search' extensionName='ddb_frontend_viewer' /></button></li>
+                <li><button data-target="#tab-search" class="tab-search" title="<f:translate key='tab.search.title' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.search' extensionName='ddb_frontend_viewer' /></button></li>
               </f:then>
               <f:else>
-                <li><button data-target="#tab-search" class="tab-search disabled" title="<f:translate key='tab.search' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.search' extensionName='ddb_frontend_viewer' /></button></li>
+                <li><button data-target="#tab-search" class="tab-search disabled" title="<f:translate key='tab.search.title' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.search' extensionName='ddb_frontend_viewer' /></button></li>
               </f:else>
             </f:if>
-            <li><button data-target="#tab-downloads" class="tab-downloads" title="<f:translate key='tab.downloads' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.downloads' extensionName='ddb_frontend_viewer' /></button></li>
-            <li><button data-target="#tab-imageadjust" class="tab-imageadjust" title="<f:translate key='tab.imageadjust' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.imageadjust' extensionName='ddb_frontend_viewer' /></button></li>
+            <li><button data-target="#tab-downloads" class="tab-downloads" title="<f:translate key='tab.downloads.title' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.downloads' extensionName='ddb_frontend_viewer' /></button></li>
+            <li><button data-target="#tab-imageadjust" class="tab-imageadjust" title="<f:translate key='tab.imageadjust.title' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.imageadjust' extensionName='ddb_frontend_viewer' /></button></li>
         </ul>
     </div>
 
