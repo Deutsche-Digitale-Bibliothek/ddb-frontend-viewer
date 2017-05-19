@@ -38,28 +38,28 @@
 			<target>Datengeber</target>
 		</trans-unit>
 		<trans-unit id="tab.downloads" approved="yes">
-			<source>Downloads</source>
-			<target>Downloads</target>
+			<source>Show Downloads</source>
+			<target>Downloads anzeigen</target>
 		</trans-unit>
 		<trans-unit id="tab.fulltext" approved="yes">
-			<source>Fulltext</source>
-			<target>Volltext</target>
+			<source>Show Fulltext</source>
+			<target>Volltext anzeigen</target>
 		</trans-unit>
 		<trans-unit id="tab.imageadjust" approved="yes">
-			<source>Image Adjustments</source>
-			<target>Bildbearbeitung</target>
+			<source>Show Image Adjustments</source>
+			<target>Bildbearbeitung anzeigen</target>
 		</trans-unit>
 		<trans-unit id="tab.meta" approved="yes">
-			<source>Metadata</source>
-			<target>Metadaten</target>
+			<source>Show Metadata</source>
+			<target>Metadaten anzeigen</target>
 		</trans-unit>
 		<trans-unit id="tab.search" approved="yes">
-			<source>Search in Document</source>
-			<target>Suche im Dokument</target>
+			<source>Show Search in Document</source>
+			<target>Suche im Dokument anzeigen</target>
 		</trans-unit>
 		<trans-unit id="tab.toc" approved="yes">
-			<source>Table of Contents</source>
-			<target>Inhaltsverzeichnis</target>
+			<source>Show Table of Contents</source>
+			<target>Inhaltsverzeichnis anzeigen</target>
 		</trans-unit>
 		</body>
 	</file>
