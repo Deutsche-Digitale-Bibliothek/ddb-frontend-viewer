@@ -50,9 +50,10 @@
             <f:then>
               <li>
                 <f:link.external
-                uri="<ddb:downloadLinks type='work' />"
-                class="download-document"
-                title="<f:translate key='download.work' extensionName='ddb_frontend_viewer' />"><f:translate key="download.work"  extensionName="ddb_frontend_viewer" /></f:link.external>
+                  uri="<ddb:downloadLinks type='work' />"
+                  class="download-document"
+                  target="_blank"
+                  title="<f:translate key='download.work' extensionName='ddb_frontend_viewer' />"><f:translate key="download.work"  extensionName="ddb_frontend_viewer" /></f:link.external>
               </li>
             </f:then>
             <f:else>
@@ -61,6 +62,7 @@
                   <f:link.external
                     uri="http://digital.slub-dresden.de/fileadmin/data/<ddb:xpath xpath='/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:extension/slub:slub/slub:id[@type=\'digital\']' />/<ddb:xpath xpath='/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:extension/slub:slub/slub:id[@type=\'digital\']' />_tif/jpegs/<ddb:xpath xpath='/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:extension/slub:slub/slub:id[@type=\'digital\']' />.pdf"
                     class="download-document"
+                    target="_blank"
                     title="<f:translate key='download.work' extensionName='ddb_frontend_viewer' />"><f:translate key="download.work"  extensionName="ddb_frontend_viewer" />
                   </f:link.external>
                 </f:if>
@@ -71,19 +73,34 @@
             <f:then>
               <f:if condition="<ddb:downloadLinks type='page-left' pagenumber='{gp-page}' /> !=''">
                 <li>
-                  <f:link.external uri="<ddb:downloadLinks type='page-left' pagenumber='{gp-page}' />" class="download-page" title="<f:translate key='download.leftPage' extensionName='ddb_frontend_viewer' />"><f:translate key="download.leftPage"  extensionName="ddb_frontend_viewer" /></f:link.external>
+                  <f:link.external
+                    uri="<ddb:downloadLinks type='page-left' pagenumber='{gp-page}' />"
+                    class="download-page"
+                    target="_blank"
+                    title="<f:translate key='download.leftPage' extensionName='ddb_frontend_viewer' />"><f:translate key="download.leftPage"  extensionName="ddb_frontend_viewer" />
+                  </f:link.external>
                 </li>
               </f:if>
               <f:if condition="<ddb:downloadLinks type='page-right' pagenumber='{gp-page}' /> !=''">
                 <li>
-                  <f:link.external uri="<ddb:downloadLinks type='page-right' pagenumber='{gp-page}' />" class="download-page" title="<f:translate key='download.rightPage' extensionName='ddb_frontend_viewer' />"><f:translate key="download.rightPage"  extensionName="ddb_frontend_viewer" /></f:link.external>
+                  <f:link.external
+                    uri="<ddb:downloadLinks type='page-right' pagenumber='{gp-page}' />"
+                    class="download-page"
+                    target="_blank"
+                    title="<f:translate key='download.rightPage' extensionName='ddb_frontend_viewer' />"><f:translate key="download.rightPage"  extensionName="ddb_frontend_viewer" />
+                  </f:link.external>
                 </li>
               </f:if>
             </f:then>
             <f:else>
               <f:if condition="<ddb:downloadLinks type='page-left' pagenumber='{gp-page}' /> !=''">
                 <li>
-                  <f:link.external uri="<ddb:downloadLinks type='page-left' pagenumber='{gp-page}' />" class="download-page" title="<f:translate key='download.singlePage' extensionName='ddb_frontend_viewer' />"><f:translate key="download.singlePage"  extensionName="ddb_frontend_viewer" /></f:link.external>
+                  <f:link.external
+                    uri="<ddb:downloadLinks type='page-left' pagenumber='{gp-page}' />"
+                    class="download-page"
+                    target="_blank"
+                    title="<f:translate key='download.singlePage' extensionName='ddb_frontend_viewer' />"><f:translate key="download.singlePage"  extensionName="ddb_frontend_viewer" />
+                  </f:link.external>
                 </li>
               </f:if>
             </f:else>
