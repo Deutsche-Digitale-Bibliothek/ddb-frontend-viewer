@@ -1,0 +1,125 @@
+/*
+ *
+ * Sidebar // Table of contents
+ * ================================================
+ * Special styles for the TOC section
+ * in the viewers sidebar
+ *
+ * Author: Thomas Jung <thomas@tjwd.de>
+ * License: All rights reserved
+ *
+ */
+
+#tab-toc > ul.toc {
+    position: relative;
+    line-height: 1.2;
+    margin-left: -10px;
+    a, span.a {
+        position: relative;
+        padding: 8px 30px 8px 10px;
+        line-height: 16px;
+        display: block;
+        color: @warm-grey;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        .pagination {
+            position: absolute;
+            right: 10px;
+            font-weight: 700;
+            opacity: 0.4;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: right;
+        }
+    }
+    span.a {
+        opacity: 0.5;
+        font-weight: normal;
+    }
+    ul {
+        position: relative;
+        li {
+            position: relative;
+            &:before {
+                position: absolute;
+                left: 12px;
+                top: 0;
+                bottom: 0;
+                width: 1px;
+                content: " ";
+                background: lighten(@warm-grey,50%);
+            }
+            &:after {
+                position: absolute;
+                top: 7px;
+                left: 3px;
+                width: 14px;
+                height: 14px;
+                content: " ";
+                border-radius: 14px;
+                border: 2px solid #fff;
+                background: rgb(198,181,179) no-repeat center center;
+                background-size: 14px 14px; 
+                z-index: 100;
+                font-size: 16px;
+                font-weight: bold;
+                color: #fff;
+                text-align: center;
+                content: " ";
+            }
+            &:last-child:before {
+                height: 20px;
+                bottom: auto;
+            }
+            &.current {
+                > a, > span.a {
+                    font-weight: bold;
+                }
+            }
+            &.submenu:after {
+                background-image: url('data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCI+PHN0eWxlPi5zdDB7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1taXRlcmxpbWl0OjEwfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMgN2g4TTcgM3Y4Ii8+PC9zdmc+');
+            }
+            &.submenu.active:after, &.submenu.current:after {
+                background-image: url('data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCI+PHN0eWxlPi5zdDB7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1taXRlcmxpbWl0OjEwfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMgN2g4Ii8+PC9zdmc+');
+            }
+            a, span.a {
+                padding-left: 30px;
+                &:after {
+                    position: absolute;
+                    left: 10px;
+                    top: 15px;
+                    width: 15px;
+                    height: 1px;
+                    content: " ";
+                    background: lighten(@warm-grey,50%);
+                }
+            }
+        }
+        ul {
+            .treelevel(30px);
+            ul {
+                .treelevel(50px);
+                ul {
+                    .treelevel(70px);
+                    ul {
+                        .treelevel(90px);
+                        ul {
+                            .treelevel(110px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        a, span.a {
+            padding-right: 40px;
+        }
+    }
+    .movin & {
+        pointer-events: none;
+    }
+}
+
+// EOF

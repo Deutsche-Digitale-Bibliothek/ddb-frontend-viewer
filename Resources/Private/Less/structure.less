@@ -1,0 +1,75 @@
+/*
+ *
+ * Structure
+ * ================================================
+ * Basic definition of body, cotainers and other
+ * structural elements
+ *
+ * Author: Thomas Jung <thomas@tjwd.de>
+ * License: All rights reserved
+ *
+ */
+
+/* ==============[ first tings first. simple font import. ]=============================== */
+@font-face {
+    font-family: 'KarbidWeb';
+    src: url("../Fonts/Karbid.eot");
+}
+
+@font-face {
+    font-family: 'KarbidWeb';
+    src: url("../Fonts/Karbid.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'KarbidWebBold';
+  src: url("../Fonts/KarbidBold.woff") format("woff");
+  font-weight: bold;
+}
+
+
+/* ==============[ basic html element settings ]========================================== */
+* {
+    box-sizing: border-box;
+}
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+    text-align:center;
+    font-family: 'Calibri', Helvetica, Arial, sans-serif;
+    .transition(all .2s ease-in-out);
+    &.movin {
+        pointer-events: none !important;
+    }
+    &.hidden {
+        opacity: 0;
+    }
+    &.fullscreen {
+        background: rgb(0,0,0);
+    }
+}
+a {
+    color: @primary-red;
+    text-decoration: none;
+    .no-touchevents & {
+        &:hover {
+            color: @primary-red !important;
+            text-decoration: underline;
+        }
+    }
+}
+.main-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .hidden & {
+        opacity: 0;
+    }
+    .static & {
+        .transition(none);
+    }
+}
+
+// EOF

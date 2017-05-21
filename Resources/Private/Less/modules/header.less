@@ -1,0 +1,110 @@
+/*
+ *
+ * Header
+ * ================================================
+ * All styles for the headerbar 
+ *
+ * Author: Thomas Jung <thomas@tjwd.de>
+ * License: All rights reserved
+ *
+ */
+
+.header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 180px;
+    text-align: left;
+    border-bottom: 2px solid @warm-grey-bg;
+    .provider {
+        display: none;
+    }
+    .metadata {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        h1 {
+            font-size: 26px;
+            font-family: @karbidBold;
+            line-height: 1.2;
+            color: @primary-red;
+            letter-spacing: -0.05ex;
+        }
+        .provider-link {
+            margin: 5px 0 0 0;
+            line-height: 1.2;
+            font-family: @karbid;
+            .label {
+                color: @warm-grey;
+                font-family: @karbidBold;
+                font-weight: bold;
+            }
+            a {
+                color: @warm-grey;
+            }
+        }
+    }
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        height: 100px;
+        .provider {
+            position: absolute;
+            top: 22px;
+            left: 30px;
+            width: 110px;
+            height: 60px;
+            display: table;
+            .transition();
+            a {
+                position: relative;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                img {
+                    width: 100px;
+                    height: auto;
+                }
+            }
+        }
+        .metadata {
+            left: 160px;
+            right: 595px;
+            top: 25px;
+            .transition();
+            h1, .provider-link {
+                position: relative;
+                display: inline-block;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                width: 100%;
+                line-height: 1.5;
+                margin-top: -5px;
+            }
+        }
+        &.missing-provider-image {
+            .provider {
+                display: none;
+            }
+            .metadata {
+                left: 30px;
+            }
+        }
+        .static & {
+            .provider, .metadata {
+                .transition(none);
+            }
+        }
+        .fullscreen & {
+            border-bottom: 1px dotted lighten(@warm-grey,10%);
+            .provider, .metadata {
+                .transform(translateX(-200px));
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+// EOF

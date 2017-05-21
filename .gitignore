@@ -1,1 +1,4 @@
 .DS_Store
+node_modules
+Templates
+Resources/Public/Css/allStyles.css.map
