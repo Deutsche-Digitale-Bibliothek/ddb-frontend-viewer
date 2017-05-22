@@ -1,0 +1,40 @@
+/*
+ *
+ * Sidebar // Downloads
+ * ================================================
+ * Special styles for the downloads section
+ * in the viewers sidebar
+ *
+ * Author: Thomas Jung <thomas@tjwd.de>
+ * License: All rights reserved
+ *
+ */
+
+.download-wrapper {
+    ul {
+        margin: 20px 0;
+        li {
+            margin: 10px 0;
+            a {
+                position: relative;
+                display: block;
+                color: @warm-grey;
+                padding-left: 22px;
+                min-height: 30px;
+                line-height: 30px;
+                &:before {
+                    position: absolute;
+                    top: 5px;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    background: url(../Images/ctrlIcons.svg) no-repeat -220px -20px;
+                    background-size: auto 40px;
+                    content: " ";
+                }
+            }
+        }
+    }
+}
+
+// EOF

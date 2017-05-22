@@ -27,21 +27,39 @@
 			<source>Download whole work (PDF)</source>
 		</trans-unit>
 		<trans-unit id="tab.toc">
-			<source>Show Table of Contents</source>
+			<source>Table of Contents</source>
 		</trans-unit>
 		<trans-unit id="tab.meta">
-			<source>Show Metadata</source>
+			<source>Metadata</source>
 		</trans-unit>
 		<trans-unit id="tab.fulltext">
-			<source>Show Fulltext</source>
+			<source>Fulltext</source>
 		</trans-unit>
 		<trans-unit id="tab.search">
-			<source>Show Search in Document</source>
+			<source>Search in Document</source>
 		</trans-unit>
 		<trans-unit id="tab.imageadjust">
-			<source>Show Image Adjustments</source>
+			<source>Image Adjustments</source>
 		</trans-unit>
 		<trans-unit id="tab.downloads">
+			<source>Downloads</source>
+		</trans-unit>
+		<trans-unit id="tab.toc.title">
+			<source>Show Table of Contents</source>
+		</trans-unit>
+		<trans-unit id="tab.meta.title">
+			<source>Show Metadata</source>
+		</trans-unit>
+		<trans-unit id="tab.fulltext.title">
+			<source>Show Fulltext</source>
+		</trans-unit>
+		<trans-unit id="tab.search.title">
+			<source>Show Search in Document</source>
+		</trans-unit>
+		<trans-unit id="tab.imageadjust.title">
+			<source>Show Image Adjustments</source>
+		</trans-unit>
+		<trans-unit id="tab.downloads.title">
 			<source>Show Downloads</source>
 		</trans-unit>
 		<trans-unit id="metadata.provider">

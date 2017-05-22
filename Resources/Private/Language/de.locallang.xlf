@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-04-21T07:55:18Z">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-05-19T15:53:51Z">
 		<header>
 			<generator>LFEditor</generator>
 		</header>
@@ -38,26 +38,50 @@
 			<target>Datengeber</target>
 		</trans-unit>
 		<trans-unit id="tab.downloads" approved="yes">
+			<source>Downloads</source>
+			<target>Downloads</target>
+		</trans-unit>
+		<trans-unit id="tab.downloads.title" approved="yes">
 			<source>Show Downloads</source>
 			<target>Downloads anzeigen</target>
 		</trans-unit>
 		<trans-unit id="tab.fulltext" approved="yes">
+			<source>Fulltext</source>
+			<target>Volltext</target>
+		</trans-unit>
+		<trans-unit id="tab.fulltext.title" approved="yes">
 			<source>Show Fulltext</source>
 			<target>Volltext anzeigen</target>
 		</trans-unit>
 		<trans-unit id="tab.imageadjust" approved="yes">
+			<source>Image Adjustments</source>
+			<target>Bildbearbeitung</target>
+		</trans-unit>
+		<trans-unit id="tab.imageadjust.title" approved="yes">
 			<source>Show Image Adjustments</source>
 			<target>Bildbearbeitung anzeigen</target>
 		</trans-unit>
 		<trans-unit id="tab.meta" approved="yes">
+			<source>Metadata</source>
+			<target>Metadaten</target>
+		</trans-unit>
+		<trans-unit id="tab.meta.title" approved="yes">
 			<source>Show Metadata</source>
 			<target>Metadaten anzeigen</target>
 		</trans-unit>
 		<trans-unit id="tab.search" approved="yes">
+			<source>Search in Document</source>
+			<target>Suche im Dokument</target>
+		</trans-unit>
+		<trans-unit id="tab.search.title" approved="yes">
 			<source>Show Search in Document</source>
 			<target>Suche im Dokument anzeigen</target>
 		</trans-unit>
 		<trans-unit id="tab.toc" approved="yes">
+			<source>Table of Contents</source>
+			<target>Inhaltsverzeichnis</target>
+		</trans-unit>
+		<trans-unit id="tab.toc.title" approved="yes">
 			<source>Show Table of Contents</source>
 			<target>Inhaltsverzeichnis anzeigen</target>
 		</trans-unit>

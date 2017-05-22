@@ -1,0 +1,159 @@
+/*
+ *
+ * Page grid
+ * ================================================
+ * The definitions for the page dock which is
+ * sticked to the bottom of the '.document-view'
+ *
+ * Author: Thomas Jung <thomas@tjwd.de>
+ * License: All rights reserved
+ *
+ */
+
+.tx-dlf-pagegrid {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 0;
+    background: rgba(255,255,255,0.9);
+    border-top: 1px solid @warm-grey-bg;
+    .transition();
+    text-align: center;
+    .fullscreen & {
+        bottom: -200px;
+    }
+    .tx-dlf-dockCloseContainer {
+        position: absolute;
+        top: -30px;
+        right: 25px;
+        width: 30px;
+        height: 30px;
+        .transition();
+        background: @primary-red;
+        border:0;
+        .vertgrad(@primary-red-light, @primary-red, 0, 100%);
+        &:before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: url(../Images/ctrlIcons.svg) no-repeat -300px -30px;
+            background-size: auto 60px;
+            content: " ";
+        }
+        @media screen and (min-width: @tabletLandscapeViewportWidth) {
+            top: -40px;
+            width: 40px;
+            height: 40px;
+            &:before {
+                background-size: auto 80px;
+                background-position: -400px -40px;
+            }
+            .no-touchevents & {
+                cursor: pointer;
+                &:hover {
+                    .vertgrad(@primary-red, @primary-red-light, 0, 100%);
+                }
+            }
+        }
+    }
+    .pagegrid-scroll-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .tx-dlf-pagegrid-pagebrowser {
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        left: 0;
+        height: 0;
+        opacity: 0;
+        .transition();
+        color: lighten(@warm-grey,50%);
+        a, span {
+            position: relative;
+            padding: 5px;
+            height: 28px;
+            min-width: 28px;
+            margin: 0 3px;
+            display: inline-block;
+            color: @warm-grey;
+        }
+        span.active {
+            border: 1px solid @primary-red;
+        }
+    }
+    .tx-dlf-pagegrid-list {
+        position: relative;
+        display: table;
+        border-spacing: 10px;
+        margin: 10px auto 0 auto;
+        li {
+            position: relative;
+            display: table-cell;
+            width: 50px;
+            height: 90px;
+            vertical-align: middle;
+            text-align: center;
+            img {
+                position: relative;
+                width: 42px;
+                height: auto;
+                max-height: 85px;
+                object-fit: contain;
+            }
+            .tx-dlf-pagegrid-pagination {
+                position: absolute;
+                top: -5px;
+                left: 50%;
+                margin-left: -20px;
+                width: 40px;
+                color: lighten(@warm-grey,50%);
+                font-size: 10px;
+            }
+            &.tx-dlf-pagegrid-cur {
+                img {
+                    border: 3px solid @primary-red;
+                    .transform(scale(1.2));
+                    z-index: 1000;
+                }
+                .tx-dlf-pagegrid-pagination {
+                    top: -10px;
+                    font-weight: bold;
+                    color: @primary-red;
+                }
+            }
+            @media screen and (min-width: @tabletLandscapeViewportWidth) {
+                .no-touchevents & {
+                    .transition();
+                    cursor: pointer;
+                    &:hover {
+                        .transform(scale(1.2));
+                        z-index: 1100;
+                    }
+                }
+            }
+        }
+    }
+    &.open {
+        height: 160px;
+        .tx-dlf-pagegrid-pagebrowser {
+            bottom: 15px;
+            height: 24px;
+            opacity: 1;
+        }
+        .tx-dlf-dockCloseContainer {
+            bottom: 160px;
+        }
+    }
+}
+
+// EOF

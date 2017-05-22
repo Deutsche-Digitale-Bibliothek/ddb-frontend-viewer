@@ -3,19 +3,19 @@
   <div class="sidebar">
     <div class="tab-nav">
         <ul>
-            <li><button data-target="#tab-toc" class="tab-toc active" title="<f:translate key='tab.toc' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.toc' extensionName='ddb_frontend_viewer' /></button></li>
-            <li><button data-target="#tab-meta" class="tab-meta" title="<f:translate key='tab.meta' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.meta' extensionName='ddb_frontend_viewer' /></button></li>
-            <li><button data-target="#tab-fulltext" class="tab-fulltext" title="<f:translate key='tab.fulltext' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.fulltext' extensionName='ddb_frontend_viewer' /></button></li>
+            <li><button data-target="#tab-toc" class="tab-toc active" title="<f:translate key='tab.toc.title' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.toc' extensionName='ddb_frontend_viewer' /></button></li>
+            <li><button data-target="#tab-meta" class="tab-meta" title="<f:translate key='tab.meta.title' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.meta' extensionName='ddb_frontend_viewer' /></button></li>
+            <li><button data-target="#tab-fulltext" class="tab-fulltext" title="<f:translate key='tab.fulltext.title' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.fulltext' extensionName='ddb_frontend_viewer' /></button></li>
             <f:if condition="<ddb:xpath xpath='//mets:amdSec/mets:digiprovMD/mets:mdWrap[@OTHERMDTYPE=\"DVLINKS\"]/mets:xmlData/dv:links/dv:sru' />">
               <f:then>
-                <li><button data-target="#tab-search" class="tab-search" title="<f:translate key='tab.search' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.search' extensionName='ddb_frontend_viewer' /></button></li>
+                <li><button data-target="#tab-search" class="tab-search" title="<f:translate key='tab.search.title' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.search' extensionName='ddb_frontend_viewer' /></button></li>
               </f:then>
               <f:else>
-                <li><button data-target="#tab-search" class="tab-search disabled" title="<f:translate key='tab.search' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.search' extensionName='ddb_frontend_viewer' /></button></li>
+                <li><button data-target="#tab-search" class="tab-search disabled" title="<f:translate key='tab.search.title' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.search' extensionName='ddb_frontend_viewer' /></button></li>
               </f:else>
             </f:if>
-            <li><button data-target="#tab-downloads" class="tab-downloads" title="<f:translate key='tab.downloads' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.downloads' extensionName='ddb_frontend_viewer' /></button></li>
-            <li><button data-target="#tab-imageadjust" class="tab-imageadjust" title="<f:translate key='tab.imageadjust' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.imageadjust' extensionName='ddb_frontend_viewer' /></button></li>
+            <li><button data-target="#tab-downloads" class="tab-downloads" title="<f:translate key='tab.downloads.title' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.downloads' extensionName='ddb_frontend_viewer' /></button></li>
+            <li><button data-target="#tab-imageadjust" class="tab-imageadjust" title="<f:translate key='tab.imageadjust.title' extensionName='ddb_frontend_viewer' />"><f:translate key='tab.imageadjust' extensionName='ddb_frontend_viewer' /></button></li>
         </ul>
     </div>
 
@@ -32,8 +32,10 @@
 
       <div id="tab-fulltext" class="fulltext-wrapper tab-content-pane">
         <h3><f:translate key='tab.fulltext' extensionName='ddb_frontend_viewer' /></h3>
-        <f:cObject typoscriptObjectPath="lib.tools.toolsFulltext" />
-        <div id="tx-dlf-fulltextselection"></div>
+        <f:if condition="{gp-double} == 0">
+          <f:cObject typoscriptObjectPath="lib.tools.toolsFulltext" />
+          <div id="tx-dlf-fulltextselection"></div>
+        </f:if>
       </div>
 
       <div id="tab-search" class="search-wrapper tab-content-pane">
@@ -48,9 +50,10 @@
             <f:then>
               <li>
                 <f:link.external
-                uri="<ddb:downloadLinks type='work' />"
-                class="download-document"
-                title="<f:translate key='download.work' extensionName='ddb_frontend_viewer' />"><f:translate key="download.work"  extensionName="ddb_frontend_viewer" /></f:link.external>
+                  uri="<ddb:downloadLinks type='work' />"
+                  class="download-document"
+                  target="_blank"
+                  title="<f:translate key='download.work' extensionName='ddb_frontend_viewer' />"><f:translate key="download.work"  extensionName="ddb_frontend_viewer" /></f:link.external>
               </li>
             </f:then>
             <f:else>
@@ -59,6 +62,7 @@
                   <f:link.external
                     uri="http://digital.slub-dresden.de/fileadmin/data/<ddb:xpath xpath='/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:extension/slub:slub/slub:id[@type=\'digital\']' />/<ddb:xpath xpath='/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:extension/slub:slub/slub:id[@type=\'digital\']' />_tif/jpegs/<ddb:xpath xpath='/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:extension/slub:slub/slub:id[@type=\'digital\']' />.pdf"
                     class="download-document"
+                    target="_blank"
                     title="<f:translate key='download.work' extensionName='ddb_frontend_viewer' />"><f:translate key="download.work"  extensionName="ddb_frontend_viewer" />
                   </f:link.external>
                 </f:if>
@@ -69,19 +73,34 @@
             <f:then>
               <f:if condition="<ddb:downloadLinks type='page-left' pagenumber='{gp-page}' /> !=''">
                 <li>
-                  <f:link.external uri="<ddb:downloadLinks type='page-left' pagenumber='{gp-page}' />" class="download-page" title="<f:translate key='download.leftPage' extensionName='ddb_frontend_viewer' />"><f:translate key="download.leftPage"  extensionName="ddb_frontend_viewer" /></f:link.external>
+                  <f:link.external
+                    uri="<ddb:downloadLinks type='page-left' pagenumber='{gp-page}' />"
+                    class="download-page"
+                    target="_blank"
+                    title="<f:translate key='download.leftPage' extensionName='ddb_frontend_viewer' />"><f:translate key="download.leftPage"  extensionName="ddb_frontend_viewer" />
+                  </f:link.external>
                 </li>
               </f:if>
               <f:if condition="<ddb:downloadLinks type='page-right' pagenumber='{gp-page}' /> !=''">
                 <li>
-                  <f:link.external uri="<ddb:downloadLinks type='page-right' pagenumber='{gp-page}' />" class="download-page" title="<f:translate key='download.rightPage' extensionName='ddb_frontend_viewer' />"><f:translate key="download.rightPage"  extensionName="ddb_frontend_viewer" /></f:link.external>
+                  <f:link.external
+                    uri="<ddb:downloadLinks type='page-right' pagenumber='{gp-page}' />"
+                    class="download-page"
+                    target="_blank"
+                    title="<f:translate key='download.rightPage' extensionName='ddb_frontend_viewer' />"><f:translate key="download.rightPage"  extensionName="ddb_frontend_viewer" />
+                  </f:link.external>
                 </li>
               </f:if>
             </f:then>
             <f:else>
               <f:if condition="<ddb:downloadLinks type='page-left' pagenumber='{gp-page}' /> !=''">
                 <li>
-                  <f:link.external uri="<ddb:downloadLinks type='page-left' pagenumber='{gp-page}' />" class="download-page" title="<f:translate key='download.singlePage' extensionName='ddb_frontend_viewer' />"><f:translate key="download.singlePage"  extensionName="ddb_frontend_viewer" /></f:link.external>
+                  <f:link.external
+                    uri="<ddb:downloadLinks type='page-left' pagenumber='{gp-page}' />"
+                    class="download-page"
+                    target="_blank"
+                    title="<f:translate key='download.singlePage' extensionName='ddb_frontend_viewer' />"><f:translate key="download.singlePage"  extensionName="ddb_frontend_viewer" />
+                  </f:link.external>
                 </li>
               </f:if>
             </f:else>

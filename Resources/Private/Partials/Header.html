@@ -2,10 +2,10 @@
 <f:section name="Header">
   <div class="header">
     <div class="provider">
-      <f:if condition="<ddb:xpath xpath='//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\'DVRIGHTS\']/mets:xmlData/dv:rights/dv:ownerLogo' />">
-        <f:link.external uri="<ddb:xpath xpath='//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\"DVRIGHTS\"]/mets:xmlData/dv:rights/dv:ownerSiteURL' />" title="<ddb:xpath xpath='//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\"DVRIGHTS\"]/mets:xmlData/dv:rights/dv:owner' />" target="_blank">
-        <img src="<ddb:xpath xpath='//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\'DVRIGHTS\']/mets:xmlData/dv:rights/dv:ownerLogo' />"
-          title="<ddb:xpath xpath='//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\'DVRIGHTS\']/mets:xmlData/dv:rights/dv:owner' />"
+      <f:if condition="<ddb:xpath xpath='(//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\'DVRIGHTS\']/mets:xmlData/dv:rights/dv:ownerLogo)[1]' />">
+        <f:link.external uri="<ddb:xpath xpath='(//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\"DVRIGHTS\"]/mets:xmlData/dv:rights/dv:ownerSiteURL)[1]' />" title="<ddb:xpath xpath='//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\"DVRIGHTS\"]/mets:xmlData/dv:rights/dv:owner' />" target="_blank">
+        <img src="<ddb:xpath xpath='(//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\'DVRIGHTS\']/mets:xmlData/dv:rights/dv:ownerLogo)[1]' />"
+          title="<ddb:xpath xpath='(//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\'DVRIGHTS\']/mets:xmlData/dv:rights/dv:owner)[1]' />"
           alt="Abbildung eines Logo"
           />
         </f:link.external>
@@ -27,8 +27,8 @@
         </f:if>
         <div class="provider-link">
           <span class="label"><f:translate key='metadata.provider' extensionName='ddb_frontend_viewer' />:</span>
-          <f:link.external uri="<ddb:xpath xpath='//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\"DVRIGHTS\"]/mets:xmlData/dv:rights/dv:ownerSiteURL' />" title="Seite des Datengebers besuchen" target="_blank">
-            <ddb:xpath xpath='//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\'DVRIGHTS\']/mets:xmlData/dv:rights/dv:owner' />
+          <f:link.external uri="<ddb:xpath xpath='(//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\"DVRIGHTS\"]/mets:xmlData/dv:rights/dv:ownerSiteURL)[1]' />" title="Seite des Datengebers besuchen" target="_blank">
+            <ddb:xpath xpath='(//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\'DVRIGHTS\']/mets:xmlData/dv:rights/dv:owner)[1]' />
           </f:link.external>
         </div>
     </div>
