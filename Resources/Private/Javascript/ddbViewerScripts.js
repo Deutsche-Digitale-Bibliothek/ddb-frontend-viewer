@@ -123,6 +123,11 @@ $(document).ready(function() {
             $('.tab-nav button.tab-fulltext').click();
         }
     }
+	
+	// Check if image manipulation is supported. Otherwise disable tab nav element
+    if($('#tx-dlf-tools-imagetools').children() == 0) {
+        $('.tab-imageadjust').addClass('disabled');
+	}
 
     // Add active span to pagegrids paging and remove separate characters (Oh my, how stupid is that?)
     $('.tx-dlf-pagegrid-pagebrowser').html(function(_, html) {
