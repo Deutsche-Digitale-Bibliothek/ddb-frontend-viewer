@@ -19,8 +19,9 @@ page {
 		author.field = author
 		robots = all
 		viewport = width=device-width, initial-scale=1
-		Content-Security-Policy = upgrade-insecure-requests
-		Content-Security-Policy.httpEquivalent = 1
+		# force
+		# Content-Security-Policy = upgrade-insecure-requests
+		# Content-Security-Policy.httpEquivalent = 1
 	}
 
 }
