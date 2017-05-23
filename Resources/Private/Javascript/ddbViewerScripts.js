@@ -6,21 +6,27 @@
 
 !*/
 
+
+
 $(document).ready(function() {
 
-    // Add loading indicator just for the OL3 element (throw error after 20sec)
-    var startTime = new Date().getTime();
-    var timer = setInterval(function() {
-        if(new Date().getTime() - startTime > 200000){
-            clearInterval(timer);
-            $('#tx-dlf-map .loading .loading-wrapper').html('<div class="warning">Fehler beim Laden der Bilddaten. Bitte versuchen Sie die Seite erneut aufzurufen.</div>');
-            return;
-        }
-        if($('#tx-dlf-map .ol-viewport')[0]) {
-            $('#tx-dlf-map .loading').fadeOut(800,function() { $(this).remove(); });
-            clearInterval(timer);
-        }
-    },200);
+    // Add loading indicator just for the OL3 element (throw error after 20sec; runs only if there is an .current element in the toc to ensure image data is given)
+    if(!$('ul.toc .current')[0]) {
+        $('#tx-dlf-map .loading').remove();
+    } else {
+        var startTime = new Date().getTime();
+        var timer = setInterval(function() {
+            if(new Date().getTime() - startTime > 20000){
+                clearInterval(timer);
+                $('#tx-dlf-map .loading .loading-wrapper').html('<div class="warning">Fehler beim Laden der Bilddaten. Bitte versuchen Sie die Seite erneut aufzurufen.</div>');
+                return;
+            }
+            if($('#tx-dlf-map .ol-viewport')[0]) {
+                $('#tx-dlf-map .loading').fadeOut(800,function() { $(this).remove(); });
+                clearInterval(timer);
+            }
+        },200);
+    }
 
     // check mobile device to specify click events
     function mobileCheck() {

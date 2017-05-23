@@ -37,17 +37,14 @@
                 display: table-cell;
                 vertical-align: middle;
                 text-align: center;
-                svg {
+                img {
                     width: 70px;
                     height: 70px;
-                    path {
-                        fill: @primary-red;
-                    }
                 }
                 .loading-label {
                     display: block;
                     margin-top: 20px;
-                    color: lighten(@warm-grey,20%);
+                    color: @primary-red;
                     font-weight: bold;
                 }
                 .warning {
@@ -70,12 +67,9 @@
                     }
                 }
                 .fullscreen & {
-                    svg {
+                    img {
                         width: 100px;
                         height: 100px;
-                        path {
-                            fill: lighten(@warm-grey,20%);
-                        }
                     }
                 }
             }
