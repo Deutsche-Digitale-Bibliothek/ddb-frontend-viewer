@@ -59,6 +59,18 @@ a {
             text-decoration: underline;
         }
     }
+    .metadata &, #tab-meta & {
+        position: relative;
+        padding-left: 22px;
+        &[href^="http"]:not([href^="http://localhost"]):not([href*="dev.fiz-karlsruhe.de"]):not([href*="deutsche-digitale-bibliothek.de"])::before {
+            position: absolute;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            content: " ";
+            background: url(../Images/ctrlIcons.svg) no-repeat -610px -10px;
+        }
+    }
 }
 .main-wrapper {
     position: relative;
