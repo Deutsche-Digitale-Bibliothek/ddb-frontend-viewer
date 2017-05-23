@@ -123,9 +123,9 @@ $(document).ready(function() {
             $('.tab-nav button.tab-fulltext').click();
         }
     }
-	
+
 	// Check if image manipulation is supported. Otherwise disable tab nav element
-    if($('#tx-dlf-tools-imagetools').children() == 0) {
+    if($('#tx-dlf-tools-imagetools').children().length == 0) {
         $('.tab-imageadjust').addClass('disabled');
 	}
 
