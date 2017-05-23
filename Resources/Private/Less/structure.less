@@ -72,6 +72,13 @@ a {
         }
     }
 }
+
+a, button {
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 3px @primary-red;
+    }
+}
 .main-wrapper {
     position: relative;
     width: 100%;
