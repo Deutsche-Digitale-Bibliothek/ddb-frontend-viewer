@@ -7,7 +7,6 @@
 !*/
 
 
-
 $(document).ready(function() {
 
     // Add loading indicator just for the OL3 element (throw error after 20sec; runs only if there is an .current element in the toc to ensure image data is given)
@@ -130,13 +129,15 @@ $(document).ready(function() {
         }
     }
 
-	// Check if image manipulation is supported. Otherwise disable tab nav element
-    if($('#tx-dlf-tools-imagetools').children().length == 0) {
-        $('.tab-imageadjust').addClass('disabled').attr({
-            'title': 'Bildbearbeitung wird nicht unterstützt',
-            'disabled': 'disabled'
-        });
-	}
+
+	$("#tx-dlf-tools-imagetools").bind('cssClassChanged', function(){
+		if($("#tx-dlf-tools-imagetools").hasClass('deactivate')) {
+			$('.tab-imageadjust').addClass('disabled').attr({
+				'title': 'Bildbearbeitung wird nicht unterstützt',
+				'disabled': 'disabled'
+			});
+		}
+    });
 
     // Add active span to pagegrids paging and remove separate characters (Oh my, how stupid is that?)
     $('.tx-dlf-pagegrid-pagebrowser').html(function(_, html) {
@@ -234,5 +235,21 @@ $.fn.isInViewport = function() {
     var viewportBottom = viewportTop + $(window).height();
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
+
+// Helper function to create a trigger a custom event when a CSS class was added
+(function(){
+    var originalAddClassMethod = jQuery.fn.addClass;
+
+    jQuery.fn.addClass = function(){
+        // Execute the original method.
+        var result = originalAddClassMethod.apply( this, arguments );
+
+        // trigger a custom event
+        jQuery(this).trigger('cssClassChanged');
+
+        // return the original result
+        return result;
+    }
+})();
 
 // EOF
