@@ -13,7 +13,7 @@ $(document).ready(function() {
     var timer = setInterval(function() {
         if(new Date().getTime() - startTime > 200000){
             clearInterval(timer);
-            $('#tx-dlf-map .loading .loading-wrapper').html('<div class="warning"><strong>Fehler</strong> beim laden der Bilddaten. Bitte versuchen Sie die Seite erneut aufzurufen oder kontaktieren Sie den Datengeber.</div>');
+            $('#tx-dlf-map .loading .loading-wrapper').html('<div class="warning">Fehler beim Laden der Bilddaten. Bitte versuchen Sie die Seite erneut aufzurufen.</div>');
             return;
         }
         if($('#tx-dlf-map .ol-viewport')[0]) {
