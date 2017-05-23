@@ -126,7 +126,10 @@ $(document).ready(function() {
 
 	// Check if image manipulation is supported. Otherwise disable tab nav element
     if($('#tx-dlf-tools-imagetools').children().length == 0) {
-        $('.tab-imageadjust').addClass('disabled');
+        $('.tab-imageadjust').addClass('disabled').attr({
+            'title': 'Bildbearbeitung wird nicht unterstützt',
+            'disabled': 'disabled'
+        });
 	}
 
     // Add active span to pagegrids paging and remove separate characters (Oh my, how stupid is that?)
