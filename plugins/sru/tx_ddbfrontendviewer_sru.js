@@ -31,51 +31,83 @@ $("#tx_ddbfrontendviewer-sru-form").submit(function( event ) {
 		},
 		function(data) {
 
-			var resultList = '<div class="sru-results-active-indicator"></div><ul>';
+			var resultList = '<div class="sru-results-active-indicator"></div>';
 
 			if (data.error) {
 
-				resultList += '<li>' + data.error + '</li>';
+				resultList += '<ul><li>' + data.error + '</li></ul>';
 
 			} else {
 
-				for (var i=0; i < data.length; i++) {
+				var dataSorted;
+				dataSorted = data.sort(function(a, b){return a.page > b.page});
 
-					var link_current = $(location).attr('href');
+				var pages = [];
 
-					var link_base = link_current.substring(0, link_current.indexOf('?'));
-					var link_params = link_current.substring(link_base.length + 1, link_current.length);
+				var previewText = '';
 
-					var link_id = link_params.match(/id=(\d)*/g);
+				var outputTextLink = {};
+				var outputImageLink = {};
 
-					if (link_id) {
+				$.each( dataSorted, function( index, value ){
 
-						link_params = link_id + '&';
-
-					} else {
-
-						link_params = '&';
-
+					if (pages.indexOf(value.page) == -1) {
+							previewText = '';
+							pages.push(value.page);
 					}
 
-					var newlink = link_base + '?' + (link_params
-					+ 'tx_dlf[id]=' + data[i].link
-					+ '&tx_dlf[origimage]=' + data[i].origImage
-					+ '&tx_dlf[highlight]=' + encodeURIComponent(data[i].highlight)
-					+ '&tx_dlf[page]=' + (data[i].page));
+						if (previewText.length > 1) {
+							previewText += ' [...] ' + value.previewText;
+						} else {
+							previewText = value.previewText;
+						}
 
-					if (data[i].previewImage) {
-						resultList += '<li><a href=\"' + newlink + '\">' + data[i].previewImage + '</li>';
-					}
-					if (data[i].previewText) {
-						resultList += '<li><a href=\"' + newlink + '\">' + data[i].previewText + '</li>';
-					}
-				}
+						var link_current = $(location).attr('href');
+
+						var link_base = link_current.substring(0, link_current.indexOf('?'));
+						var link_params = link_current.substring(link_base.length + 1, link_current.length);
+
+						var link_id = link_params.match(/id=(\d)*/g);
+
+						if (link_id) {
+
+							link_params = link_id + '&';
+
+						} else {
+
+							link_params = '&';
+
+						}
+
+						var newlink = link_base + '?' + (link_params
+						+ 'tx_dlf[id]=' + value.link
+						+ '&tx_dlf[origimage]=' + value.origImage
+						+ '&tx_dlf[highlight]=' + encodeURIComponent(value.highlight)
+						+ '&tx_dlf[page]=' + (value.page));
+
+						if (value.previewImage && outputImageLink[value.page] === undefined) {
+							outputImageLink[value.page] = '<a href=\"' + newlink + '\">' + value.previewImage + '</a>';
+						}
+						if (value.previewText) {
+							outputTextLink[value.page] = '<a href=\"' + newlink + '\">' + previewText + '</a>';
+						}
+
+					});
+
+					var output = '';
+
+					$.each(pages, function( index, value ){
+
+						output += '<ul>';
+						output += '<li><h3>Seite ' + value + '</h3></li>';
+						output += '<li>' + outputImageLink[value] + '</li>';
+						output += '<li>' + outputTextLink[value] + '</li>';
+						output += '<ul>';
+
+					});
 
 			}
-			resultList += '</ul>';
-
-			$('#tx_ddbfrontendviewer-sru-results').html(resultList);
+			$('#tx_ddbfrontendviewer-sru-results').html(output);
 
 		},
 		"json"
