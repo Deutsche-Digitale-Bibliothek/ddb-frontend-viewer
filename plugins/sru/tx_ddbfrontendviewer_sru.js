@@ -99,7 +99,16 @@ $("#tx_ddbfrontendviewer-sru-form").submit(function( event ) {
 					$.each(pages, function( index, value ){
 
 						output += '<ul>';
-						output += '<li><h3>Seite ' + value + '</h3></li>';
+						if ($.isNumeric(value) === false) {
+							var label = $('ul#sru-' + value + ' li.label').text();
+							var page = $('ul#sru-' + value + ' li.page').text();
+							if (label.length == 0) {
+								label = page;
+							}
+						} else {
+							label = value;
+						}
+						output += '<li><h3>Seite ' + label + '</h3></li>';
 						output += '<li>' + outputImageLink[value] + '</li>';
 						output += '<li>' + outputTextLink[value] + '</li>';
 						output += '<ul>';

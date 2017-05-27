@@ -87,6 +87,30 @@ class GetDoc
   }
 
   /**
+   * Get mapping of physical pages, labels and image number
+   *
+   * @access	public
+   *
+   * @return	string: The left and right download url
+   */
+  public function getPhysicalPageMap()
+  {
+
+    if (!$this->init()) {
+      return '';
+    }
+
+    $physicalPages = $this->doc->physicalPages;
+    $physicalPagesInfo = $this->doc->physicalPagesInfo;
+
+    foreach ($physicalPages as $key => $physicalPage) {
+        $map[$key] = array( 'label' => $physicalPagesInfo[$physicalPage]['label'], 'physicalPage' => $physicalPage);
+    }
+
+    return $map;
+  }
+
+  /**
    * get xpath result
    *
    * @access	public
