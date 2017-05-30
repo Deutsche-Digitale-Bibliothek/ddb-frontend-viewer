@@ -9,7 +9,7 @@ page {
 		style = EXT:ddb_frontend_viewer/Resources/Public/Css/allStyles.css
 	}
 
-	includeJSlibs {
+	includeJSLibs {
 		# we include jquery by t3jquery on page.9 below
 		uiscripts = EXT:ddb_frontend_viewer/Resources/Public/Js/allScripts.js
 	}

@@ -202,6 +202,9 @@ $(document).ready(function() {
     $('body').removeClass('hidden');
     setTimeout(function() { $('body').removeClass('static'); }, 1000);
 
+    // Force new window/tab for external links
+    $('a[href^="http"]:not([href^="http://localhost"]):not([href*="dev.fiz-karlsruhe.de"]):not([href*="deutsche-digitale-bibliothek.de"])').attr('target','_blank');
+
 });
 
 $(document).keyup(function(e) {

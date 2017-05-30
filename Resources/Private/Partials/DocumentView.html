@@ -11,4 +11,20 @@
     <f:cObject typoscriptObjectPath="plugin.tx_dlf_pagegrid" />
   </div>
 </div>
+<f:if condition="<ddb:xpath xpath='//mets:amdSec/mets:digiprovMD/mets:mdWrap[@OTHERMDTYPE=\"DVLINKS\"]/mets:xmlData/dv:links/dv:sru' />">
+<div style="display:none">
+<f:for each="<ddb:physicalPages />" as="value" key="page">
+  <ul class="sru-helper" id="sru-{value.physicalPage}">
+    <f:if condition="{value.physicalPage} == {gp-page}">
+      <li class="current">{value.physicalPage}</li>
+    </f:if>
+    <f:if condition="{page} == {gp-page}">
+        <li class="current">{page}</li>
+    </f:if>
+    <li class="page">{page}</li>
+    <li class="label">{value.label}</li>
+  </ul>
+</f:for>
+</div>
+</f:if>
 </f:section>
