@@ -10,131 +10,129 @@
 
 $(document).ready(function() {
 
-$("#tx_ddbfrontendviewer-sru-form").submit(function( event ) {
+	$("#tx_ddbfrontendviewer-sru-form").submit(function( event ) {
 
-	// Stop form from submitting normally
-	event.preventDefault();
+		// Stop form from submitting normally
+		event.preventDefault();
 
-	$('#tx_ddbfrontendviewer-sru-results-loading').show();
-	$('#tx_ddbfrontendviewer-sru-results-clearing').hide();
-	$('#tx_ddbfrontendviewer-sru-results ul').remove();
+		$('#tx_ddbfrontendviewer-sru-results-loading').show();
+		$('#tx_ddbfrontendviewer-sru-results-clearing').hide();
+		$('#tx_ddbfrontendviewer-sru-results ul').remove();
 
-	// Send the data using post
-	$.post(
-		window.location.pathname,
-		{
-			eID: "tx_ddbfrontendviewer_sru_eid",
-			q: $( "input[name='tx_dlf[query]']" ).val(),
-			L: $( "input[name='tx_ddbfrontendviewer[L]']" ).val(),
-			id: $( "input[name='tx_ddbfrontendviewer[id]']" ).val(),
-			sru: $( "input[name='tx_ddbfrontendviewer[sru]']" ).val(),
-			action: $( "input[name='tx_ddbfrontendviewer[action]']" ).val(),
-		},
-		function(data) {
+		// Send the data using post
+		$.post(
+			window.location.pathname,
+			{
+				eID: "tx_ddbfrontendviewer_sru_eid",
+				q: $( "input[name='tx_dlf[query]']" ).val(),
+				L: $( "input[name='tx_ddbfrontendviewer[L]']" ).val(),
+				id: $( "input[name='tx_ddbfrontendviewer[id]']" ).val(),
+				sru: $( "input[name='tx_ddbfrontendviewer[sru]']" ).val(),
+				action: $( "input[name='tx_ddbfrontendviewer[action]']" ).val(),
+			},
+			function(data) {
 
-			var resultList = '<div class="sru-results-active-indicator"></div>';
+				var resultList = '<div class="sru-results-active-indicator"></div>';
 
-			if (data.error) {
+				if (data.error) {
 
-				resultList += '<ul><li>' + data.error + '</li></ul>';
+					resultList += '<ul><li>' + data.error + '</li></ul>';
 
-			} else {
+				} else {
 
-				var dataSorted;
-				dataSorted = data.sort(function(a, b){return a.page > b.page});
+					var dataSorted;
+					dataSorted = data.sort(function(a, b){return a.page > b.page});
 
-				var pages = [];
+					var pages = [];
 
-				var previewText = '';
+					var previewText = '';
 
-				var outputTextLink = {};
-				var outputImageLink = {};
+					var outputTextLink = {};
+					var outputImageLink = {};
 
-				$.each( dataSorted, function( index, value ){
+					$.each( dataSorted, function( index, value ){
 
-					if (pages.indexOf(value.page) == -1) {
-							previewText = '';
-							pages.push(value.page);
-					}
-
-						if (previewText.length > 1) {
-							previewText += ' [...] ' + value.previewText;
-						} else {
-							previewText = value.previewText;
+						if (pages.indexOf(value.page) == -1) {
+								previewText = '';
+								pages.push(value.page);
 						}
 
-						var link_current = $(location).attr('href');
-
-						var link_base = link_current.substring(0, link_current.indexOf('?'));
-						var link_params = link_current.substring(link_base.length + 1, link_current.length);
-
-						var link_id = link_params.match(/id=(\d)*/g);
-
-						if (link_id) {
-
-							link_params = link_id + '&';
-
-						} else {
-
-							link_params = '&';
-
-						}
-
-						var newlink = link_base + '?' + (link_params
-						+ 'tx_dlf[id]=' + value.link
-						+ '&tx_dlf[origimage]=' + value.origImage
-						+ '&tx_dlf[highlight]=' + encodeURIComponent(value.highlight)
-						+ '&tx_dlf[page]=' + (value.page));
-
-						if (value.previewImage && outputImageLink[value.page] === undefined) {
-							outputImageLink[value.page] = '<a href=\"' + newlink + '\">' + value.previewImage + '</a>';
-						}
-						if (value.previewText) {
-							outputTextLink[value.page] = '<a href=\"' + newlink + '\">' + previewText + '</a>';
-						}
-
-					});
-
-					var output = '';
-
-					$.each(pages, function( index, value ){
-
-						output += '<ul>';
-						var page = $('ul#sru-' + value + ' li.page').text();
-						if ($.isNumeric(value) === false) {
-							var label = $('ul#sru-' + value + ' li.label').text();
-							if (label.length == 0) {
-								label = page;
+							if (previewText.length > 1) {
+								previewText += ' [...] ' + value.previewText;
+							} else {
+								previewText = value.previewText;
 							}
-						} else {
-							label = value;
-						}
-						var pageCurrent = $('ul#sru-' + value + ' li.current').text();
-						var active = (page == pageCurrent) ? 'active' : '';
-						output += '<li><h3 class="'+ active +'">Seite ' + label + '</h3></li>';
-						output += '<li>' + outputImageLink[value] + '</li>';
-						output += '<li>' + outputTextLink[value] + '</li>';
-						output += '</ul>';
 
-					});
+							var link_current = $(location).attr('href');
 
-			}
-			$('#tx_ddbfrontendviewer-sru-results').html(output);
+							var link_base = link_current.substring(0, link_current.indexOf('?'));
+							var link_params = link_current.substring(link_base.length + 1, link_current.length);
 
-		},
-		"json"
-	)
-	.done(function( data ) {
-		$('#tx_ddbfrontendviewer-sru-results-loading').hide();
-		$('#tx_ddbfrontendviewer-sru-results-clearing').show();
+							var link_id = link_params.match(/id=(\d)*/g);
+
+							if (link_id) {
+
+								link_params = link_id + '&';
+
+							} else {
+
+								link_params = '&';
+
+							}
+
+							var newlink = link_base + '?' + (link_params
+							+ 'tx_dlf[id]=' + value.link
+							+ '&tx_dlf[origimage]=' + value.origImage
+							+ '&tx_dlf[highlight]=' + encodeURIComponent(value.highlight)
+							+ '&tx_dlf[page]=' + (value.page));
+
+							if (value.previewImage && outputImageLink[value.page] === undefined) {
+								outputImageLink[value.page] = '<a href=\"' + newlink + '\">' + value.previewImage + '</a>';
+							}
+							if (value.previewText) {
+								outputTextLink[value.page] = '<a href=\"' + newlink + '\">' + previewText + '</a>';
+							}
+
+						});
+
+						var output = '';
+
+						$.each(pages, function( index, value ){
+
+							output += '<ul>';
+							var page = $('ul#sru-' + value + ' li.page').text();
+							if ($.isNumeric(value) === false) {
+								var label = $('ul#sru-' + value + ' li.label').text();
+								if (label.length == 0) {
+									label = page;
+								}
+							} else {
+								label = value;
+							}
+							var pageCurrent = $('ul#sru-' + value + ' li.current').text();
+							var active = (page == pageCurrent) ? 'active' : '';
+							output += '<li><h3 class="'+ active +'">Seite ' + label + '</h3></li>';
+							output += '<li>' + outputImageLink[value] + '</li>';
+							output += '<li>' + outputTextLink[value] + '</li>';
+							output += '</ul>';
+
+						});
+
+				}
+				$('#tx_ddbfrontendviewer-sru-results').html(output);
+
+			},
+			"json"
+		)
+		.done(function( data ) {
+			$('#tx_ddbfrontendviewer-sru-results-loading').hide();
+			$('#tx_ddbfrontendviewer-sru-results-clearing').show();
+		});
 	});
-});
 
-// clearing button
-$('#tx_ddbfrontendviewer-sru-results-clearing').click(function() {
-	$('.sru-results-active-indicator').remove();
-	$('#tx_ddbfrontendviewer-sru-query').val('');
-});
-
-
+	// clearing button
+	$('#tx_ddbfrontendviewer-sru-results-clearing').click(function() {
+		$('.sru-results-active-indicator').remove();
+		$('#tx_ddbfrontendviewer-sru-query').val('');
+	});
 });
