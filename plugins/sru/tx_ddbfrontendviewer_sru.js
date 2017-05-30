@@ -17,6 +17,7 @@ $("#tx_ddbfrontendviewer-sru-form").submit(function( event ) {
 
 	$('#tx_ddbfrontendviewer-sru-results-loading').show();
 	$('#tx_ddbfrontendviewer-sru-results-clearing').hide();
+	$('#tx_ddbfrontendviewer-sru-results ul').remove();
 
 	// Send the data using post
 	$.post(
@@ -88,7 +89,6 @@ $("#tx_ddbfrontendviewer-sru-form").submit(function( event ) {
 
 // clearing button
 $('#tx_ddbfrontendviewer-sru-results-clearing').click(function() {
-	$('#tx_ddbfrontendviewer-sru-results ul').remove();
 	$('.sru-results-active-indicator').remove();
 	$('#tx_ddbfrontendviewer-sru-query').val('');
 });
