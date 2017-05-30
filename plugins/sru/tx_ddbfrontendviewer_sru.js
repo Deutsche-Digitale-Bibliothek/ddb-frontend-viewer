@@ -10,6 +10,8 @@
 
 $(document).ready(function() {
 
+	var searchQuery;
+
 	$("#tx_ddbfrontendviewer-sru-form").submit(function( event ) {
 
 		// Stop form from submitting normally
@@ -18,6 +20,8 @@ $(document).ready(function() {
 		$('#tx_ddbfrontendviewer-sru-results-loading').show();
 		$('#tx_ddbfrontendviewer-sru-results-clearing').hide();
 		$('#tx_ddbfrontendviewer-sru-results ul').remove();
+
+		searchQuery = $("input[name='tx_dlf[query]']" ).val();
 
 		// Send the data using post
 		$.post(
@@ -85,7 +89,7 @@ $(document).ready(function() {
 							+ '&tx_dlf[origimage]=' + value.origImage
 							+ '&tx_dlf[highlight]=' + encodeURIComponent(value.highlight)
 							+ '&tx_dlf[page]=' + (value.page))
-							+ '&tx_dlf[query]=' + query;
+							+ '&tx_dlf[searchquery]=' + searchQuery;
 
 							if (value.previewImage && outputImageLink[value.page] === undefined) {
 								outputImageLink[value.page] = '<a href=\"' + newlink + '\">' + value.previewImage + '</a>';
@@ -132,10 +136,10 @@ $(document).ready(function() {
 	});
 
 	// If we have a search query show the search tab and trigger a search
-	var query = getUrlParameter('tx_dlf[query]');
-	if(query) {
+	searchQuery = getUrlParameter("tx_dlf[searchquery]");
+	if(searchQuery) {
 		$(".tab-search").click();
-		$("input[name='tx_dlf[query]']" ).val(query);
+		$("input[name='tx_dlf[query]']" ).val(searchQuery);
  		$("#tx_ddbfrontendviewer-sru-form input[type='submit']").click();
 	}
 
