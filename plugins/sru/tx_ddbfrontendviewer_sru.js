@@ -84,7 +84,8 @@ $(document).ready(function() {
 							+ 'tx_dlf[id]=' + value.link
 							+ '&tx_dlf[origimage]=' + value.origImage
 							+ '&tx_dlf[highlight]=' + encodeURIComponent(value.highlight)
-							+ '&tx_dlf[page]=' + (value.page));
+							+ '&tx_dlf[page]=' + (value.page))
+							+ '&tx_dlf[query]=' + query;
 
 							if (value.previewImage && outputImageLink[value.page] === undefined) {
 								outputImageLink[value.page] = '<a href=\"' + newlink + '\">' + value.previewImage + '</a>';
@@ -130,9 +131,33 @@ $(document).ready(function() {
 		});
 	});
 
+	// If we have a search query show the search tab and trigger a search
+	var query = getUrlParameter('tx_dlf[query]');
+	if(query) {
+		$(".tab-search").click();
+		$("input[name='tx_dlf[query]']" ).val(query);
+ 		$("#tx_ddbfrontendviewer-sru-form input[type='submit']").click();
+	}
+
 	// clearing button
 	$('#tx_ddbfrontendviewer-sru-results-clearing').click(function() {
 		$('.sru-results-active-indicator').remove();
 		$('#tx_ddbfrontendviewer-sru-query').val('');
 	});
 });
+
+
+var getUrlParameter = function getUrlParameter(sParam) {
+	var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+		sURLVariables = sPageURL.split('&'),
+		sParameterName,
+		i;
+
+	for (i = 0; i < sURLVariables.length; i++) {
+		sParameterName = sURLVariables[i].split('=');
+
+		if (sParameterName[0] === sParam) {
+			return sParameterName[1] === undefined ? true : sParameterName[1];
+		}
+	}
+};
