@@ -159,7 +159,6 @@ $(document).ready(function() {
 
 	});
 
-
 	// Clear highlight from links
 	$.each($('.page-control a, .tx-dlf-pagegrid-list li a'), function() {
 		$(this).attr('href', removeURLParameter($(this), 'tx_dlf[highlight]'));
@@ -187,11 +186,11 @@ var getUrlParameter = function getUrlParameter(sParam) {
 };
 
 var removeURLParameter = function removeURLParameterFromLink(link, parameter) {
-	var url = decodeURIComponent(link.attr('href'));
+	var url = link.attr('href');
 	var parameters = url.split('&');
 	for(var i = parameters.length - 1; i > 0 ; i--) {
 		var sParameterName = parameters[i].split('=');
-		if(sParameterName[0] === parameter) {
+		if(sParameterName[0] === encodeURIComponent(parameter)) {
 			parameters.splice(i,1);
 		}
 	}
