@@ -36,11 +36,11 @@ $(document).ready(function() {
 			},
 			function(data) {
 
-				var resultList = '<div class="sru-results-active-indicator"></div>';
+				var output = '<div class="sru-results-active-indicator"></div>';
 
 				if (data.error) {
 
-					resultList += '<ul><li>' + data.error + '</li></ul>';
+					output += '<ul><li>' + data.error + '</li></ul>';
 
 				} else {
 
@@ -99,8 +99,6 @@ $(document).ready(function() {
 							}
 
 						});
-
-						var output = '';
 
 						$.each(pages, function( index, value ){
 
