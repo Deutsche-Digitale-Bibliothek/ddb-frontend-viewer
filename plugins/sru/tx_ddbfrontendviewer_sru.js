@@ -147,7 +147,27 @@ $(document).ready(function() {
 	$('#tx_ddbfrontendviewer-sru-results-clearing').click(function() {
 		$('.sru-results-active-indicator').remove();
 		$('#tx_ddbfrontendviewer-sru-query').val('');
+
+		// Clear searchQuery from links
+		$.each($('.page-control a, .tx-dlf-pagegrid-list li a'), function() {
+			$(this).attr('href', removeURLParameter($(this), 'tx_dlf[searchquery]'));
+		});
+
+		// Clear searchQuery from page selector
+		$("input[name='tx_dlf[searchquery]']").attr('value', '');
+
+
 	});
+
+
+	// Clear highlight from links
+	$.each($('.page-control a, .tx-dlf-pagegrid-list li a'), function() {
+		$(this).attr('href', removeURLParameter($(this), 'tx_dlf[highlight]'));
+	});
+
+	// Clear highlight from page selector
+	$("input[name='tx_dlf[highlight]']").attr('value', '');
+
 });
 
 
@@ -165,3 +185,16 @@ var getUrlParameter = function getUrlParameter(sParam) {
 		}
 	}
 };
+
+var removeURLParameter = function removeURLParameterFromLink(link, parameter) {
+	var url = decodeURIComponent(link.attr('href'));
+	var parameters = url.split('&');
+	for(var i = parameters.length - 1; i > 0 ; i--) {
+		var sParameterName = parameters[i].split('=');
+		if(sParameterName[0] === parameter) {
+			parameters.splice(i,1);
+		}
+	}
+
+	return parameters.join('&');
+}
