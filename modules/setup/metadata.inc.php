@@ -247,12 +247,25 @@ $metadata = array (
 		'wrap' => "key.wrap = <dt>|</dt>\nvalue.required = 1\nvalue.wrap = <dd>|</dd>",
 		'is_listed' => 1,
 	),
+	'subtitle' => array (
+		'hidden' => 1,
+		'format' => array (
+			array (
+				'encoded' => 1,
+				'xpath' => './mods:titleInfo[not(@type="alternative")]/mods:subTitle',
+				'xpath_sorting' => '',
+			),
+		),
+		'default_value' => '',
+		'wrap' => "key.wrap = <dt>|</dt>\n\nvalue.required = 1\nvalue.wrap = <dd>|</dd>",
+		'is_listed' => 1,
+	),
 	'title' => array (
 		'hidden' => 0,
 		'format' => array (
 			array (
 				'encoded' => 1,
-				'xpath' => 'concat(./mods:titleInfo[not(@type="alternative")]/mods:nonSort," ",./mods:titleInfo[not(@type="alternative")]/mods:title," ",./mods:titleInfo[not(@type="alternative")]/mods:partNumber," ",./mods:titleInfo[not(@type="alternative")]/mods:partName)',
+				'xpath' => 'concat(./mods:titleInfo[not(@type="alternative")]/mods:nonSort," ",./mods:titleInfo[not(@type="alternative")]/mods:title," ",./mods:titleInfo[not(@type="alternative")]/mods:subtitle," ",./mods:titleInfo[not(@type="alternative")]/mods:partNumber," ",./mods:titleInfo[not(@type="alternative")]/mods:partName)',
 				'xpath_sorting' => '',
 			),
 		),
@@ -273,11 +286,24 @@ $metadata = array (
 		'wrap' => '',
 		'is_listed' => 0,
 	),
+	'genre' => array (
+		'hidden' => 1,
+		'format' => array (
+			array (
+				'encoded' => 1,
+				'xpath' => '/mods:genre',
+				'xpath_sorting' => '',
+			),
+		),
+		'default_value' => '',
+		'wrap' => "key.wrap = <dt class=\"tx-dlf-type\">|</dt>\nvalue.required = 1\nvalue.wrap = <dd class=\"tx-dlf-type\">|</dd>",
+		'is_listed' => 1,
+	),
 	'type' => array (
 		'hidden' => 0,
 		'format' => array (),
 		'default_value' => '',
-		'wrap' => "key.wrap = <dt class=\"tx-dlf-type\">|</dt>\nvalue.required = 1\nvalue.wrap = <dd class=\"tx-dlf-type\">|</dd>",
+		'wrap' => "key.wrap = <dt class=\"tx-dlf-type\">|</dt>\nvalue.required = 1\nvalue.override.field = genre\nvalue.override.insertData = 1\nvalue.override.fieldRequired = genre\nvalue.wrap = <dd class=\"tx-dlf-type\">|</dd>",
 		'is_listed' => 1,
 	),
 );

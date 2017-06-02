@@ -114,9 +114,11 @@
 			<label index="settlement">Settlement</label>
 			<label index="repository">Repository</label>
 			<label index="type">Document Type</label>
+			<label index="genre">Document Type</label>
 			<label index="author">Author</label>
 			<label index="parentAuthor">Author (Parent)</label>
 			<label index="title">Title</label>
+			<label index="subtitle">Subtitle</label>
 			<label index="parentTitle">Parent Title</label>
 			<label index="volume">Volume</label>
 			<label index="issue">Issue</label>
@@ -247,10 +249,12 @@
 			<!-- Metadaten -->
 			<label index="settlement">Aufbewahrungsort</label>
 			<label index="repository">Einrichtung</label>
-			<label index="type">Strukturtyp</label>
+			<label index="type">Dokumenttyp</label>
+			<label index="genre">Dokumenttyp</label>
 			<label index="author">Autor</label>
 			<label index="parentAuthor">Autor (Gesamtheit)</label>
 			<label index="title">Titel</label>
+			<label index="subtitle">Untertitel</label>
 			<label index="parentTitle">Gesamttitel</label>
 			<label index="volume">Band</label>
 			<label index="issue">Ausgabe</label>
