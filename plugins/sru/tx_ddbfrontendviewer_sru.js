@@ -123,7 +123,6 @@ $(document).ready(function() {
 
 				}
 				$('#tx_ddbfrontendviewer-sru-results').html(output);
-
 			},
 			"json"
 		)
@@ -164,6 +163,7 @@ $(document).ready(function() {
 
 	// Clear highlight from page selector
 	$("input[name='tx_dlf[highlight]']").attr('value', '');
+
 
 });
 
