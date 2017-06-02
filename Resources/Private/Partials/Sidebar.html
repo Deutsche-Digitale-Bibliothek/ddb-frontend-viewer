@@ -57,10 +57,10 @@
               </li>
             </f:then>
             <f:else>
-              <f:if condition="<ddb:xpath xpath='/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:extension/slub:slub/slub:id[@type=\'digital\']' />">
+              <f:if condition="<ddb:xpath xpath='(//mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:extension/slub:slub/slub:id[@type=\'digital\'])[1]' />">
                 <li>
                   <f:link.external
-                    uri="http://digital.slub-dresden.de/fileadmin/data/<ddb:xpath xpath='/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:extension/slub:slub/slub:id[@type=\'digital\']' />/<ddb:xpath xpath='/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:extension/slub:slub/slub:id[@type=\'digital\']' />_tif/jpegs/<ddb:xpath xpath='/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:extension/slub:slub/slub:id[@type=\'digital\']' />.pdf"
+                    uri="http://digital.slub-dresden.de/fileadmin/data/<ddb:xpath xpath='(//mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:extension/slub:slub/slub:id[@type=\'digital\'])[1]' />/<ddb:xpath xpath='(//mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:extension/slub:slub/slub:id[@type=\'digital\'])[1]' />_tif/jpegs/<ddb:xpath xpath='(//mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:extension/slub:slub/slub:id[@type=\'digital\'])[1]' />.pdf"
                     class="download-document"
                     target="_blank"
                     title="<f:translate key='download.work' extensionName='ddb_frontend_viewer' />"><f:translate key="download.work"  extensionName="ddb_frontend_viewer" />

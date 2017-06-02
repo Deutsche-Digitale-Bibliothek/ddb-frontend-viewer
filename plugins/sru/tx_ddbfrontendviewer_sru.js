@@ -102,7 +102,7 @@ $(document).ready(function() {
 
 						$.each(pages, function( index, value ){
 
-							output += '<ul>';
+							output += '<ul class="sru-result">';
 							var page = $('ul#sru-' + value + ' li.page').text();
 							if ($.isNumeric(value) === false) {
 								var label = $('ul#sru-' + value + ' li.label').text();
@@ -114,9 +114,9 @@ $(document).ready(function() {
 							}
 							var pageCurrent = $('ul#sru-' + value + ' li.current').text();
 							var active = (page == pageCurrent) ? 'active' : '';
-							output += '<li><h3 class="'+ active +'">Seite ' + label + '</h3></li>';
-							output += '<li>' + outputImageLink[value] + '</li>';
-							output += '<li>' + outputTextLink[value] + '</li>';
+							output += '<li class="sru-result-headline"><h3 class="'+ active +'">Seite ' + label + '</h3></li>';
+							output += '<li class="sru-result-image">' + outputImageLink[value] + '</li>';
+							output += '<li class="sru-result-text">' + outputTextLink[value] + '</li>';
 							output += '</ul>';
 
 						});
