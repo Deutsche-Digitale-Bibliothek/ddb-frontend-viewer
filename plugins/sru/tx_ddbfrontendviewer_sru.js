@@ -144,6 +144,8 @@ $(document).ready(function() {
 	$('#tx_ddbfrontendviewer-sru-results-clearing').click(function() {
 		$('.sru-results-active-indicator').remove();
 		$('#tx_ddbfrontendviewer-sru-query').val('');
+		// remove already highlighted words
+		tx_dlf_viewer.highlightLayer.getSource().clear();
 
 		// Clear searchQuery from links
 		$.each($('.page-control a, .tx-dlf-pagegrid-list li a'), function() {
