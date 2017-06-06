@@ -175,12 +175,12 @@ $metadata = array (
 		'wrap' => "key.wrap = <dt>|</dt>\nvalue.setContentToCurrent = 1\nvalue.required = 1\nvalue.typolink.parameter.current = 1\nvalue.typolink.parameter.rawUrlEncode = 1\nvalue.typolink.parameter.prepend = TEXT\nvalue.typolink.parameter.prepend.value = http://gso.gbv.de/xslt/DB=1.28/SET=1/TTL=1/CMD?ACT=SRCHA&IKT=8002&TRM=\nvalue.wrap = <dd>|</dd>",
 		'is_listed' => 1,
 	),
-	'publisher' => array (
-		'hidden' => 0,
+	'electronic_ed' => array (
+		'hidden' => 1,
 		'format' => array (
 			array (
 				'encoded' => 1,
-				'xpath' => './mods:originInfo/mods:publisher',
+				'xpath' => './mods:originInfo/mods:publisher[text() and ../mods:edition/text()="[Electronic ed.]"]',
 				'xpath_sorting' => '',
 			),
 		),
@@ -206,7 +206,7 @@ $metadata = array (
 		'format' => array (
 			array (
 				'encoded' => 1,
-				'xpath' => 'concat(./mods:note[@type="creation/production credits"], " ",./mods:note[@type="publications"])',
+				'xpath' => 'concat(./mods:note[@type="creation/production credits"]," ",./mods:note[@type="publications"]," ",./mods:physicalDescription/mods:note[@type="condition"])',
 				'xpath_sorting' => '',
 			),
 		),

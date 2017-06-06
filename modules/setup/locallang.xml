@@ -131,7 +131,7 @@
 			<label index="parentYear">Year of Publication (Parent)</label>
 			<label index="vd16">VD16</label>
 			<label index="vd17">VD17</label>
-			<label index="publisher">Publisher</label>
+			<label index="electronic_ed">Electronic Edition</label>
 			<label index="series">Series</label>
 			<label index="urn">URN</label>
 			<label index="purl">Persistent URL</label>
@@ -267,7 +267,7 @@
 			<label index="parentYear">Erscheinungsjahr (Gesamtheit)</label>
 			<label index="vd16">VD16</label>
 			<label index="vd17">VD17</label>
-			<label index="publisher">Verleger</label>
+			<label index="electronic_ed">Elektronische Ausgabe</label>
 			<label index="series">Reihe</label>
 			<label index="urn">URN</label>
 			<label index="purl">Persistente URL</label>
