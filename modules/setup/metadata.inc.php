@@ -189,7 +189,7 @@ $metadata = array (
 		'is_listed' => 1,
 	),
 	'series' => array (
-		'hidden' => 0,
+		'hidden' => 1,
 		'format' => array (
 			array (
 				'encoded' => 1,
