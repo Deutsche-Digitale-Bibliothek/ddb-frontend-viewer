@@ -16,7 +16,7 @@
 <f:for each="<ddb:physicalPages />" as="value" key="page">
   <ul class="sru-helper" id="sru-{value.physicalPage}">
     <f:if condition="{value.physicalPage} == {gp-page}">
-      <li class="current">{value.physicalPage}</li>
+      <li class="current">{page}</li>
     </f:if>
     <f:if condition="{page} == {gp-page}">
         <li class="current">{page}</li>
