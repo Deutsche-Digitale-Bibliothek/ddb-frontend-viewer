@@ -201,6 +201,19 @@ $metadata = array (
 		'wrap' => "key.wrap = <dt>|</dt>\nvalue.required = 1\nvalue.wrap = <dd>|</dd>",
 		'is_listed' => 1,
 	),
+	'note' => array (
+		'hidden' => 0,
+		'format' => array (
+			array (
+				'encoded' => 1,
+				'xpath' => 'concat(./mods:note[@type="creation/production credits"], " ",./mods:note[@type="publications"])',
+				'xpath_sorting' => '',
+			),
+		),
+		'default_value' => '',
+		'wrap' => "key.wrap = <dt>|</dt>\nvalue.required = 1\nvalue.wrap = <dd>|</dd>",
+		'is_listed' => 1,
+	),
 	'place' => array (
 		'hidden' => 0,
 		'format' => array (),
