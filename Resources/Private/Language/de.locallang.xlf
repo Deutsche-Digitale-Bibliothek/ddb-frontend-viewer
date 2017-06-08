@@ -7,7 +7,7 @@
 		<body>
 		<trans-unit id="double.RectoVerso" approved="yes">
 			<source>Adjust recto/verso</source>
-			<target>Recto/Verso korrigieren</target>
+			<target>Seitenfolge ändern</target>
 		</trans-unit>
 		<trans-unit id="double.doublePageView" approved="yes">
 			<source>Show double pages</source>
