@@ -35,6 +35,7 @@
 			<label index="bachelor_thesis">Bachelor Thesis</label>
 			<label index="binding">Binding</label>
 			<label index="bookplate">Bookplate</label>
+			<label index="bundle">Bundle</label>
 			<label index="cartulary">Cartulary</label>
 			<label index="chapter">Chapter</label>
 			<label index="collation">Collation</label>
@@ -81,11 +82,13 @@
 			<label index="newspaper">Newspaper</label>
 			<label index="note">Note</label>
 			<label index="official_notification">Official Notification</label>
+			<label index="other">Other</label>
 			<label index="ornament">Ornament</label>
 			<label index="paper">Paper</label>
 			<label index="paste_down">Paste Down</label>
 			<label index="periodical">Periodical</label>
 			<label index="photograph">Photograph</label>
+			<label index="picture">Picture</label>
 			<label index="plan">Plan</label>
 			<label index="poster">Poster</label>
 			<label index="preface">Preface</label>
@@ -98,6 +101,7 @@
 			<label index="register">Register</label>
 			<label index="report">Report</label>
 			<label index="research_paper">Research Paper</label>
+			<label index="review">Review</label>
 			<label index="scheme">Scheme</label>
 			<label index="seal">Seal</label>
 			<label index="section">Section</label>
@@ -109,7 +113,7 @@
 			<label index="title_page">Titlepage</label>
 			<label index="verse">Verse</label>
 			<label index="volume">Volume</label>
-			<!-- <label index="year">Year</label> -->
+			<label index="year">Year</label>
 			<!-- metadata -->
 			<label index="settlement">Settlement</label>
 			<label index="repository">Repository</label>
@@ -166,13 +170,15 @@
 			<label index="address">Anrede</label>
 			<label index="album">Album</label>
 			<label index="annotation">Annotation</label>
-			<label index="article">Artikel</label>
+			<label index="article">Aufsatz</label>
 			<label index="atlas">Atlas</label>
 			<label index="bachelor_thesis">Bachelorarbeit</label>
 			<label index="binding">Einband</label>
 			<label index="bookplate">Exlibris</label>
+			<label index="bundle">Konvolut</label>
 			<label index="cartulary">Kartular</label>
 			<label index="chapter">Kapitel</label>
+			<label index="charter">Urkunde</label>
 			<label index="collation">Bogensignatur</label>
 			<label index="colophon">Kolophon</label>
 			<label index="contained_work">Enthaltenes Werk</label>
@@ -187,8 +193,8 @@
 			<label index="dossier">Vorgang</label>
 			<label index="edge">Schnitt</label>
 			<label index="endsheet">Vorsatz</label>
-			<label index="engraved_titlepage">Kupfertitel</label>
-			<label index="entry">Eintrag</label>
+			<label index="engraved_titlepage">Illustration</label>
+			<label index="entry">Eingang</label>
 			<label index="fascicle">Faszikel</label>
 			<label index="file">Akte</label>
 			<label index="folder">Mappe</label>
@@ -210,18 +216,20 @@
 			<label index="master_thesis">Masterarbeit</label>
 			<label index="manuscript">Handschrift</label>
 			<label index="map">Karte</label>
-			<label index="monograph">Monographie</label>
+			<label index="monograph">Monografie</label>
 			<label index="month">Monat</label>
 			<label index="multivolume_work">Mehrbändiges Werk</label>
-			<label index="musical_notation">Musiknotation</label>
+			<label index="musical_notation">Noten</label>
 			<label index="newspaper">Zeitung</label>
 			<label index="note">Anmerkung</label>
 			<label index="official_notification">Bescheid</label>
 			<label index="ornament">Buchschmuck</label>
+			<label index="other">Sonstiges</label>
 			<label index="paper">Vortrag</label>
 			<label index="paste_down">Spiegel</label>
-			<label index="periodical">Periodica</label>
+			<label index="periodical">Fortlaufendes Sammelwerk</label>
 			<label index="photograph">Fotografie</label>
+			<label index="picture">Foto</label>
 			<label index="plan">Plan</label>
 			<label index="poster">Plakat</label>
 			<label index="preface">Vorwort</label>
@@ -234,7 +242,8 @@
 			<label index="register">Amtsbuch</label>
 			<label index="report">Bericht</label>
 			<label index="research_paper">Forschungsarbeit</label>
-			<label index="scheme">Schema</label>
+			<label index="review">Rezension</label>
+			<label index="scheme">Illustration</label>
 			<label index="seal">Siegel</label>
 			<label index="section">Abschnitt</label>
 			<label index="spine">Rücken</label>
@@ -242,10 +251,10 @@
 			<label index="study">Studie</label>
 			<label index="table">Tabelle</label>
 			<label index="text">Text</label>
-			<label index="title_page">Titelseite</label>
+			<label index="title_page">Titelblatt</label>
 			<label index="verse">Vers</label>
 			<label index="volume">Band</label>
-			<!-- <label index="year">Jahr</label> -->
+			<label index="year">Jahr</label>
 			<!-- Metadaten -->
 			<label index="settlement">Aufbewahrungsort</label>
 			<label index="repository">Einrichtung</label>

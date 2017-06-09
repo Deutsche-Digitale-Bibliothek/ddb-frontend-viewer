@@ -52,6 +52,10 @@ $structures = array (
 		'toplevel' => 0,
 		'oai_name' => ''
 	),
+	'bundle' => array (
+		'toplevel' => 0,
+		'oai_name' => ''
+	),
 	'cartulary' => array (
 		'toplevel' => 1,
 		'oai_name' => '',
@@ -248,6 +252,10 @@ $structures = array (
 		'toplevel' => 0,
 		'oai_name' => ''
 	),
+	'other' => array (
+		'toplevel' => 0,
+		'oai_name' => ''
+	),
 	'paper' => array (
 		'toplevel' => 1,
 		'oai_name' => '',
@@ -261,6 +269,10 @@ $structures = array (
 		'oai_name' => ''
 	),
 	'photograph' => array (
+		'toplevel' => 1,
+		'oai_name' => '',
+	),
+	'picture' => array (
 		'toplevel' => 1,
 		'oai_name' => '',
 	),
@@ -305,6 +317,10 @@ $structures = array (
 		'oai_name' => '',
 	),
 	'report' => array (
+		'toplevel' => 1,
+		'oai_name' => '',
+	),
+	'review' => array (
 		'toplevel' => 1,
 		'oai_name' => '',
 	),
