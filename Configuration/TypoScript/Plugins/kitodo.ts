@@ -111,6 +111,7 @@ plugin.tx_dlf_pageview {
 	excludeOther = 0
 	features =
 	elementId = tx-dlf-map
+	useInternalProxy = 1
 	templateFile = EXT:ddb_frontend_viewer/Resources/Private/Templates/Plugins/Kitodo/pageview.tmpl
 
 }
