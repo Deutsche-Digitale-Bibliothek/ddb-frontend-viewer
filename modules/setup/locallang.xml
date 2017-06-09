@@ -220,7 +220,7 @@
 			<label index="ornament">Buchschmuck</label>
 			<label index="paper">Vortrag</label>
 			<label index="paste_down">Spiegel</label>
-			<label index="periodical">Peridica</label>
+			<label index="periodical">Periodica</label>
 			<label index="photograph">Fotografie</label>
 			<label index="plan">Plan</label>
 			<label index="poster">Plakat</label>
@@ -233,7 +233,7 @@
 			<label index="provenance">Besitznachweis</label>
 			<label index="register">Amtsbuch</label>
 			<label index="report">Bericht</label>
-			<label index="research_paper">Forschungsbericht</label>
+			<label index="research_paper">Forschungsarbeit</label>
 			<label index="scheme">Schema</label>
 			<label index="seal">Siegel</label>
 			<label index="section">Abschnitt</label>
