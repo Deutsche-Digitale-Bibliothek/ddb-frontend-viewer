@@ -375,5 +375,9 @@ $structures = array (
 	'year' => array (
 		'toplevel' => 1,
 		'oai_name' => ''
+	),
+	'Journal' => array (
+		'toplevel' => 0,
+		'oai_name' => ''
 	)
 );

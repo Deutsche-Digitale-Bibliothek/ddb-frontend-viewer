@@ -44,6 +44,8 @@
 			<label index="contents">Table of Contents</label>
 			<label index="corrigenda">Corrigenda</label>
 			<label index="cover">Cover</label>
+			<label index="cover_front">Front Cover</label>
+			<label index="cover_back">Back Cover</label>
 			<label index="day">Day</label>
 			<label index="dedication">Dedication</label>
 			<label index="diploma_thesis">Diploma Thesis</label>
@@ -144,6 +146,7 @@
 			<label index="copyright">Copyright Owner</label>
 			<label index="creator">Creator</label>
 			<label index="format">Physical Form</label>
+			<label index="Journal">Periodical</label>
 		</languageKey>
 		<languageKey index="de" type="array">
 			<label index="flash.wrongPageType">Seite ist kein SysOrdner!</label>
@@ -185,6 +188,8 @@
 			<label index="contents">Inhaltsverzeichnis</label>
 			<label index="corrigenda">Errata</label>
 			<label index="cover">Deckel</label>
+			<label index="cover_front">Vorderdeckel</label>
+			<label index="cover_back">Rückdeckel</label>
 			<label index="day">Tag</label>
 			<label index="dedication">Widmung</label>
 			<label index="diploma_thesis">Diplomarbeit</label>
@@ -255,6 +260,7 @@
 			<label index="verse">Vers</label>
 			<label index="volume">Band</label>
 			<label index="year">Jahr</label>
+			<label index="Journal">Fortlaufendes Sammelwerk</label>
 			<!-- Metadaten -->
 			<label index="settlement">Aufbewahrungsort</label>
 			<label index="repository">Einrichtung</label>
