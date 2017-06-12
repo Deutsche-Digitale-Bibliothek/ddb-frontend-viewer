@@ -64,6 +64,10 @@ $structures = array (
 		'toplevel' => 0,
 		'oai_name' => ''
 	),
+	'charter' => array (
+		'toplevel' => 0,
+		'oai_name' => ''
+	),
 	'collation' => array (
 		'toplevel' => 0,
 		'oai_name' => ''
