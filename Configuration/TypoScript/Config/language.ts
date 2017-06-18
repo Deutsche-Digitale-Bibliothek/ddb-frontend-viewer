@@ -9,7 +9,7 @@
 	htmlTag_langKey = de
 	locale_all = de_DE.UTF-8
 	sys_language_mode = content_fallback
-	sys_language_overlay = hideNonTranslated
+	sys_language_overlay = 1
 }
 
 [globalVar = GP:L=1]
