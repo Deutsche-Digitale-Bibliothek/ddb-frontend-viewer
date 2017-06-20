@@ -26,6 +26,7 @@ lib.navigation_pagecontrol {
 	templateFile = EXT:ddb_frontend_viewer/Resources/Private/Templates/Plugins/Kitodo/navigation-pagecontrol.tmpl
 }
 
+# configuration of table of contents plugin (toc)
 plugin.tx_dlf_toc {
 	pages = {$config.storagePid}
 	excludeOther = 0
