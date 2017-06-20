@@ -16,6 +16,13 @@
 		<f:render section="DocumentView" partial="DocumentView" arguments="{_all}" />
 		<!--TYPO3SEARCH_end-->
 </div>
+<script type="text/javascript">
+<!-- workaround for fiz proxy, SRU and pageselect plugin -->
+	var action = $("form").attr('action');
+	if (action !== undefined && action.indexOf(window.location.protocol) == -1) {
+		$(".page-control form").attr('action', action.replace('http:', 'https:'))
+	}
+</script>
 <f:if condition="{piwik_idsite}">
 	<f:render section="Piwik" partial="Piwik" arguments="{_all}" />
 </f:if>
