@@ -53,6 +53,13 @@
       <f:cObject typoscriptObjectPath="lib.navigation_viewfunction" />
 
       <div class="page-control">
+        <script type="text/javascript">
+        <!-- workaround for fiz proxy -->
+          var action = $(".page-control form").attr('action');
+          if (action !== undefined && action.indexOf(window.location.protocol) == -1) {
+          	$(".page-control form").attr('action', action.replace('http:', 'https:'))
+          }
+        </script>
         <f:cObject typoscriptObjectPath="lib.navigation_pagecontrol" />
       </div>
     </div>
