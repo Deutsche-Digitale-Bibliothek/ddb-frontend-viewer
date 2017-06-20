@@ -18,10 +18,12 @@
 </div>
 <script type="text/javascript">
 <!-- workaround for fiz proxy, SRU and pageselect plugin -->
-	var action = $("form").attr('action');
-	if (action !== undefined && action.indexOf(window.location.protocol) == -1) {
-		$(".page-control form").attr('action', action.replace('http:', 'https:'))
+$("form").each(function(index) {
+	var action = $(this).attr('action');
+	if (action.indexOf(window.location.protocol) == -1) {
+		$(this).attr('action', action.replace('http:', 'https:'))
 	}
+});
 </script>
 <f:if condition="{piwik_idsite}">
 	<f:render section="Piwik" partial="Piwik" arguments="{_all}" />
