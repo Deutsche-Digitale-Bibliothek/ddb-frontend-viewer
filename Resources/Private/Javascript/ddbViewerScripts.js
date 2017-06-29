@@ -93,6 +93,13 @@ $(document).ready(function() {
         }, 3500);
     }
 
+    // scroll to current element in search results
+    if($('.sru-result-headline h3.active')[0] && !$('.sru-result-headline h3.active').isInViewport()) {
+        $('#tab-search').delay(1000).animate({
+            scrollTop: $('.sru-result-headline h3.active').offset().top
+        }, 1500);
+    }
+
     // Avoid broken image display if METS definitions are wrong
     $('.provider img').each(function() {
         if((typeof this.naturalWidth != "undefined" && this.naturalWidth == 0 ) || this.readyState == 'uninitialized' ) {
