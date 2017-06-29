@@ -160,6 +160,8 @@ $(document).ready(function() {
             $('.document-view').width(containerWidth - currentWidth-10);
         },
         stop: function(event, ui) {
+            // bring back (accidently) hidden canvas elements
+            $('canvas.ol-unselectable').show();
             // fire resize window event to ensure the OL3 built in updateSize() function is triggered
             window.dispatchEvent(new Event('resize'));
             // set cookie to ensure settings stay present for next page eg.
