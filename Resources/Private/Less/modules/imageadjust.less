@@ -77,20 +77,32 @@
             font-family: 'Calibri', Helvetica, Arial, sans-serif;
             font-size: 16px;
             margin-top: -15px;
-            padding-left: 36px;
             line-height: 40px;
             display: inline-block;
         }
         button.reset-btn {
             margin-left: 10px;
-            background: url('data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCI+PHN0eWxlPi5zdDB7ZmlsbDpub25lO3N0cm9rZTojM2QzODM4O3N0cm9rZS13aWR0aDoxLjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTIyLjIgMTIuNWwtMy40IDIuNCAzLjQgMi40Ii8+PHBhdGggY2xhc3M9InN0MCIgZD0iTTIwLjcgMTQuN2MzLjUgMCA2LjQgMi45IDYuNCA2LjRzLTIuOSA2LjQtNi40IDYuNC02LjQtMi45LTYuNC02LjQiLz48L3N2Zz4=') no-repeat 0 0;
+            padding-left: 36px;
+            background: url('data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCI+PHN0eWxlPi5zdDB7ZmlsbDpub25lO3N0cm9rZTojYTUwMDNiO3N0cm9rZS13aWR0aDoxLjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTIyLjIgMTIuNWwtMy40IDIuNCAzLjQgMi40Ii8+PHBhdGggY2xhc3M9InN0MCIgZD0iTTIwLjcgMTQuN2MzLjUgMCA2LjQgMi45IDYuNCA2LjRzLTIuOSA2LjQtNi40IDYuNC02LjQtMi45LTYuNC02LjQiLz48L3N2Zz4=') no-repeat 0 0;
             outline: none;
+            cursor: pointer;
+            &:hover {
+                color: @primary-red;
+                text-decoration: underline;
+            }
         }
         .checkbox {
-            margin-left: -46px;
-            background: url(../Images/ctrlIcons.svg) no-repeat -560px -40px;
-            label input {
-                margin-right: 4px;
+            margin-left: -40px;
+            background: transparent;
+            label {
+                cursor: pointer;
+                &:hover {
+                    color: @primary-red;
+                    text-decoration: underline;
+                }
+                input {
+                    margin-right: 4px;
+                }
             }
         }
     }
