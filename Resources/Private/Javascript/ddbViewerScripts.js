@@ -68,18 +68,24 @@ $(document).ready(function() {
         return false;
     });
 
-    // menu toggles for offcanvas toc and metadata
-    $('.sidebar-toggle, .tx-dlf-dockCloseContainer').attr({'title':'Thumbnails einblenden'}).on(mobileEvent, function(event) {
-        var toggleElement = ($(this).attr('class') == 'tx-dlf-dockCloseContainer') ? '.tx-dlf-pagegrid' : '.sidebar';
-        $(this).parents(toggleElement).toggleClass('open');
+    // Add title attribute to pagegrid trigger
+    $('.tx-dlf-dockCloseContainer').attr({'title':'Thumbnails einblenden'});
+
+    // menu toggles for offcanvas sidebar and pagegrid dock
+    $('.sidebar-toggle, .tx-dlf-dockCloseContainer').on(mobileEvent, function(event) {
+        var toggleElement = ($(this).attr('class').split(' ')[0] == 'tx-dlf-dockCloseContainer') ? '.tx-dlf-pagegrid' : '.sidebar';
+        $(toggleElement).toggleClass('open');
         $('body').addClass('movin');
-        if(toggleElement == '.tx-dlf-pagegrid') {
+        if(toggleElement.split(' ')[0] == '.tx-dlf-pagegrid') {
             if($(toggleElement).hasClass('open')) {
                 Cookies.set('ddbViewerPagegridActive', 'open');
             } else {
                 Cookies.remove('ddbViewerPagegridActive');
             }
             $('.tx-dlf-dockCloseContainer').attr({'title': ($(toggleElement).hasClass('open')) ? 'Thumbnails ausblenden' : 'Thumbnails einblenden'});
+        } else {
+            $(this).toggleClass('open');
+            $('.header .controls').toggleClass('disabled');
         }
         setTimeout(function() {
             $('body').removeClass('movin');
