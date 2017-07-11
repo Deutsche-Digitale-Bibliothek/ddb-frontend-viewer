@@ -14,8 +14,9 @@
 .controls {
     position: absolute;
     right: 15px;
-    bottom: 8px;
+    bottom: 10px;
     .clearfix();
+    .transition();
     > div {
         position: relative;
         display: block;
@@ -49,6 +50,10 @@
             opacity: 0.35;
             cursor: not-allowed;
         }
+    }
+    &.disabled {
+        opacity: 0.3;
+        pointer-events: none;
     }
     .zoom, .rotate, .doublepage {
         display: none;

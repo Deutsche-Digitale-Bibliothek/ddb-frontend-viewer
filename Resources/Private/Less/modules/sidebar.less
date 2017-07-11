@@ -21,47 +21,12 @@
     text-align: left;
     padding: 15px;
     background: fade(#fff,95%);
-    z-index: 100;
+    z-index: 200;
     border-right: 2px solid @warm-grey-bg;
     .transition();
     .transform(translateX(-100%));
-    .sidebar-toggle {
-        position: absolute;
-        top: 136px;
-        right: -50px;
-        width: 50px;
-        height: 50px;
-        .vertgrad(@primary-red-light, @primary-red, 0, 100%);
-        .transition();
-        opacity: .9;
-        &:before {
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            width: 40px;
-            height: 40px;
-            background: url(../Images/ctrlIcons.svg) no-repeat -360px -40px;
-            content: " ";
-        }
-        &:after {
-            position: absolute;
-            top: -50px;
-            left: -1px;
-            bottom: -50px;
-            width: 1px;
-            content: " ";
-            background: -moz-linear-gradient(top, rgba(236,10,60,0) 0%, rgba(236,10,60,1) 33%, rgba(165,0,59,1) 66%, rgba(165,0,59,0) 100%);
-            background: -webkit-linear-gradient(top, rgba(236,10,60,0) 0%,rgba(236,10,60,1) 33%,rgba(165,0,59,1) 66%,rgba(165,0,59,0) 100%);
-            background: linear-gradient(to bottom, rgba(236,10,60,0) 0%,rgba(236,10,60,1) 33%,rgba(165,0,59,1) 66%,rgba(165,0,59,0) 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ec0a3c', endColorstr='#00a5003b',GradientType=0 );
-        }
-    }
     &.open {
         .transform(translateX(0));
-        .sidebar-toggle {
-            right: -30px;
-            width: 30px;
-        }
     }
     .tab-nav {
         ul {
@@ -124,6 +89,7 @@
                     &.disabled {
                         opacity: 0.5;
                         cursor: not-allowed;
+                        pointer-events: none;
                     }
                 }
             }
@@ -177,9 +143,6 @@
         .fullscreen & {
             .transform(translateX(-100%));
         }
-        .sidebar-toggle {
-            display: none;
-        }
         .tab-nav {
             padding: 30px 30px 0 30px;
             ul {
@@ -187,6 +150,12 @@
                 li {
                     width: auto;
                     margin-right: 10px;
+                    button {
+                        &.disabled {
+                            cursor: not-allowed;
+                            pointer-events: all;
+                        }
+                    }
                 }
             }
         }
