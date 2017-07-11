@@ -91,6 +91,23 @@
         span.active {
             border: 1px solid @primary-red;
         }
+        .nav-chunk {
+            margin: 0;
+            padding: 0;
+            &.part-1 {
+                a:nth-child(n+3) {
+                    display: none;                    
+                }
+            }
+            &.part-3 {
+                a {
+                    display: none;
+                    &:nth-child(n+3) {
+                        display: inline;
+                    }
+                }
+            }
+        }
     }
     .tx-dlf-pagegrid-list {
         position: relative;

@@ -152,10 +152,11 @@ $(document).ready(function() {
 		}
     });
 
-    // Add active span to pagegrids paging and remove separate characters (Oh my, how stupid is that?)
+    // Add active span to pagegrids paging and remove separate characters and after all this we split the result in two or three chunks to hide some numbers via CSS (Oh my, how stupid is that? Developers hell, here i come.)
     $('.tx-dlf-pagegrid-pagebrowser').html(function(_, html) {
-        return html.replace(/- \d+ -/g, function addActive(el) { return '<span class="active">'+el.replace(' -','').replace('- ','')+'</span>'; }).replace(/ - /g,'');
-    });
+        var newHTML = html.replace(/- \d+ -/g, function addActive(el) { return '<span class="active">'+el.replace(' -','').replace('- ','')+'</span>'; }).replace(/ - /g,'').split(/\.{3}(?!\.)/g);
+        return (newHTML.length == 3) ? '<span class="nav-chunk part-1">'+newHTML[0]+'</span>...<span class="nav-chunk part-2">'+newHTML[1]+'</span>...<span class="nav-chunk part-3">'+newHTML[2]+'</span>' : '<span class="nav-chunk">'+newHTML[0]+'</span>...<span class="nav-chunk">'+newHTML[1]+'</span>';
+    });    
 
     // Resize function for sidebar (based on jQueryUI)
     var resize = $(".sidebar"), containerWidth = $(".main-wrapper").width();
@@ -223,12 +224,10 @@ $(document).ready(function() {
 });
 
 $(document).keyup(function(e) {
-
     // Check if ESC key is pressed end fullscreen mode
     if (e.keyCode == 27 && $('body.fullscreen')[0]) {
             return exitFullscreen();
     }
-
 });
 
 // Activate fullscreen mode and set corresponding cookie
