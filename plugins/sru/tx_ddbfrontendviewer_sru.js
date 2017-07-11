@@ -20,6 +20,7 @@ $(document).ready(function() {
 		$('#tx_ddbfrontendviewer-sru-results-loading').show();
 		$('#tx_ddbfrontendviewer-sru-results-clearing').hide();
 		$('#tx_ddbfrontendviewer-sru-results ul').remove();
+		$('#tx_ddbfrontendviewer-sru-query').blur();
 
 		searchQuery = $("input[name='tx_dlf[query]']" ).val();
 
