@@ -136,7 +136,7 @@ $(document).ready(function() {
         }
     }
 
-
+    // Check if the image manipulation is available
 	$("#tx-dlf-tools-imagetools").bind('cssClassChanged', function(){
 		if($("#tx-dlf-tools-imagetools").hasClass('deactivate')) {
 			$('.tab-imageadjust').addClass('disabled').attr({
