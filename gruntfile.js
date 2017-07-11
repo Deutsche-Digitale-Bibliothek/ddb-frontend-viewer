@@ -25,7 +25,7 @@ module.exports = function(grunt) {
                     optimization: 2
                 },
                 files: {
-                    "Resources/Public/Js/allScripts.js" : ['Resources/Private/Javascript/modernizrCustom.js', 'Resources/Private/Javascript/js.cookie.js', 'Resources/Private/Javascript/ddbViewerScripts.js']
+                    "Resources/Public/Js/allScripts.js" : ['Resources/Private/Javascript/jquery.ui.touch-punch.min.js', 'Resources/Private/Javascript/modernizrCustom.js', 'Resources/Private/Javascript/js.cookie.js', 'Resources/Private/Javascript/ddbViewerScripts.js']
                 }
             }
         },
