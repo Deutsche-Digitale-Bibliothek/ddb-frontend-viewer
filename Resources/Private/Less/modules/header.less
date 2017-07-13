@@ -65,7 +65,7 @@
     .sidebar-toggle {
         position: absolute;
         bottom: 10px;
-        left: 0;
+        left: -20px;
         width: 30px;
         height: 30px;
         .vertgrad(@primary-red-light, @primary-red, 0, 100%);
@@ -98,6 +98,7 @@
         }
         &.open {
             .transform(translateX(90vw));
+            left: 0;
             &:after {
                 display: block;
             }
