@@ -27,7 +27,7 @@
         </f:if>
         <div class="provider-link">
           <span class="label"><f:translate key='metadata.provider' extensionName='ddb_frontend_viewer' />:</span>
-          <f:link.external uri="<ddb:xpath xpath='(//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\"DVRIGHTS\"]/mets:xmlData/dv:rights/dv:ownerSiteURL)[1]' />" title="Seite des Datengebers besuchen" target="_blank">
+          <f:link.external uri="<ddb:xpath xpath='(//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\"DVRIGHTS\"]/mets:xmlData/dv:rights/dv:ownerSiteURL)[1]' />" title="<f:translate key='metadata.link_provider' extensionName='ddb_frontend_viewer' />" target="_blank">
             <ddb:xpath xpath='(//mets:amdSec/mets:rightsMD/mets:mdWrap[@OTHERMDTYPE=\'DVRIGHTS\']/mets:xmlData/dv:rights/dv:owner)[1]' />
           </f:link.external>
         </div>

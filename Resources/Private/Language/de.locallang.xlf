@@ -37,6 +37,10 @@
 			<source>Provider</source>
 			<target>Datengeber</target>
 		</trans-unit>
+		<trans-unit id="metadata.link_provider">
+			<source>Show data provider website</source>
+			<target>Seite des Datengebers besuchen</target>
+		</trans-unit>
 		<trans-unit id="tab.downloads" approved="yes">
 			<source>Downloads</source>
 			<target>Downloads</target>
