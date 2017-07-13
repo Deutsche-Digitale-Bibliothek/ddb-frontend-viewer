@@ -151,8 +151,10 @@
                 li {
                     button {
                         &.disabled {
-                            cursor: not-allowed;
-                            pointer-events: all;
+                            .no-touchevents & {
+                                cursor: not-allowed;
+                                pointer-events: all;
+                            }
                         }
                     }
                 }
