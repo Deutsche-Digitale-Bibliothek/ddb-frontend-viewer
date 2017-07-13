@@ -54,8 +54,6 @@ $(document).ready(function() {
         // if fulltext is selected enable fulltext-mode, otherwise deactivate if neccessary
         if ($(this).hasClass('tab-fulltext') && !$("#tx-dlf-tools-fulltext").hasClass("fulltext-visible")) {
             $("#tx-dlf-tools-fulltext").click();
-        } else if ($("#tx-dlf-tools-fulltext").hasClass("fulltext-visible")) {
-             $("#tx-dlf-tools-fulltext").click();
         }
 
         // if image-adjustment is selected enable image adjustmen, otherwise deactivate it
@@ -135,21 +133,21 @@ $(document).ready(function() {
             'title':'Keine Volltexte vorhanden',
             'disabled': 'disabled'
         });
-    } else {
-        // If we have a fulltext and it is visible switch to fulltext tab
-        if (dlfUtils.getCookie("tx-dlf-pageview-fulltext-select") == 'enabled') {
-            $('.tab-nav button.tab-fulltext').click();
-        }
+    }
+
+    // If we have a fulltext and it is visible switch to fulltext tab
+    if (dlfUtils.getCookie("tx-dlf-pageview-fulltext-select") == 'enabled') {
+        $('#tx-dlf-tools-fulltext').click();
     }
 
     // Check if the image manipulation is available
-	$("#tx-dlf-tools-imagetools").bind('cssClassChanged', function(){
-		if($("#tx-dlf-tools-imagetools").hasClass('deactivate')) {
-			$('.tab-imageadjust').addClass('disabled').attr({
-				'title': 'Bildbearbeitung wird nicht unterstützt',
-				'disabled': 'disabled'
-			});
-		}
+    $("#tx-dlf-tools-imagetools").bind('cssClassChanged', function(){
+        if($("#tx-dlf-tools-imagetools").hasClass('deactivate')) {
+            $('.tab-imageadjust').addClass('disabled').attr({
+                'title': 'Bildbearbeitung wird nicht unterstützt',
+                'disabled': 'disabled'
+            });
+        }
     });
 
     // Add active span to pagegrids paging and remove separate characters and after all this we split the result in two or three chunks to hide some numbers via CSS (Oh my, how stupid is that? Developers hell, here i come.)
