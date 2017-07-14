@@ -89,6 +89,12 @@
 		<trans-unit id="document.loading_data">
 			<source>Loading Data...</source>
 		</trans-unit>
+		<trans-unit id="document.fullscreen.close">
+			<source>Close Fullscreen Mode</source>
+		</trans-unit>
+		<trans-unit id="document.fullscreen">
+			<source>Fullscreen</source>
+		</trans-unit>
 		</body>
 	</file>
 </xliff>

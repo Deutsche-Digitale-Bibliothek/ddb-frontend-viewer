@@ -187,7 +187,7 @@ $(document).ready(function() {
     // if cookie for fullscreen view is present adapat initial page rendering
     if(Cookies.get('ddbViewerFullscreen')) {
         $('body').addClass('fullscreen static');
-        $('.zoom .fullscreen').addClass('active').attr('title','Vollansicht schließen');
+        $('.zoom .fullscreen').addClass('active').attr('title',$('li#document-fullscreen-close').text());
     }
 
     // If Cookie with sidebar width is present adapt page
@@ -223,14 +223,14 @@ $(document).keyup(function(e) {
 // Activate fullscreen mode and set corresponding cookie
 function enterFullscreen() {
     setTimeout(function() { window.dispatchEvent(new Event('resize')); }, 220);
-    $("body").addClass('fullscreen'); $('.zoom .fullscreen').addClass('active').attr('title','Vollansicht schließen');
+    $("body").addClass('fullscreen'); $('.zoom .fullscreen').addClass('active').attr('title',$('li#document-fullscreen-close').text());
     Cookies.set('ddbViewerFullscreen', 'true');
 }
 
 // Exit fullscreen mode and drop cookie
 function exitFullscreen() {
     setTimeout(function() { window.dispatchEvent(new Event('resize')); }, 220);
-    $("body").removeClass('fullscreen'); $('.zoom .fullscreen').removeClass('active').attr('title','Vollansicht');
+    $("body").removeClass('fullscreen'); $('.zoom .fullscreen').removeClass('active').attr('title',$('li#document-fullscreen').text());
     Cookies.remove('ddbViewerFullscreen');
 }
 
