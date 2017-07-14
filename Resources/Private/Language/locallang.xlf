@@ -35,14 +35,23 @@
 		<trans-unit id="tab.fulltext">
 			<source>Fulltext</source>
 		</trans-unit>
+		<trans-unit id="tab.fulltext.disabled">
+			<source>No Fulltext available</source>
+		</trans-unit>
 		<trans-unit id="tab.search">
 			<source>Search in Document</source>
+		</trans-unit>
+		<trans-unit id="tab.search.disabled">
+			<source>No Search in Document available</source>
 		</trans-unit>
 		<trans-unit id="tab.imageadjust">
 			<source>Image Adjustments</source>
 		</trans-unit>
 		<trans-unit id="tab.downloads">
 			<source>Downloads</source>
+		</trans-unit>
+		<trans-unit id="tab.downloads.diabled">
+			<source>No Downloads available</source>
 		</trans-unit>
 		<trans-unit id="tab.toc.title">
 			<source>Show Table of Contents</source>

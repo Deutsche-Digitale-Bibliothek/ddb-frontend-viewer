@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-07-14T11:34:13Z">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-07-14T11:44:49Z">
 		<header>
 			<generator>LFEditor</generator>
 		</header>
@@ -57,6 +57,10 @@
 			<source>Downloads</source>
 			<target>Downloads</target>
 		</trans-unit>
+		<trans-unit id="tab.downloads.diabled" approved="yes">
+			<source>No Downloads available</source>
+			<target>Keine Downloads vorhanden</target>
+		</trans-unit>
 		<trans-unit id="tab.downloads.title" approved="yes">
 			<source>Show Downloads</source>
 			<target>Downloads anzeigen</target>
@@ -64,6 +68,10 @@
 		<trans-unit id="tab.fulltext" approved="yes">
 			<source>Fulltext</source>
 			<target>Volltext</target>
+		</trans-unit>
+		<trans-unit id="tab.fulltext.disabled" approved="yes">
+			<source>No Fulltext available</source>
+			<target>Keine Volltexte vorhanden</target>
 		</trans-unit>
 		<trans-unit id="tab.fulltext.title" approved="yes">
 			<source>Show Fulltext</source>
@@ -88,6 +96,10 @@
 		<trans-unit id="tab.search" approved="yes">
 			<source>Search in Document</source>
 			<target>Suche im Dokument</target>
+		</trans-unit>
+		<trans-unit id="tab.search.disabled" approved="yes">
+			<source>No Search in Document available</source>
+			<target>Keine Volltext-Suche vorhanden</target>
 		</trans-unit>
 		<trans-unit id="tab.search.title" approved="yes">
 			<source>Show Search in Document</source>
