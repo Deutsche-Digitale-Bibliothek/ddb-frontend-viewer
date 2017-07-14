@@ -4,7 +4,12 @@
   <div class="tx-dlf-pageview">
     <f:cObject typoscriptObjectPath="plugin.tx_dlf_pageview" />
     <div id="tx-dlf-map">
-        <div class="loading"><div class="loading-wrapper"><img src="{f:uri.image(src: 'EXT:ddb_frontend_viewer/Resources/Public/Images/loadingAnimation.svg', absolute:'true')}" alt="Anzeige zum Ladestatus"><span class="loading-label">Lade Daten...</span></div></div>
+      <div class="loading">
+        <div class="loading-wrapper">
+          <img src="{f:uri.image(src: 'EXT:ddb_frontend_viewer/Resources/Public/Images/loadingAnimation.svg', absolute:'true')}" alt="Anzeige zum Ladestatus">
+            <span class="loading-label"><f:translate key='document.loading_data' extensionName='ddb_frontend_viewer' /></span>
+        </div>
+      </div>
     </div>
   </div>
   <div class="tx-dlf-pagegrid">

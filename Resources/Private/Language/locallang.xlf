@@ -68,6 +68,9 @@
 		<trans-unit id="metadata.link_provider">
 			<source>Show data provider website</source>
 		</trans-unit>
+		<trans-unit id="document.loading_data">
+			<source>Loading Data...</source>
+		</trans-unit>
 		</body>
 	</file>
 </xliff>
