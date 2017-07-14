@@ -114,15 +114,7 @@ $(document).ready(function() {
     // Check if there are is a download list. Otherwise disable tab nav element
     if(!$('#tab-downloads ul li')[0]) {
         $('.tab-downloads').addClass('disabled').attr({
-            'title': 'Keine Downloads vorhanden',
-            'disabled': 'disabled'
-        });
-    }
-
-    // Check if the search form is disabled (in this case it came with the markup)
-    if($('.tab-search.disabled')[0]) {
-        $('.tab-search').attr({
-            'title': 'Keine Volltext-Suche vorhanden',
+            'title': $('#tab-downloads-disabled').text(),
             'disabled': 'disabled'
         });
     }
@@ -130,7 +122,7 @@ $(document).ready(function() {
     // Check if there is a fulltext available. Otherwise disable tab nav element
     if(!$('#tx-dlf-tools-fulltext')[0]) {
         $('.tab-fulltext').addClass('disabled').attr({
-            'title':'Keine Volltexte vorhanden',
+            'title': $('li#tab-fulltext-disabled').text(),
             'disabled': 'disabled'
         });
     }
@@ -144,7 +136,7 @@ $(document).ready(function() {
     $("#tx-dlf-tools-imagetools").bind('cssClassChanged', function(){
         if($("#tx-dlf-tools-imagetools").hasClass('deactivate')) {
             $('.tab-imageadjust').addClass('disabled').attr({
-                'title': 'Bildbearbeitung wird nicht unterstützt',
+                'title': $('li#tab-imageadjust-disabled').text(),
                 'disabled': 'disabled'
             });
         }
@@ -154,7 +146,7 @@ $(document).ready(function() {
     $('.tx-dlf-pagegrid-pagebrowser').html(function(_, html) {
         var newHTML = html.replace(/- \d+ -/g, function addActive(el) { return '<span class="active">'+el.replace(' -','').replace('- ','')+'</span>'; }).replace(/ - /g,'').split(/\.{3}(?!\.)/g);
         return (newHTML.length == 3) ? '<span class="nav-chunk part-1">'+newHTML[0]+'</span>...<span class="nav-chunk part-2">'+newHTML[1]+'</span>...<span class="nav-chunk part-3">'+newHTML[2]+'</span>' : '<span class="nav-chunk">'+newHTML[0]+'</span>...<span class="nav-chunk">'+newHTML[1]+'</span>';
-    });    
+    });
 
     // Resize function for sidebar (based on jQueryUI)
     var resize = $(".sidebar"), containerWidth = $(".main-wrapper").width();

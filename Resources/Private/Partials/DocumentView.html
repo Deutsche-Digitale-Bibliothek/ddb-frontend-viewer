@@ -16,6 +16,7 @@
     <f:cObject typoscriptObjectPath="plugin.tx_dlf_pagegrid" />
   </div>
 </div>
+
 <f:if condition="<ddb:xpath xpath='//mets:amdSec/mets:digiprovMD/mets:mdWrap[@OTHERMDTYPE=\"DVLINKS\"]/mets:xmlData/dv:links/dv:sru' />">
 <div style="display:none">
 <f:for each="<ddb:physicalPages />" as="value" key="page">
@@ -32,4 +33,14 @@
 </f:for>
 </div>
 </f:if>
+
+<div style="display:none">
+  <ul id="lang-helper">
+    <li id="tab-thumbnails-hide"><f:translate key='tab.thumbnails.hide' extensionName='ddb_frontend_viewer' /></li>
+    <li id="tab-thumbnails-show"><f:translate key='tab.thumbnails.show' extensionName='ddb_frontend_viewer' /></li>
+    <li id="tab-fulltext-disabled"><f:translate key='tab.fulltext.disabled' extensionName='ddb_frontend_viewer' /></li>
+    <li id="tab-downloads-disabled"><f:translate key='tab.downloads.disabled' extensionName='ddb_frontend_viewer' /></li>
+  </ul>
+</div>
+
 </f:section>

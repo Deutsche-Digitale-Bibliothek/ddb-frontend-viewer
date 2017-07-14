@@ -50,7 +50,7 @@
 		<trans-unit id="tab.downloads">
 			<source>Downloads</source>
 		</trans-unit>
-		<trans-unit id="tab.downloads.diabled">
+		<trans-unit id="tab.downloads.disabled">
 			<source>No Downloads available</source>
 		</trans-unit>
 		<trans-unit id="tab.toc.title">
@@ -65,14 +65,17 @@
 		<trans-unit id="tab.search.title">
 			<source>Show Search in Document</source>
 		</trans-unit>
-		<trans-unit id="tab.Thumbnails.show">
+		<trans-unit id="tab.thumbnails.show">
 			<source>Show Thumbnails</source>
 		</trans-unit>
-		<trans-unit id="tab.Thumbnails.hide">
+		<trans-unit id="tab.thumbnails.hide">
 			<source>Hide Thumbnails</source>
 		</trans-unit>
 		<trans-unit id="tab.imageadjust.title">
 			<source>Show Image Adjustments</source>
+		</trans-unit>
+		<trans-unit id="tab.imageadjust.disabled">
+			<source>Image Adjustments not supported</source>
 		</trans-unit>
 		<trans-unit id="tab.downloads.title">
 			<source>Show Downloads</source>
