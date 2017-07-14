@@ -66,9 +66,6 @@ $(document).ready(function() {
         return false;
     });
 
-    // Add title attribute to pagegrid trigger
-    $('.tx-dlf-dockCloseContainer').attr({'title':$('li#tab-thumbnails-show').text()});
-
     // menu toggles for offcanvas sidebar and pagegrid dock
     $('.sidebar-toggle, .tx-dlf-dockCloseContainer').on(mobileEvent, function(event) {
         var toggleElement = ($(this).attr('class').split(' ')[0] == 'tx-dlf-dockCloseContainer') ? '.tx-dlf-pagegrid' : '.sidebar';
@@ -202,6 +199,10 @@ $(document).ready(function() {
     // If Cookie with pagegrid dock status is present just open it
     if(Cookies.get('ddbViewerPagegridActive')) {
         $('.tx-dlf-pagegrid').addClass('open');
+        // Add title attribute to pagegrid trigger
+        $('.tx-dlf-dockCloseContainer').attr({'title':$('li#tab-thumbnails-hide').text()});
+    } else {
+      $('.tx-dlf-dockCloseContainer').attr({'title':$('li#tab-thumbnails-show').text()});
     }
 
     // Finally all things are settled. Curtain up!
