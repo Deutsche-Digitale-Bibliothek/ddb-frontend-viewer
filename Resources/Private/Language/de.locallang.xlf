@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-05-19T15:53:51Z">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-07-14T11:34:13Z">
 		<header>
 			<generator>LFEditor</generator>
 		</header>
 		<body>
+		<trans-unit id="document.loading_data" approved="yes">
+			<source>Loading Data...</source>
+			<target>Lade Daten...</target>
+		</trans-unit>
 		<trans-unit id="double.RectoVerso" approved="yes">
 			<source>Adjust recto/verso</source>
 			<target>Seitenfolge ändern</target>
@@ -33,13 +37,21 @@
 			<source>Download whole work (PDF)</source>
 			<target>Ganzes Werk herunterladen (PDF)</target>
 		</trans-unit>
+		<trans-unit id="metadata.link_provider" approved="yes">
+			<source>Show data provider website</source>
+			<target>Seite des Datengebers besuchen</target>
+		</trans-unit>
 		<trans-unit id="metadata.provider" approved="yes">
 			<source>Provider</source>
 			<target>Datengeber</target>
 		</trans-unit>
-		<trans-unit id="metadata.link_provider">
-			<source>Show data provider website</source>
-			<target>Seite des Datengebers besuchen</target>
+		<trans-unit id="tab.Thumbnails.hide" approved="yes">
+			<source>Hide Thumbnails</source>
+			<target>Thumbnails ausblenden</target>
+		</trans-unit>
+		<trans-unit id="tab.Thumbnails.show" approved="yes">
+			<source>Show Thumbnails</source>
+			<target>Thumbnails einblenden</target>
 		</trans-unit>
 		<trans-unit id="tab.downloads" approved="yes">
 			<source>Downloads</source>

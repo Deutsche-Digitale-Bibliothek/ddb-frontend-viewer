@@ -56,6 +56,12 @@
 		<trans-unit id="tab.search.title">
 			<source>Show Search in Document</source>
 		</trans-unit>
+		<trans-unit id="tab.Thumbnails.show">
+			<source>Show Thumbnails</source>
+		</trans-unit>
+		<trans-unit id="tab.Thumbnails.hide">
+			<source>Hide Thumbnails</source>
+		</trans-unit>
 		<trans-unit id="tab.imageadjust.title">
 			<source>Show Image Adjustments</source>
 		</trans-unit>
