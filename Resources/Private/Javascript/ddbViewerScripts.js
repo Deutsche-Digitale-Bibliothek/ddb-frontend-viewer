@@ -67,7 +67,7 @@ $(document).ready(function() {
     });
 
     // Add title attribute to pagegrid trigger
-    $('.tx-dlf-dockCloseContainer').attr({'title':'Thumbnails einblenden'});
+    $('.tx-dlf-dockCloseContainer').attr({'title':$('li#tab-thumbnails-show').text()});
 
     // menu toggles for offcanvas sidebar and pagegrid dock
     $('.sidebar-toggle, .tx-dlf-dockCloseContainer').on(mobileEvent, function(event) {
@@ -80,7 +80,7 @@ $(document).ready(function() {
             } else {
                 Cookies.remove('ddbViewerPagegridActive');
             }
-            $('.tx-dlf-dockCloseContainer').attr({'title': ($(toggleElement).hasClass('open')) ? 'Thumbnails ausblenden' : 'Thumbnails einblenden'});
+            $('.tx-dlf-dockCloseContainer').attr({'title': ($(toggleElement).hasClass('open')) ? $('li#tab-thumbnails-hide').text() : $('li#tab-thumbnails-show').text()});
         } else {
             $(this).toggleClass('open');
             $('.header .controls').toggleClass('disabled');
