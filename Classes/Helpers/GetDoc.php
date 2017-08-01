@@ -40,7 +40,7 @@ class GetDoc
       return '';
     }
 
-    $details = $this->doc->physicalPagesInfo[$this->doc->physicalPages[$pagenumber]];
+    $details = $this->doc->physicalStructuresInfo[$this->doc->physicalStructures[$pagenumber]];
 		$file = $details['files']['DOWNLOAD'];
 
 		if (!empty($file)) {
@@ -67,9 +67,9 @@ class GetDoc
     }
 
     // Get work link.
-  		if (!empty($this->doc->physicalPagesInfo[$this->doc->physicalPages[0]]['files']['DOWNLOAD'])) {
+  		if (!empty($this->doc->physicalStructuresInfo[$this->doc->physicalStructures[0]]['files']['DOWNLOAD'])) {
 
-  			$workLink = $this->doc->getFileLocation($this->doc->physicalPagesInfo[$this->doc->physicalPages[0]]['files']['DOWNLOAD']);
+  			$workLink = $this->doc->getFileLocation($this->doc->physicalStructuresInfo[$this->doc->physicalStructures[0]]['files']['DOWNLOAD']);
 
   		} else {
 
@@ -100,11 +100,11 @@ class GetDoc
       return '';
     }
 
-    $physicalPages = $this->doc->physicalPages;
-    $physicalPagesInfo = $this->doc->physicalPagesInfo;
+    $physicalStructures = $this->doc->physicalStructures;
+    $physicalStructuresInfo = $this->doc->physicalStructuresInfo;
 
-    foreach ($physicalPages as $key => $physicalPage) {
-        $map[$key] = array( 'label' => $physicalPagesInfo[$physicalPage]['label'], 'physicalPage' => $physicalPage);
+    foreach ($physicalStructures as $key => $physicalPage) {
+        $map[$key] = array( 'label' => $physicalStructuresInfo[$physicalPage]['label'], 'physicalPage' => $physicalPage);
     }
 
     return $map;
