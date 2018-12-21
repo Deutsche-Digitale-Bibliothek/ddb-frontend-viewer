@@ -125,7 +125,7 @@ $(document).ready(function() {
     }
 
     // If we have a fulltext and it is visible switch to fulltext tab
-    if (dlfUtils.getCookie("tx-dlf-pageview-fulltext-select") == 'enabled') {
+    if (Cookies.get("tx-dlf-pageview-fulltext-select") == 'enabled') {
         $('#tx-dlf-tools-fulltext').click();
     }
 
