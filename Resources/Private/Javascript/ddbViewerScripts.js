@@ -52,8 +52,16 @@ $(document).ready(function() {
         $(target).addClass('active');
 
         // if fulltext is selected enable fulltext-mode, otherwise deactivate if neccessary
-        if ($(this).hasClass('tab-fulltext') && !$("#tx-dlf-tools-fulltext").hasClass("fulltext-visible")) {
+        if ($(this).hasClass('tab-fulltext')) {
+          if (!$("#tx-dlf-tools-fulltext").hasClass("fulltext-visible")) {
+            // tab fulltext selected but fulltext feature is not shown --> enable by click
             $("#tx-dlf-tools-fulltext").click();
+          }
+        } else {
+          if ($("#tx-dlf-tools-fulltext").hasClass("fulltext-visible")) {
+            // fulltext tab is NOT selected but fulltext is shown --> disable by click
+            $("#tx-dlf-tools-fulltext").click();
+          }
         }
 
         // if image-adjustment is selected enable image adjustmen, otherwise deactivate it
@@ -126,7 +134,7 @@ $(document).ready(function() {
 
     // If we have a fulltext and it is visible switch to fulltext tab
     if (Cookies.get("tx-dlf-pageview-fulltext-select") == 'enabled') {
-        $('#tx-dlf-tools-fulltext').click();
+        $('.tab-nav button.tab-fulltext').click();
     }
 
     // Check if the image manipulation is available
