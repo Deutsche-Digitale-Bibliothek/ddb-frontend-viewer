@@ -8,9 +8,8 @@ page {
 	includeCSS {
 		style = EXT:ddb_frontend_viewer/Resources/Public/Css/allStyles.css
 	}
-
-	includeJSLibs {
-		# we include jquery by t3jquery on page.9 below
+	includeJSFooterlibs {
+		# jQuery is included by Kitodo.Presentation on head of page
 		uiscripts = EXT:ddb_frontend_viewer/Resources/Public/Js/allScripts.js
 	}
 	meta {
