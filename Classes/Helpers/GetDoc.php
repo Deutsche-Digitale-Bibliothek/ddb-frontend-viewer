@@ -103,8 +103,10 @@ class GetDoc
     $physicalStructures = $this->doc->physicalStructures;
     $physicalStructuresInfo = $this->doc->physicalStructuresInfo;
 
-    foreach ($physicalStructures as $key => $physicalPage) {
-        $map[$key] = array( 'label' => $physicalStructuresInfo[$physicalPage]['label'], 'physicalPage' => $physicalPage);
+    if (is_array($physicalStructures)) {
+        foreach ($physicalStructures as $key => $physicalPage) {
+            $map[$key] = array('label' => $physicalStructuresInfo[$physicalPage]['label'], 'physicalPage' => $physicalPage);
+        }
     }
 
     return $map;
