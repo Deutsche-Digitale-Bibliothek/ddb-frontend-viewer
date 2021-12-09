@@ -1,0 +1,28 @@
+{
+  "name": "slub/ddb-frontend-viewer",
+  "description": "Viewer based on Kitodo.Presentation, customized for DDB",
+  "type": "typo3-cms-extension",
+  "homepage": "https://github.com/Deutsche-Digitale-Bibliothek/ddb-frontend-viewer",
+  "keywords" : ["TYPO3 CMS"],
+  "license": "GPL-3.0-or-later",
+  "authors" : [
+    {
+      "name" : "Alexander Bigga",
+      "email" : "alexander.bigga@slub-dresden.de",
+      "role" : "Developer"
+    }
+  ],
+  "require": {
+      "typo3/cms-core": "^7.6"
+  },
+  "autoload": {
+      "psr-4": {
+          "Slub\\DdbFrontendViewer\\": "Classes"
+      }
+  },
+  "extra": {
+    "typo3/cms": {
+       "extension-key": "ddb_frontend_viewer"
+    }
+  }
+}
