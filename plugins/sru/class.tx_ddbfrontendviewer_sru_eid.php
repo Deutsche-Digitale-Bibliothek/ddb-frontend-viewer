@@ -71,7 +71,7 @@ class tx_ddbfrontendviewer_sru_eid extends \TYPO3\CMS\Frontend\Plugin\AbstractPl
 
 					$fullTextHit = $record->xpath('//srw:recordData');
 
-					$pageAttributes = '';
+					$pageAttributes = [];
 
 					foreach($fullTextHit[$id]->children('http://dfg-viewer.de/')->page->attributes() as $key => $val) {
 

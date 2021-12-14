@@ -1,6 +1,4 @@
-{namespace t3jquery=T3Ext\T3jquery\ViewHelpers}
 {namespace ddb=Slub\DdbFrontendViewer\ViewHelpers}
-<t3jquery:AddJQuery />
 <f:if condition="<ddb:xpath xpath='(//mets:mets/mets:structMap/mets:div/@LABEL)[1]' />">
 	<f:then>
 		<ddb:titleTag title="<ddb:xpath xpath='(//mets:mets/mets:structMap/mets:div/@LABEL)[1]' />" />
@@ -17,7 +15,7 @@
 		<!--TYPO3SEARCH_end-->
 </div>
 <script type="text/javascript">
-<!-- workaround for fiz proxy, SRU and pageselect plugin -->
+<f:comment>workaround for FIZ proxy, SRU and pageselect plugin</f:comment>
 $("form").each(function(index) {
 	var action = $(this).attr('action');
 	if (action.indexOf(window.location.protocol) == -1) {

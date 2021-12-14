@@ -3,7 +3,7 @@
 This TYPO3 extension provides the configuration and setup for the DDB Frontend Viewer.
 
 ##  Installation
-This extension needs to reside in a folder called `ddb_frontend_viewer` in TYPO3 extension folder ('typoconf/ext'). 
+This extension needs to reside in a folder called `ddb_frontend_viewer` in TYPO3 extension folder ('typoconf/ext').
 
 ## Frontend development (based on Grunt)
 
@@ -14,9 +14,5 @@ You can simply get it running by installing the local needings of NPM with npm i
 After that just type grunt to start the processing which watches all the LESS and JS folders to generate new asset files on the fly if anythings changes.
 
 ## Dependencies
-- TYPO3 CMS Frontend (cms)
-- CSS styled content (css_styled_content)
-- Extbase Framework (Extbase)
-- Fluid Templating Engine (fluid)
-- RealURL (realurl)
-- Kitodo.Presentatioin (dlf)
+- TYPO3 CMS Frontend (cms) 7.6.x
+- Kitodo.Presentatioin (dlf) 2.3.x
