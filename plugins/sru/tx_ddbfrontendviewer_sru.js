@@ -109,7 +109,13 @@ $(document).ready(function() {
 								var label = $('ul#sru-' + value + ' li.label').text();
 								if (label.length == 0) {
 									label = page;
-								}
+								} else {
+                                    // special case: remove string "Seite" from label, because it's added later on
+                                    pos = label.indexOf('Seite');
+                                    if (pos >= 0) {
+                                        label = label.substring(pos + 6);
+                                    }
+                                }
 							} else {
 								label = value;
 							}
