@@ -100,8 +100,8 @@ class GetDoc
       return '';
     }
 
-    $physicalStructures = $this->doc->physicalStructures;
-    $physicalStructuresInfo = $this->doc->physicalStructuresInfo;
+    $physicalStructures = $this->doc->physicalStructure;
+    $physicalStructuresInfo = $this->doc->physicalStructureInfo;
 
     if (is_array($physicalStructures)) {
         foreach ($physicalStructures as $key => $physicalPage) {
